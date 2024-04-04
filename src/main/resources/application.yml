@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://mysql-8fa9327-msp-proj.a.aivencloud.com:17515/defaultdb
+    username: avnadmin
+    password: AVNS_yydiyOF4HVsfWgwrPiF
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+      connection-timeout: 30000
+
