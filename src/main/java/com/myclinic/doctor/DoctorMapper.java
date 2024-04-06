@@ -14,9 +14,10 @@ public class DoctorMapper implements RowMapper<Doctor> {
         return new DoctorDTO(
                 doctor.getId(),
                 doctor.getName(),
+                doctor.getBirthDate(),
                 doctor.getEmail(),
-                doctor.getPhone(),
-                doctor.getBirthDate()
+                doctor.getPassword(),
+                doctor.getPhone()
         );
     }
 
@@ -28,9 +29,10 @@ public class DoctorMapper implements RowMapper<Doctor> {
         return new Doctor(
                 doctorDTO.id(),
                 doctorDTO.name(),
+                doctorDTO.birthDate(),
                 doctorDTO.email(),
-                doctorDTO.phone(),
-                doctorDTO.birthDate()
+                doctorDTO.password(),
+                doctorDTO.phone()
         );
     }
 
@@ -39,9 +41,10 @@ public class DoctorMapper implements RowMapper<Doctor> {
         return new Doctor(
                 Utility.getIntOrNull(rs, "id"),
                 Utility.getStringOrNull(rs, "name"),
+                Utility.getLocalDateOrNull(rs, "birth_date"),
                 Utility.getStringOrNull(rs, "email"),
-                Utility.getStringOrNull(rs, "phone"),
-                Utility.getLocalDateOrNull(rs, "birth_date")
+                Utility.getStringOrNull(rs, "password"),
+                Utility.getStringOrNull(rs, "phone")
         );
     }
 }

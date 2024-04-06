@@ -19,7 +19,7 @@ class DoctorService {
         var doctorInfo = doctorRepository.findById(doctorId);
 
         var doctor = doctorInfo.orElseThrow(
-                () -> new NotFoundException("Doctor not found")
+                () -> new NotFoundException(DoctorErrorMessages.DOCTOR_NOT_FOUND.formatMsg(doctorId))
         );
 
         return DoctorMapper.toDTO(doctor);
@@ -28,6 +28,16 @@ class DoctorService {
     List<DoctorDTO> getAll() {
         var doctors = doctorRepository.getAll();
         return DoctorMapper.toDTO(doctors);
+    }
+
+    DoctorDTO insertDoctor(DoctorDTO doctorDTO) {
+        var doctor = DoctorMapper.fromDTO(doctorDTO);
+        var doctorId = doctorRepository.insertDoctor(doctor);
+
+        if (doctorId.isEmpty())
+            throw new NotFoundException(DoctorErrorMessages.INSERTING_DOCTOR_DB_ERROR.formatMsg(doctorDTO));
+
+        return DoctorDTO.withId(doctorDTO, doctorId.get());
     }
 
 

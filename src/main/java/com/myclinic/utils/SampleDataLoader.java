@@ -32,17 +32,18 @@ public class SampleDataLoader implements CommandLineRunner {
 
     public void bulkInsert(int numberOfDoctors) {
         String sql = """
-                INSERT INTO doctor (name, email, phone, birth_Date)
-                VALUES (?, ?, ?, ?)
+                INSERT INTO doctor (name, birth_date, email, password, phone)
+                VALUES (?, ?, ?, ?, ?)
                 """;
 
         List<Doctor> doctors = new ArrayList<>(numberOfDoctors);
         for (int i = 0; i < numberOfDoctors; i++) {
             String name = faker.name().fullName();
             String email = faker.internet().emailAddress();
+            String password = faker.internet().password();
             String phone = faker.phoneNumber().cellPhone();
             LocalDate birthDate = faker.date().birthday().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            doctors.add(new Doctor(i, name, email, phone, birthDate));
+            doctors.add(new Doctor(i, name, birthDate, email, password, phone));
         }
 
         jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {

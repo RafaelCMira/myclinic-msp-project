@@ -14,9 +14,16 @@ import java.time.LocalDate;
 public class Doctor {
     private Integer id;
     private String name;
-    private String email;
-    private String phone;
     private LocalDate birthDate;
+    private String email;
+    private String password;
+    private String phone;
+
+    // add list of specialties
 
     // add list of patients
+
+    // add list of appointments
+
+    // add list of clinics
 }
