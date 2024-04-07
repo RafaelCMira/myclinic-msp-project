@@ -19,6 +19,7 @@ class DoctorController {
         this.doctorService = doctorService;
     }
 
+    //region Insert
     @PostMapping()
     ResponseEntity<ApiResponse<DoctorDTO>> insertDoctor(@Valid @RequestBody DoctorDTO doctorDTO) {
         var doctor = doctorService.insertDoctor(doctorDTO);
@@ -30,7 +31,9 @@ class DoctorController {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
+    //endregion
 
+    //region Update
     @PutMapping("/{id}")
     ResponseEntity<ApiResponse<DoctorDTO>> updateDoctor(@PathVariable Integer id, @Valid @RequestBody DoctorDTO doctorDTO) {
         var doctor = doctorService.updateDoctor(id, doctorDTO);
@@ -42,7 +45,9 @@ class DoctorController {
 
         return ResponseEntity.ok().body(response);
     }
+    //endregion
 
+    //region Delete
     @DeleteMapping("/{id}")
     ResponseEntity<ApiResponse<String>> deleteDoctor(@PathVariable Integer id) {
         doctorService.deleteDoctor(id);
@@ -54,7 +59,9 @@ class DoctorController {
 
         return ResponseEntity.ok().body(response);
     }
-
+    //endregion
+    
+    //region Get
     @GetMapping("/{id}")
     ResponseEntity<ApiResponse<DoctorDTO>> getDoctor(@PathVariable Integer id) {
         var doctor = doctorService.getDoctor(id);
@@ -78,6 +85,7 @@ class DoctorController {
 
         return ResponseEntity.ok().body(response);
     }
+    //endregion
 
 
 }

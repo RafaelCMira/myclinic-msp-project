@@ -21,7 +21,7 @@ class DoctorRepository {
         this.doctorMapper = doctorMapper;
     }
 
-    // Writes
+    //region Writes
 
     Optional<Integer> insertDoctor(Doctor doctor) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
@@ -74,8 +74,9 @@ class DoctorRepository {
 
         db.update(query, doctorId);
     }
+    //endregion
 
-    // Reads
+    //region Reads
     Optional<Doctor> findById(Integer doctorId) {
         String query = """
                 SELECT
@@ -106,4 +107,5 @@ class DoctorRepository {
 
         return db.query(query, doctorMapper);
     }
+    //endregion
 }

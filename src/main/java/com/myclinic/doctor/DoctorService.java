@@ -16,6 +16,7 @@ class DoctorService {
         this.doctorRepository = doctorRepository;
     }
 
+    //region Insert
     DoctorDTO insertDoctor(DoctorDTO doctorDTO) {
         Validations.validate(doctorDTO);
 
@@ -27,7 +28,9 @@ class DoctorService {
 
         return DoctorDTO.withId(doctorDTO, doctorId.get());
     }
+    //endregion
 
+    //region Update
     DoctorDTO updateDoctor(Integer doctorId, DoctorDTO doctorDTO) {
         Validations.validate(doctorDTO);
 
@@ -38,11 +41,15 @@ class DoctorService {
 
         return DoctorMapper.toDTO(doctor);
     }
+    //endregion
 
+    //region Delete
     void deleteDoctor(Integer doctorId) {
         doctorRepository.deleteDoctor(doctorId);
     }
+    //endregion
 
+    //region Get
     DoctorDTO getDoctor(Integer doctorId) {
         var doctorInfo = doctorRepository.findById(doctorId);
 
@@ -57,5 +64,6 @@ class DoctorService {
         var doctors = doctorRepository.getAll();
         return DoctorMapper.toDTO(doctors);
     }
+    //endregion
 
 }
