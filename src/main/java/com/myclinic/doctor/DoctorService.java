@@ -28,6 +28,17 @@ class DoctorService {
         return DoctorDTO.withId(doctorDTO, doctorId.get());
     }
 
+    DoctorDTO updateDoctor(Integer doctorId, DoctorDTO doctorDTO) {
+        Validations.validate(doctorDTO);
+
+        var doctor = DoctorMapper.fromDTO(doctorDTO);
+        doctor.setId(doctorId);
+
+        doctorRepository.updateDoctor(doctor);
+
+        return DoctorMapper.toDTO(doctor);
+    }
+
     DoctorDTO getDoctor(Integer doctorId) {
         var doctorInfo = doctorRepository.findById(doctorId);
 

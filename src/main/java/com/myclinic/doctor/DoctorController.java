@@ -31,6 +31,18 @@ class DoctorController {
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
+    @PutMapping("/{id}")
+    ResponseEntity<ApiResponse<DoctorDTO>> updateDoctor(@PathVariable Integer id, @Valid @RequestBody DoctorDTO doctorDTO) {
+        var doctor = doctorService.updateDoctor(id, doctorDTO);
+
+        ApiResponse<DoctorDTO> response = ApiResponse.<DoctorDTO>builder()
+                .status(ApiResponse.Status.SUCCESS.name())
+                .result(doctor)
+                .build();
+
+        return ResponseEntity.ok().body(response);
+    }
+
     @GetMapping("/{id}")
     ResponseEntity<ApiResponse<DoctorDTO>> getDoctor(@PathVariable Integer id) {
         var doctor = doctorService.getDoctor(id);

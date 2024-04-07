@@ -22,7 +22,7 @@ class DoctorRepository {
     }
 
     // Writes
-    
+
     Optional<Integer> insertDoctor(Doctor doctor) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         String query = """
@@ -42,6 +42,28 @@ class DoctorRepository {
 
         return Optional.ofNullable(keyHolder.getKey())
                 .map(Number::intValue);
+    }
+
+    void updateDoctor(Doctor doctor) {
+        String query = """
+                UPDATE doctor
+                SET
+                    name = ?,
+                    birth_date = ?,
+                    email = ?,
+                    phone = ?
+                WHERE
+                    doctor_id = ?
+                """;
+
+        db.update(query,
+                doctor.getName(),
+                java.sql.Date.valueOf(doctor.getBirthDate()),
+                doctor.getEmail(),
+                doctor.getPhone(),
+                doctor.getId()
+        );
+
     }
 
     // Reads
