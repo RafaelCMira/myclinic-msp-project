@@ -43,6 +43,18 @@ class DoctorController {
         return ResponseEntity.ok().body(response);
     }
 
+    @DeleteMapping("/{id}")
+    ResponseEntity<ApiResponse<String>> deleteDoctor(@PathVariable Integer id) {
+        doctorService.deleteDoctor(id);
+
+        ApiResponse<String> response = ApiResponse.<String>builder()
+                .status(ApiResponse.Status.SUCCESS.name())
+                .result("Doctor deleted successfully: " + id)
+                .build();
+
+        return ResponseEntity.ok().body(response);
+    }
+
     @GetMapping("/{id}")
     ResponseEntity<ApiResponse<DoctorDTO>> getDoctor(@PathVariable Integer id) {
         var doctor = doctorService.getDoctor(id);

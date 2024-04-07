@@ -39,6 +39,10 @@ class DoctorService {
         return DoctorMapper.toDTO(doctor);
     }
 
+    void deleteDoctor(Integer doctorId) {
+        doctorRepository.deleteDoctor(doctorId);
+    }
+
     DoctorDTO getDoctor(Integer doctorId) {
         var doctorInfo = doctorRepository.findById(doctorId);
 

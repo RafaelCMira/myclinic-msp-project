@@ -66,6 +66,15 @@ class DoctorRepository {
 
     }
 
+    void deleteDoctor(Integer doctorId) {
+        String query = """
+                DELETE FROM doctor
+                WHERE doctor_id = ?
+                """;
+
+        db.update(query, doctorId);
+    }
+
     // Reads
     Optional<Doctor> findById(Integer doctorId) {
         String query = """
