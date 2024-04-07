@@ -1,9 +1,9 @@
 package com.myclinic.doctor;
 
-import com.myclinic.utils.Validations;
+import com.myclinic.exception.ApiResponse;
 import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,25 +19,40 @@ class DoctorController {
         this.doctorService = doctorService;
     }
 
-
     @PostMapping()
-    ResponseEntity<DoctorDTO> insertDoctor(@Valid @RequestBody DoctorDTO doctorDTO) {
-        Validations.validate(doctorDTO);
+    ResponseEntity<ApiResponse<DoctorDTO>> insertDoctor(@Valid @RequestBody DoctorDTO doctorDTO) {
         var doctor = doctorService.insertDoctor(doctorDTO);
-        return ResponseEntity.ok().body(doctor);
+
+        ApiResponse<DoctorDTO> response = ApiResponse.<DoctorDTO>builder()
+                .status(ApiResponse.Status.SUCCESS.name())
+                .result(doctor)
+                .build();
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @GetMapping("/{id}")
-    ResponseEntity<DoctorDTO> getDoctor(@PathVariable Integer id) {
-        Validations.validate(id);
+    ResponseEntity<ApiResponse<DoctorDTO>> getDoctor(@PathVariable Integer id) {
         var doctor = doctorService.getDoctor(id);
-        return ResponseEntity.ok().body(doctor);
+
+        ApiResponse<DoctorDTO> response = ApiResponse.<DoctorDTO>builder()
+                .status(ApiResponse.Status.SUCCESS.name())
+                .result(doctor)
+                .build();
+
+        return ResponseEntity.ok().body(response);
     }
 
     @GetMapping()
-    ResponseEntity<List<DoctorDTO>> getAllDoctors() {
+    ResponseEntity<ApiResponse<List<DoctorDTO>>> getAllDoctors() {
         var doctors = doctorService.getAll();
-        return ResponseEntity.ok().body(doctors);
+
+        ApiResponse<List<DoctorDTO>> response = ApiResponse.<List<DoctorDTO>>builder()
+                .status(ApiResponse.Status.SUCCESS.name())
+                .result(doctors)
+                .build();
+
+        return ResponseEntity.ok().body(response);
     }
 
 

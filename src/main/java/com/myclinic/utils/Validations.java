@@ -3,6 +3,8 @@ package com.myclinic.utils;
 import com.myclinic.exception.GlobalErrorMessages;
 import com.myclinic.exception.customexceptions.BadRequestException;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.RecordComponent;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,23 +16,22 @@ public class Validations {
     }
 
     public static void validate(Object... params) {
-        for (Object param : params) {
-            checkNull(param);
-            if (param instanceof String string) {
-                checkBlanck(string);
+        for (Object param : params)
+            if (param instanceof String string)
                 hasSqlInjection(string);
+    }
+
+    public static void validate(Record record) {
+        for (RecordComponent component : record.getClass().getRecordComponents()) {
+            try {
+                Object value = component.getAccessor().invoke(record);
+                if (value instanceof String string) {
+                    hasSqlInjection(string);
+                }
+            } catch (IllegalAccessException | InvocationTargetException e) {
+                throw new RuntimeException("Failed to access record component: " + component.getName(), e);
             }
         }
-    }
-
-    private static void checkNull(Object param) {
-        if (param == null)
-            throw new BadRequestException(GlobalErrorMessages.NULL_PARAM.message());
-    }
-
-    private static void checkBlanck(String string) {
-        if (string.isBlank())
-            throw new BadRequestException(GlobalErrorMessages.BLANCK_PARAM.message());
     }
 
     private static void hasSqlInjection(String value) {

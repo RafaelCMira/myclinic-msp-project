@@ -1,25 +1,30 @@
 package com.myclinic.doctor;
 
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
-public record DoctorDTO(
+@JsonInclude(JsonInclude.Include.NON_NULL)
+record DoctorDTO(
+
         Integer id,
 
-        @NotBlank(message = "Name is mandatory")
+        @NotBlank(message = "name is mandatory")
         String name,
 
-        @NotBlank(message = "Birth date is mandatory")
+        @NotNull(message = "Birthdate is mandatory")
         LocalDate birthDate,
 
-        @NotBlank(message = "Email is mandatory")
+        @NotBlank(message = "email is mandatory")
         String email,
 
         @NotBlank(message = "Password is mandatory")
         String password,
 
-        @NotBlank(message = "Phone is mandatory")
+        @NotBlank(message = "phone is mandatory")
         String phone
 
         // add list of specialties
