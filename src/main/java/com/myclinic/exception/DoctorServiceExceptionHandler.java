@@ -1,6 +1,7 @@
 package com.myclinic.exception;
 
 import com.myclinic.exception.customexceptions.NotFoundException;
+import com.myclinic.exception.customexceptions.SqlInjectionException;
 import com.myclinic.exception.customexceptions.UnauthorizedException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
@@ -40,6 +41,11 @@ public class DoctorServiceExceptionHandler {
     @ExceptionHandler(UnauthorizedException.class)
     ResponseEntity<ApiResponse<?>> handleUnauthorizedException(UnauthorizedException e, HttpServletRequest request) {
         return handleException(request, HttpStatus.UNAUTHORIZED, e.getMessage(), null);
+    }
+
+    @ExceptionHandler(SqlInjectionException.class)
+    ResponseEntity<ApiResponse<?>> handleSqlInjectionException(SqlInjectionException e, HttpServletRequest request) {
+        return handleException(request, HttpStatus.BAD_REQUEST, e.getMessage(), null);
     }
 
     private ResponseEntity<ApiResponse<?>> handleException(HttpServletRequest request, HttpStatus status, String message, List<Error> errors) {

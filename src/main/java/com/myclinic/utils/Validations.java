@@ -2,6 +2,7 @@ package com.myclinic.utils;
 
 import com.myclinic.exception.GlobalErrorMessages;
 import com.myclinic.exception.customexceptions.BadRequestException;
+import com.myclinic.exception.customexceptions.SqlInjectionException;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.RecordComponent;
@@ -57,7 +58,9 @@ public class Validations {
                 && pattern.matcher(value.toLowerCase()).find();
 
         if (hasSqlInjection)
-            throw new BadRequestException(GlobalErrorMessages.SQL_INJECTION.formatMsg(value));
+            throw new SqlInjectionException(GlobalErrorMessages.SQL_INJECTION.formatMsg(value));
+
+
     }
 
 
