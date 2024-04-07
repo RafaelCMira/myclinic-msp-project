@@ -37,7 +37,11 @@ class DoctorService {
         var doctor = DoctorMapper.fromDTO(doctorDTO);
         doctor.setId(doctorId);
 
-        doctorRepository.updateDoctor(doctor);
+        var res = doctorRepository.updateDoctor(doctor);
+
+        if (res == 0) {
+            throw new NotFoundException(DoctorErrorMessages.DOCTOR_NOT_FOUND.formatMsg(doctorId));
+        }
 
         return DoctorMapper.toDTO(doctor);
     }
@@ -45,7 +49,11 @@ class DoctorService {
 
     //region Delete
     void deleteDoctor(Integer doctorId) {
-        doctorRepository.deleteDoctor(doctorId);
+        var res = doctorRepository.deleteDoctor(doctorId);
+
+        if (res == 0) {
+            throw new NotFoundException(DoctorErrorMessages.DOCTOR_NOT_FOUND.formatMsg(doctorId));
+        }
     }
     //endregion
 

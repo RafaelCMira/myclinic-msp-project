@@ -21,8 +21,7 @@ class DoctorRepository {
         this.doctorMapper = doctorMapper;
     }
 
-    //region Writes
-
+    //region Insert
     Optional<Integer> insertDoctor(Doctor doctor) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         String query = """
@@ -43,8 +42,10 @@ class DoctorRepository {
         return Optional.ofNullable(keyHolder.getKey())
                 .map(Number::intValue);
     }
+    //endregion
 
-    void updateDoctor(Doctor doctor) {
+    //region Update
+    int updateDoctor(Doctor doctor) {
         String query = """
                 UPDATE doctor
                 SET
@@ -56,7 +57,7 @@ class DoctorRepository {
                     doctor_id = ?
                 """;
 
-        db.update(query,
+        return db.update(query,
                 doctor.getName(),
                 java.sql.Date.valueOf(doctor.getBirthDate()),
                 doctor.getEmail(),
@@ -65,18 +66,20 @@ class DoctorRepository {
         );
 
     }
+    //endregion
 
-    void deleteDoctor(Integer doctorId) {
+    //region Delete
+    int deleteDoctor(Integer doctorId) {
         String query = """
                 DELETE FROM doctor
                 WHERE doctor_id = ?
                 """;
 
-        db.update(query, doctorId);
+        return db.update(query, doctorId);
     }
     //endregion
 
-    //region Reads
+    //region Get
     Optional<Doctor> findById(Integer doctorId) {
         String query = """
                 SELECT
