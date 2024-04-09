@@ -1,5 +1,6 @@
 package com.myclinic.appointment;
 
+import com.myclinic.utils.Validations;
 import org.springframework.jdbc.core.CallableStatementCallback;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -51,7 +52,7 @@ class AppointmentRepository {
             Optional<Integer> doctorId,
             Optional<Integer> clinicId,
             Optional<String> date,
-            Optional<String> time) {
+            Optional<String> hour) {
 
         StringBuilder query = new StringBuilder("""
                 SELECT
@@ -68,23 +69,29 @@ class AppointmentRepository {
         );
 
         patientId.ifPresent(
-                integer -> query.append(String.format(" AND patient_id = %d", integer))
+                id -> query.append(" AND patient_id = ").append(id)
         );
 
         doctorId.ifPresent(
-                integer -> query.append(String.format(" AND doctor_id = %d", integer))
+                id -> query.append(" AND doctor_id = ").append(id)
         );
 
         clinicId.ifPresent(
-                integer -> query.append(String.format(" AND clinic_id = %d", integer))
+                id -> query.append(" AND clinic_id = ").append(id)
         );
 
         date.ifPresent(
-                s -> query.append(String.format(" AND date = '%s'", s))
+                s -> {
+                    Validations.validate(s);
+                    query.append(String.format(" AND date = '%s'", s));
+                }
         );
 
-        time.ifPresent(
-                s -> query.append(String.format(" AND hour = '%s'", s))
+        hour.ifPresent(
+                s -> {
+                    Validations.validate(s);
+                    query.append(String.format(" AND hour = '%s'", s));
+                }
         );
 
         return db.query(query.toString(), appointmentMapper);

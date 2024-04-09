@@ -38,7 +38,7 @@ class AppointmentService {
 
         var appointment = AppointmentMapper.fromDTO(appointmentDTO);
         var res = appointmentRepository.deleteAppointment(appointment);
-        
+
         if (res == 0)
             throw new NotFoundException(AppointmentErrorMessages.APPOINTMENT_NOT_FOUND.formatMsg(appointmentDTO));
     }
@@ -50,11 +50,9 @@ class AppointmentService {
             Optional<Integer> doctorId,
             Optional<Integer> clinicId,
             Optional<String> date,
-            Optional<String> time) {
+            Optional<String> hour) {
 
-        Validations.validate(date, time);
-
-        var appointments = appointmentRepository.findByFilter(patientId, doctorId, clinicId, date, time);
+        var appointments = appointmentRepository.findByFilter(patientId, doctorId, clinicId, date, hour);
 
         return AppointmentMapper.toDTO(appointments);
     }

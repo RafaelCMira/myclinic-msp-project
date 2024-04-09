@@ -54,9 +54,9 @@ class AppointmentController {
             @RequestParam(value = "doctorId") Optional<Integer> doctorId,
             @RequestParam(value = "clinicId") Optional<Integer> clinicId,
             @RequestParam(value = "date") Optional<String> date,
-            @RequestParam(value = "time") Optional<String> time
+            @RequestParam(value = "hour") Optional<String> hour
     ) {
-        var appointment = appointmentService.getAppointments(patientId, doctorId, clinicId, date, time);
+        var appointment = appointmentService.getAppointments(patientId, doctorId, clinicId, date, hour);
 
         ApiResponse<List<AppointmentDTO>> response = ApiResponse.<List<AppointmentDTO>>builder()
                 .status(ApiResponse.Status.SUCCESS.name())
