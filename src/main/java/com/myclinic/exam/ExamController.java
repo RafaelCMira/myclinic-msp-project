@@ -33,6 +33,20 @@ class ExamController {
     }
     //endregion
 
+    //region Delete
+    @DeleteMapping()
+    ResponseEntity<ApiResponse<String>> deleteAppointment(@Valid @RequestBody ExamDTO examDTO) {
+        examService.deleteExam(examDTO);
+
+        ApiResponse<String> response = ApiResponse.<String>builder()
+                .status(ApiResponse.Status.SUCCESS.name())
+                .result("Exam deleted")
+                .build();
+
+        return ResponseEntity.ok().body(response);
+    }
+    //endregion
+
     //region Get
     @GetMapping()
     ResponseEntity<ApiResponse<List<ExamDTO>>> getExams(

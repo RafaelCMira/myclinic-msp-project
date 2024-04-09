@@ -20,7 +20,7 @@ class ExamRepository {
     //region Insert
     void insertExam(Exam exam) {
         String query = """
-                INSERT INTO exam (patient_id, clinic_id, date, hour, motive)
+                INSERT INTO exam (patient_id, clinic_id, equipment_id, date, hour, motive)
                 VALUES (?, ?, ?, ?, ?, ?)
                 """;
 
@@ -28,13 +28,27 @@ class ExamRepository {
                 query,
                 exam.getPatientId(),
                 exam.getClinicId(),
+                exam.getEquipmentId(),
                 exam.getDate(),
                 exam.getHour(),
                 exam.getMotive()
         );
     }
     //endregion
-    
+
+    //region Delete
+    int deleteExam(Exam exam) {
+        String query = """
+                DELETE FROM exam
+                WHERE patient_id = ?
+                    AND date = ?
+                    AND hour = ?
+                """;
+
+        return db.update(query, exam.getPatientId(), exam.getDate(), exam.getHour());
+    }
+    //endregion
+
     //region Get
     List<Exam> getByFilter(
             Optional<Integer> patientId,
@@ -51,7 +65,7 @@ class ExamRepository {
                     hour,
                     motive
                 FROM exam
-                WHERE exam_id = ?
+                WHERE 1 = 1
                 """
         );
 

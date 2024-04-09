@@ -10,6 +10,7 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@ToString
 class Exam {
     private Integer patientId;
     private Integer clinicId;

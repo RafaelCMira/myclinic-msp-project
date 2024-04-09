@@ -31,7 +31,7 @@ class ExamMapper implements RowMapper<Exam> {
                 .clinicId(examDTO.clinicId())
                 .equipmentId(examDTO.equipmentId())
                 .date(examDTO.date())
-                .hour(examDTO.time())
+                .hour(examDTO.hour())
                 .motive(examDTO.motive())
                 .build();
     }
