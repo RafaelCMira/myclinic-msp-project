@@ -3,6 +3,7 @@ package com.myclinic.utils;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Utility {
 
@@ -29,6 +30,14 @@ public class Utility {
     public static LocalDate getLocalDateOrNull(ResultSet rs, String columnName) {
         try {
             return rs.getDate(columnName).toLocalDate();
+        } catch (SQLException ignored) {
+            return null;
+        }
+    }
+
+    public static LocalTime getLocalTimeOrNull(ResultSet rs, String columnName) {
+        try {
+            return rs.getTime(columnName).toLocalTime();
         } catch (SQLException ignored) {
             return null;
         }

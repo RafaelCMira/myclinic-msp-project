@@ -1,5 +1,6 @@
 package com.myclinic.exception;
 
+import com.myclinic.exception.customexceptions.AlreadyExistsException;
 import com.myclinic.exception.customexceptions.NotFoundException;
 import com.myclinic.exception.customexceptions.SqlInjectionException;
 import com.myclinic.exception.customexceptions.UnauthorizedException;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ControllerAdvice
-public class DoctorServiceExceptionHandler {
+public class ServiceExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
@@ -36,6 +37,11 @@ public class DoctorServiceExceptionHandler {
     @ExceptionHandler(NotFoundException.class)
     ResponseEntity<ApiResponse<?>> handleResourceNotFoundException(NotFoundException e, HttpServletRequest request) {
         return handleException(request, HttpStatus.NOT_FOUND, e.getMessage(), null);
+    }
+
+    @ExceptionHandler(AlreadyExistsException.class)
+    ResponseEntity<ApiResponse<?>> handleAlreadyExistsException(AlreadyExistsException e, HttpServletRequest request) {
+        return handleException(request, HttpStatus.CONFLICT, e.getMessage(), null);
     }
 
     @ExceptionHandler(UnauthorizedException.class)
