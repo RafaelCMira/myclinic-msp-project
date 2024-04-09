@@ -77,11 +77,11 @@ CREATE TABLE prescription
 CREATE TABLE exam
 (
     patient_id   SMALLINT UNSIGNED NOT NULL,
+    clinic_id    SMALLINT UNSIGNED NOT NULL,
+    equipment_id SMALLINT UNSIGNED NOT NULL,
     date         DATE              NOT NULL,
     hour         TIME              NOT NULL,
     motive       TEXT              NOT NULL,
-    clinic_id    SMALLINT UNSIGNED NOT NULL,
-    equipment_id SMALLINT UNSIGNED NOT NULL,
     PRIMARY KEY (patient_id, date, hour)
 );
 
@@ -101,17 +101,17 @@ CREATE TABLE presential
     clinic_id  SMALLINT UNSIGNED NOT NULL,
     date       DATE              NOT NULL,
     hour       TIME              NOT NULL,
-    PRIMARY KEY (patient_id, clinic_id, doctor_id, date, hour)
+    PRIMARY KEY (patient_id, doctor_id, clinic_id, date, hour)
 );
 
 CREATE TABLE prescription_drugs
 (
-    doctor_id  SMALLINT UNSIGNED NOT NULL,
     patient_id SMALLINT UNSIGNED NOT NULL,
+    doctor_id  SMALLINT UNSIGNED NOT NULL,
     drug_id    SMALLINT UNSIGNED NOT NULL,
     date       DATE              NOT NULL,
     hour       TIME              NOT NULL,
-    PRIMARY KEY (doctor_id, patient_id, drug_id, date, hour)
+    PRIMARY KEY (patient_id, doctor_id, drug_id, date, hour)
 );
 
 CREATE TABLE doctor_specialities
@@ -182,3 +182,53 @@ ALTER TABLE clinic_specialities
 ALTER TABLE clinic_specialities
     ADD CONSTRAINT fk_clinic_specialities_speciality FOREIGN KEY (speciality_id) REFERENCES speciality (speciality_id) ON DELETE CASCADE;
 
+-- Procedures
+
+DELIMITER //
+CREATE PROCEDURE insert_appointment(
+    patient_id SMALLINT UNSIGNED,
+    doctor_id SMALLINT UNSIGNED,
+    clinic_id SMALLINT UNSIGNED,
+    date DATE,
+    hour TIME)
+BEGIN
+    INSERT INTO appointment VALUES (patient_id, doctor_id, date, hour);
+    INSERT INTO presential VALUES (patient_id, doctor_id, clinic_id, date, hour);
+END//
+DELIMITER ;
+
+
+DELIMITER //
+CREATE PROCEDURE delete_appointment(
+    patient_id SMALLINT UNSIGNED,
+    doctor_id SMALLINT UNSIGNED,
+    clinic_id SMALLINT UNSIGNED,
+    date DATE,
+    hour TIME)
+BEGIN
+    IF EXISTS (SELECT *
+               FROM presential
+               WHERE patient_id = patient_id
+                 AND doctor_id = doctor_id
+                 AND clinic_id = clinic_id
+                 AND date = date
+                 AND hour = hour)
+    THEN
+        DELETE
+        FROM presential
+        WHERE patient_id = patient_id
+          AND doctor_id = doctor_id
+          AND clinic_id = clinic_id
+          AND date = date
+          AND hour = hour;
+    END IF;
+
+    DELETE
+    FROM appointment
+    WHERE patient_id = patient_id
+      AND doctor_id = doctor_id
+      AND date = date
+      AND hour = hour;
+
+END//
+DELIMITER ;
