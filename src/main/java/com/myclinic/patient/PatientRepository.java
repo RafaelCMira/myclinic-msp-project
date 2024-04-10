@@ -73,7 +73,7 @@ class PatientRepository {
             cs.executeUpdate();
             return cs.getUpdateCount();
         });
-        
+
         return Optional.ofNullable(res).orElse(0);
     }
     //endregion
@@ -88,8 +88,8 @@ class PatientRepository {
                     u.phone,
                     u.birth_date
                 FROM
-                    users u INNER JOIN patient
-                    ON u.user_id = patient.patient_id
+                    users u INNER JOIN patients p
+                    ON u.user_id = p.patient_id
                 WHERE
                     user_id = ?
                 """;
@@ -108,8 +108,8 @@ class PatientRepository {
                     u.phone,
                     u.birth_date
                 FROM
-                    users u INNER JOIN patient
-                    ON u.user_id = patient.patient_id
+                    users u INNER JOIN patients p
+                    ON u.user_id = p.patient_id
                 """;
 
         return db.query(query, patientMapper);
