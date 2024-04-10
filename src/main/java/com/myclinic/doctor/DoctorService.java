@@ -23,10 +23,10 @@ class DoctorService {
         var doctor = DoctorMapper.fromDTO(doctorDTO);
         var doctorId = doctorRepository.insertDoctor(doctor);
 
-        if (doctorId.isEmpty())
+        if (doctorId == 0)
             throw new NotFoundException(DoctorErrorMessages.INSERTING_DOCTOR_DB_ERROR.formatMsg(doctorDTO));
 
-        return DoctorDTO.withId(doctorDTO, doctorId.get());
+        return DoctorDTO.withId(doctorDTO, doctorId);
     }
     //endregion
 
