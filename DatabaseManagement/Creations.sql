@@ -220,29 +220,48 @@ CREATE PROCEDURE delete_patient(
 )
 BEGIN
     DELETE FROM patients WHERE patient_id = id;
-    DELETE FROM users WHERE user_id = id;
+
+    IF ROW_COUNT() > 0 THEN
+        DELETE FROM users WHERE user_id = id;
+    END IF;
 END;
 //
 DELIMITER ;
 
-# DELIMITER //
-# CREATE PROCEDURE insert_doctor (
-#     name VARCHAR(40),
-#     birth_date  DATE,
-#     email       VARCHAR(50),
-#     password    VARCHAR(50),
-#     phone       VARCHAR(20)
-# )
-# BEGIN
-#     INSERT INTO users (name, birth_date, email, password, phone)
-#     VALUES (name, birth_date, email, password, phone);
-#
-#     INSERT INTO doctors (patient_id)
-#     VALUES (LAST_INSERT_ID());
-# END;
-#
-# //
-# DELIMITER ;
+DELIMITER //
+CREATE PROCEDURE insert_doctor(
+    IN name VARCHAR(40),
+    IN birth_date DATE,
+    IN email VARCHAR(50),
+    IN password VARCHAR(50),
+    IN phone VARCHAR(20),
+    OUT id SMALLINT UNSIGNED
+)
+BEGIN
+    INSERT INTO users (name, birth_date, email, password, phone)
+    VALUES (name, birth_date, email, password, phone);
+
+    SET id = LAST_INSERT_ID();
+
+    INSERT INTO doctors (doctor_id)
+    VALUES (id);
+END;
+//
+DELIMITER ;
+
+DELIMITER //
+CREATE PROCEDURE delete_doctor(
+    IN id SMALLINT UNSIGNED
+)
+BEGIN
+    DELETE FROM doctors WHERE doctor_id = id;
+
+    IF ROW_COUNT() > 0 THEN
+        DELETE FROM users WHERE user_id = id;
+    END IF;
+END;
+//
+DELIMITER ;
 
 # DELIMITER
 # //
