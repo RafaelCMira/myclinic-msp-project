@@ -16,4 +16,5 @@ public class Appointment {
     private Integer clinicId;
     private LocalDate date;
     private LocalTime hour;
+    private LocalTime duration;
 }

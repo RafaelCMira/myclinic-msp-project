@@ -1,7 +1,6 @@
 package com.myclinic.appointment;
 
 import com.myclinic.utils.Validations;
-import org.springframework.jdbc.core.CallableStatementCallback;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -19,30 +18,45 @@ class AppointmentRepository {
         this.appointmentMapper = appointmentMapper;
     }
 
-    private int executeAppointmentProcedure(Appointment appointment, String procedureCall) {
-        var res = db.execute(procedureCall, (CallableStatementCallback<Integer>) cs -> {
-            cs.setInt(1, appointment.getPatientId());
-            cs.setInt(2, appointment.getDoctorId());
-            cs.setInt(3, appointment.getClinicId());
-            cs.setDate(4, java.sql.Date.valueOf(appointment.getDate()));
-            cs.setTime(5, java.sql.Time.valueOf(appointment.getHour()));
-            return cs.executeUpdate();
-        });
-
-        return Optional.ofNullable(res).orElse(0);
-    }
-
     //region Insert
     void insertAppointment(Appointment appointment) {
-        String procedureCall = "{call insert_appointment(?, ?, ?, ?, ?)}";
-        executeAppointmentProcedure(appointment, procedureCall);
+        String query = """
+                INSERT INTO
+                    presential_appointments (patient_id, doctor_id, date, hour, duration, clinic_id)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """;
+
+        db.update(
+                query,
+                appointment.getPatientId(),
+                appointment.getDoctorId(),
+                appointment.getDate(),
+                appointment.getHour(),
+                appointment.getDuration(),
+                appointment.getClinicId()
+        );
     }
     //endregion
 
     //region Delete
     int deleteAppointment(Appointment appointment) {
-        String procedureCall = "{call delete_appointment(?, ?, ?, ?, ?)}";
-        return executeAppointmentProcedure(appointment, procedureCall);
+        String query = """
+                DELETE FROM
+                    presential_appointments
+                WHERE
+                    patient_id = ?
+                    AND doctor_id = ?
+                    AND date = ?
+                    AND hour = ?
+                """;
+
+        return db.update(
+                query,
+                appointment.getPatientId(),
+                appointment.getDoctorId(),
+                appointment.getDate(),
+                appointment.getHour()
+        );
     }
     //endregion
 
@@ -52,7 +66,8 @@ class AppointmentRepository {
             Optional<Integer> doctorId,
             Optional<Integer> clinicId,
             Optional<String> date,
-            Optional<String> hour) {
+            Optional<String> hour,
+            Optional<String> duration) {
 
         StringBuilder query = new StringBuilder("""
                 SELECT
@@ -60,9 +75,10 @@ class AppointmentRepository {
                     doctor_id,
                     clinic_id,
                     date,
-                    hour
+                    hour,
+                    duration
                 FROM
-                    presential
+                    presential_appointments
                 WHERE
                     1=1
                 """
@@ -91,6 +107,13 @@ class AppointmentRepository {
                 s -> {
                     Validations.validate(s);
                     query.append(String.format(" AND hour = '%s'", s));
+                }
+        );
+
+        duration.ifPresent(
+                s -> {
+                    Validations.validate(s);
+                    query.append(String.format(" AND duration = '%s'", s));
                 }
         );
 

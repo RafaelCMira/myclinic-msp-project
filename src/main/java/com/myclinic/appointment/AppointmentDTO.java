@@ -11,6 +11,7 @@ public record AppointmentDTO(
         Integer doctorId,
         Integer clinicId,
         LocalDate date,
-        LocalTime hour
+        LocalTime hour,
+        LocalTime duration
 ) {
 }

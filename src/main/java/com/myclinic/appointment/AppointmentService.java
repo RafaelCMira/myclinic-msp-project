@@ -50,9 +50,10 @@ class AppointmentService {
             Optional<Integer> doctorId,
             Optional<Integer> clinicId,
             Optional<String> date,
-            Optional<String> hour) {
+            Optional<String> hour,
+            Optional<String> duration) {
 
-        var appointments = appointmentRepository.findByFilter(patientId, doctorId, clinicId, date, hour);
+        var appointments = appointmentRepository.findByFilter(patientId, doctorId, clinicId, date, hour, duration);
 
         return AppointmentMapper.toDTO(appointments);
     }
