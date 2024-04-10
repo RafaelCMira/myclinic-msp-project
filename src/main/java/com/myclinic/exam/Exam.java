@@ -17,5 +17,6 @@ class Exam {
     private String equipmentId;
     private LocalDate date;
     private LocalTime hour;
-    private String motive;
+    private String description;
+    private String result;
 }

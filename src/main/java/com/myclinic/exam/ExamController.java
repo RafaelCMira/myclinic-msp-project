@@ -52,11 +52,13 @@ class ExamController {
     ResponseEntity<ApiResponse<List<ExamDTO>>> getExams(
             @RequestParam Optional<Integer> patientId,
             @RequestParam Optional<Integer> clinicId,
+            @RequestParam Optional<Integer> equipmentId,
             @RequestParam Optional<String> date,
             @RequestParam Optional<String> hour,
-            @RequestParam Optional<String> motive) {
+            @RequestParam Optional<String> description,
+            @RequestParam Optional<String> result) {
 
-        var exams = examService.getExams(patientId, clinicId, date, hour, motive);
+        var exams = examService.getExams(patientId, clinicId, equipmentId, date, hour, description, result);
 
         ApiResponse<List<ExamDTO>> response = ApiResponse.<List<ExamDTO>>builder()
                 .status(ApiResponse.Status.SUCCESS.name())

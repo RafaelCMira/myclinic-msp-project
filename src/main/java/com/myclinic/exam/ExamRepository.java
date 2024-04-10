@@ -1,5 +1,6 @@
 package com.myclinic.exam;
 
+import com.myclinic.utils.Validations;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -20,8 +21,8 @@ class ExamRepository {
     //region Insert
     void insertExam(Exam exam) {
         String query = """
-                INSERT INTO exam (patient_id, clinic_id, equipment_id, date, hour, motive)
-                VALUES (?, ?, ?, ?, ?, ?)
+                INSERT INTO exams (patient_id, clinic_id, equipment_id, date, hour, description, result)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
                 """;
 
         db.update(
@@ -31,7 +32,8 @@ class ExamRepository {
                 exam.getEquipmentId(),
                 exam.getDate(),
                 exam.getHour(),
-                exam.getMotive()
+                exam.getDescription(),
+                exam.getResult()
         );
     }
     //endregion
@@ -39,13 +41,18 @@ class ExamRepository {
     //region Delete
     int deleteExam(Exam exam) {
         String query = """
-                DELETE FROM exam
+                DELETE FROM exams
                 WHERE patient_id = ?
                     AND date = ?
                     AND hour = ?
                 """;
 
-        return db.update(query, exam.getPatientId(), exam.getDate(), exam.getHour());
+        return db.update(
+                query,
+                exam.getPatientId(),
+                exam.getDate(),
+                exam.getHour()
+        );
     }
     //endregion
 
@@ -53,19 +60,25 @@ class ExamRepository {
     List<Exam> getByFilter(
             Optional<Integer> patientId,
             Optional<Integer> clinicId,
+            Optional<Integer> equipmentId,
             Optional<String> date,
             Optional<String> hour,
-            Optional<String> motive) {
+            Optional<String> description,
+            Optional<String> result) {
 
         StringBuilder query = new StringBuilder("""
                 SELECT
                     patient_id,
                     clinic_id,
+                    equipment_id,
                     date,
                     hour,
-                    motive
-                FROM exam
-                WHERE 1 = 1
+                    description,
+                    result
+                FROM
+                    exams
+                WHERE
+                    1 = 1
                 """
         );
 
@@ -77,16 +90,36 @@ class ExamRepository {
                 id -> query.append(" AND clinic_id = ").append(id)
         );
 
+        equipmentId.ifPresent(
+                id -> query.append(" AND equipment_id = ").append(id)
+        );
+
         date.ifPresent(
-                s -> query.append(" AND date = '").append(s).append("'")
+                s -> {
+                    Validations.validate(s);
+                    query.append(" AND date = '").append(s).append("'");
+                }
         );
 
         hour.ifPresent(
-                s -> query.append(" AND hour = '").append(s).append("'")
+                s -> {
+                    Validations.validate(s);
+                    query.append(" AND hour = '").append(s).append("'");
+                }
         );
 
-        motive.ifPresent(
-                s -> query.append(" AND motive LIKE = '").append(s).append("%'")
+        description.ifPresent(
+                s -> {
+                    Validations.validate(s);
+                    query.append(" AND description LIKE '").append(s).append("%'");
+                }
+        );
+
+        result.ifPresent(
+                s -> {
+                    Validations.validate(s);
+                    query.append(" AND result LIKE '").append(s).append("%'");
+                }
         );
 
         return db.query(query.toString(), examMapper);

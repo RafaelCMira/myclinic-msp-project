@@ -17,7 +17,8 @@ class ExamMapper implements RowMapper<Exam> {
                 exam.getEquipmentId(),
                 exam.getDate(),
                 exam.getHour(),
-                exam.getMotive()
+                exam.getDescription(),
+                exam.getResult()
         );
     }
 
@@ -32,7 +33,8 @@ class ExamMapper implements RowMapper<Exam> {
                 .equipmentId(examDTO.equipmentId())
                 .date(examDTO.date())
                 .hour(examDTO.hour())
-                .motive(examDTO.motive())
+                .description(examDTO.description())
+                .result(examDTO.result())
                 .build();
     }
 
@@ -45,7 +47,8 @@ class ExamMapper implements RowMapper<Exam> {
                 .equipmentId(Utility.getStringOrNull(rs, "equipment_id"))
                 .date(Utility.getLocalDateOrNull(rs, "date"))
                 .hour(Utility.getLocalTimeOrNull(rs, "hour"))
-                .motive(Utility.getStringOrNull(rs, "motive"))
+                .description(Utility.getStringOrNull(rs, "description"))
+                .result(Utility.getStringOrNull(rs, "result"))
                 .build();
     }
 }

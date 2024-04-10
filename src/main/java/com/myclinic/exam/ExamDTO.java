@@ -12,6 +12,7 @@ public record ExamDTO(
         String equipmentId,
         LocalDate date,
         LocalTime hour,
-        String motive
+        String description,
+        String result
 ) {
 }

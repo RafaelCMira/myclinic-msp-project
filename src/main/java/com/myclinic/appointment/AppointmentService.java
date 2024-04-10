@@ -26,6 +26,8 @@ class AppointmentService {
         try {
             appointmentRepository.insertAppointment(appointment);
         } catch (DataAccessException e) {
+            //TODO -> Handle patient and doctor not exist (foreign key errors)
+
             throw new AlreadyExistsException(AppointmentErrorMessages.APPOINTMENT_ALREADY_EXISTS.formatMsg(appointmentDTO));
         }
         return AppointmentMapper.toDTO(appointment);

@@ -22,16 +22,13 @@ class ExamService {
     ExamDTO insertExam(ExamDTO examDTO) {
         Validations.validate(examDTO);
 
-        System.out.println(examDTO);
-
         var exam = ExamMapper.fromDTO(examDTO);
-
-        System.out.println(exam.toString());
 
         try {
             examRepository.insertExam(exam);
         } catch (DataAccessException e) {
-            System.out.println(e.getMessage());
+            //TODO -> Handle patient, clinic and equipment not exist (foreign key errors)
+            
             throw new AlreadyExistsException(ExamErrorMessages.EXAM_ALREADY_EXISTS.formatMsg(examDTO));
         }
 
@@ -55,11 +52,14 @@ class ExamService {
     List<ExamDTO> getExams(
             Optional<Integer> patientId,
             Optional<Integer> clinicId,
+            Optional<Integer> equipmentId,
             Optional<String> date,
             Optional<String> hour,
-            Optional<String> motive) {
+            Optional<String> description,
+            Optional<String> result
+    ) {
 
-        var exams = examRepository.getByFilter(patientId, clinicId, date, hour, motive);
+        var exams = examRepository.getByFilter(patientId, clinicId, equipmentId, date, hour, description, result);
 
         return ExamMapper.toDTO(exams);
     }
