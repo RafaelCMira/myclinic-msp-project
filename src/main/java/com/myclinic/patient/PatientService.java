@@ -22,10 +22,10 @@ class PatientService {
         var patient = PatientMapper.fromDTO(patientDTO);
         var patientId = patientRepository.insertPatient(patient);
 
-        if (patientId.isEmpty())
+        if (patientId == 0)
             throw new NotFoundException(PatientErrorMessages.INSERTING_PATIENT_DB_ERROR.formatMsg(patientDTO));
 
-        return PatientDTO.withId(patientDTO, patientId.get());
+        return PatientDTO.withId(patientDTO, patientId);
     }
     //endregion
 

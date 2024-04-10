@@ -1,12 +1,10 @@
 package com.myclinic.patient;
 
+import org.springframework.jdbc.core.CallableStatementCallback;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.support.GeneratedKeyHolder;
-import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.PreparedStatement;
-import java.sql.Statement;
+import java.sql.Types;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,39 +20,36 @@ class PatientRepository {
     }
 
     //region Insert
-    Optional<Integer> insertPatient(Patient patient) {
-        KeyHolder keyHolder = new GeneratedKeyHolder();
-        String query = """
-                INSERT INTO patient (name, birth_date, email, password, phone)
-                VALUES (?, ?, ?, ?, ?)
-                """;
+    Integer insertPatient(Patient patient) {
+        String procedureCall = "{call insert_patient(?, ?, ?, ?, ?, ?)}";
 
-        db.update(con -> {
-            PreparedStatement ps = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, patient.getName());
-            ps.setDate(2, java.sql.Date.valueOf(patient.getBirthDate()));
-            ps.setString(3, patient.getEmail());
-            ps.setString(4, patient.getPassword());
-            ps.setString(5, patient.getPhone());
-            return ps;
-        }, keyHolder);
+        var res = db.execute(procedureCall, (CallableStatementCallback<Integer>) cs -> {
+            cs.setString(1, patient.getName());
+            cs.setDate(2, java.sql.Date.valueOf(patient.getBirthDate()));
+            cs.setString(3, patient.getEmail());
+            cs.setString(4, patient.getPassword());
+            cs.setString(5, patient.getPhone());
+            cs.registerOutParameter(6, Types.INTEGER);
+            cs.execute();
+            return cs.getInt(6);
+        });
 
-        return Optional.ofNullable(keyHolder.getKey())
-                .map(Number::intValue);
+        return Optional.ofNullable(res).orElse(0);
     }
     //endregion
 
     //region Update
     int updatePatient(Patient patient) {
         String query = """
-                UPDATE patient
+                UPDATE users
                 SET
                     name = ?,
                     birth_date = ?,
                     email = ?,
+                    password = ?,
                     phone = ?
                 WHERE
-                    patient_id = ?
+                    user_id = ?
                 """;
 
         return db.update(
@@ -62,6 +57,7 @@ class PatientRepository {
                 patient.getName(),
                 java.sql.Date.valueOf(patient.getBirthDate()),
                 patient.getEmail(),
+                patient.getPassword(),
                 patient.getPhone(),
                 patient.getId()
         );
@@ -70,12 +66,15 @@ class PatientRepository {
 
     //region Delete
     int deletePatient(Integer patientId) {
-        String query = """
-                DELETE FROM patient
-                WHERE patient_id = ?
-                """;
+        String procedureCall = "{call delete_patient(?)}";
 
-        return db.update(query, patientId);
+        var res = db.execute(procedureCall, (CallableStatementCallback<Integer>) cs -> {
+            cs.setInt(1, patientId);
+            cs.executeUpdate();
+            return cs.getUpdateCount();
+        });
+        
+        return Optional.ofNullable(res).orElse(0);
     }
     //endregion
 
@@ -83,15 +82,16 @@ class PatientRepository {
     Optional<Patient> findById(Integer patientId) {
         String query = """
                 SELECT
-                    patient_id AS id,
-                    name,
-                    email,
-                    phone,
-                    birth_date
+                    user_id AS id,
+                    u.name,
+                    u.email,
+                    u.phone,
+                    u.birth_date
                 FROM
-                    patient
+                    users u INNER JOIN patient
+                    ON u.user_id = patient.patient_id
                 WHERE
-                    patient_id = ?
+                    user_id = ?
                 """;
 
         return db.query(query, patientMapper, patientId)
@@ -102,13 +102,14 @@ class PatientRepository {
     List<Patient> getALL() {
         String query = """
                 SELECT
-                    patient_id AS id,
-                    name,
-                    email,
-                    phone,
-                    birth_date
+                    user_id AS id,
+                    u.name,
+                    u.email,
+                    u.phone,
+                    u.birth_date
                 FROM
-                    patient
+                    users u INNER JOIN patient
+                    ON u.user_id = patient.patient_id
                 """;
 
         return db.query(query, patientMapper);
