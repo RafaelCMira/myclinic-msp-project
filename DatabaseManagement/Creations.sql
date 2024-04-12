@@ -26,12 +26,12 @@ CREATE TABLE drugs
 CREATE TABLE users
 (
     user_id     SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name        VARCHAR(40) NOT NULL,
-    birth_date  DATE        NOT NULL,
-    email       VARCHAR(50) NOT NULL,
-    password    VARCHAR(50) NOT NULL,
-    phone       VARCHAR(20) NOT NULL,
-    register_ts TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP
+    name        VARCHAR(40)        NOT NULL,
+    birth_date  DATE               NOT NULL,
+    email       VARCHAR(50) UNIQUE NOT NULL,
+    password    VARCHAR(50)        NOT NULL,
+    phone       VARCHAR(20)        NOT NULL,
+    register_ts TIMESTAMP          NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE doctors
