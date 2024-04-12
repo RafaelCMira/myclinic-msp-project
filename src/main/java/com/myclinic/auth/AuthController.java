@@ -20,7 +20,6 @@ public class AuthController {
 
     @PostMapping("/register")
     ResponseEntity<ApiResponse<UserDTO>> register(@Valid @RequestBody UserDTO userDTO) {
-        System.out.println(userDTO);
 
         var res = authService.register(userDTO);
 
