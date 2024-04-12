@@ -15,6 +15,11 @@ DROP TABLE IF EXISTS doctors;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS clinics;
 
+DROP PROCEDURE insert_patient;
+DROP PROCEDURE delete_patient;
+DROP PROCEDURE insert_doctor;
+DROP PROCEDURE delete_doctor;
+
 
 -- Tables
 CREATE TABLE drugs
