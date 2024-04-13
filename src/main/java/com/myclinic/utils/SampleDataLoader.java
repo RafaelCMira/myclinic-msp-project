@@ -7,11 +7,12 @@ import com.myclinic.patient.Patient;
 import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
+import org.springframework.jdbc.core.CallableStatementCallback;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
@@ -39,11 +40,6 @@ public class SampleDataLoader implements CommandLineRunner {
     }
 
     public List<Doctor> insertDoctors(int amount) {
-        String sql = """
-                INSERT INTO doctor (name, birth_date, email, password, phone)
-                VALUES (?, ?, ?, ?, ?)
-                """;
-
         List<Doctor> doctors = new ArrayList<>(amount);
         for (int i = 1; i < amount + 1; i++) {
             String name = faker.name().fullName();
@@ -54,35 +50,34 @@ public class SampleDataLoader implements CommandLineRunner {
             doctors.add(new Doctor(i, name, birthDate, email, password, phone));
         }
 
-        jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {
-            @Override
-            public void setValues(PreparedStatement ps, int i) throws SQLException {
-                Doctor doctor = doctors.get(i);
-                ps.setString(1, doctor.getName());
-                ps.setDate(2, java.sql.Date.valueOf(doctor.getBirthDate()));
-                ps.setString(3, doctor.getEmail());
-                ps.setString(4, doctor.getPassword());
-                ps.setString(5, doctor.getPhone());
-            }
+        for (Doctor doctor : doctors) {
+            String procedureCall = "{call insert_doctor(?, ?, ?, ?, ?, ?)}";
 
-            @Override
-            public int getBatchSize() {
-                return doctors.size();
-            }
-        });
+            jdbcTemplate.execute(procedureCall, (CallableStatementCallback<Integer>) cs -> {
+                cs.setString(1, doctor.getName());
+                cs.setDate(2, java.sql.Date.valueOf(doctor.getBirthDate()));
+                cs.setString(3, doctor.getEmail());
+                cs.setString(4, doctor.getPassword());
+                cs.setString(5, doctor.getPhone());
+                cs.registerOutParameter(6, Types.INTEGER);
+                cs.execute();
+                return 0;
+            });
+        }
 
         return doctors;
     }
 
     public List<Pair<Integer, String>> insertDrugs(int amount) {
         String sql = """
-                INSERT INTO drug (name)
+                INSERT INTO drugs (name)
                 VALUES (?)
                 """;
 
         List<Pair<Integer, String>> drugs = new ArrayList<>(amount);
         for (int i = 1; i < amount + 1; i++) {
-            String name = faker.medical().medicineName();
+            String name = faker.medical().medicineName().length() > 100 ? faker.medical().medicineName().substring(0, 100) :
+                    faker.medical().medicineName();
             drugs.add(Pair.of(i, name));
         }
 
@@ -104,7 +99,7 @@ public class SampleDataLoader implements CommandLineRunner {
 
     public List<Pair<Integer, String>> insertSpecialities() {
         String sql = """
-                INSERT INTO speciality (name)
+                INSERT INTO specialities (name)
                 VALUES (?)
                 """;
 
@@ -136,11 +131,6 @@ public class SampleDataLoader implements CommandLineRunner {
     }
 
     public List<Patient> insertPatients(int amount) {
-        String sql = """
-                INSERT INTO patient (name, birth_date, email, password, phone)
-                VALUES (?, ?, ?, ?, ?)
-                """;
-
         List<Patient> patients = new ArrayList<>(amount);
         for (int i = 1; i < amount + 1; i++) {
             String name = faker.name().fullName();
@@ -151,29 +141,27 @@ public class SampleDataLoader implements CommandLineRunner {
             patients.add(new Patient(i, name, birthDate, email, password, phone));
         }
 
-        jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {
-            @Override
-            public void setValues(PreparedStatement ps, int i) throws SQLException {
-                Patient patient = patients.get(i);
-                ps.setString(1, patient.getName());
-                ps.setDate(2, java.sql.Date.valueOf(patient.getBirthDate()));
-                ps.setString(3, patient.getEmail());
-                ps.setString(4, patient.getPassword());
-                ps.setString(5, patient.getPhone());
-            }
+        for (Patient patient : patients) {
+            String procedureCall = "{call insert_patient(?, ?, ?, ?, ?, ?)}";
 
-            @Override
-            public int getBatchSize() {
-                return patients.size();
-            }
-        });
+            jdbcTemplate.execute(procedureCall, (CallableStatementCallback<Integer>) cs -> {
+                cs.setString(1, patient.getName());
+                cs.setDate(2, java.sql.Date.valueOf(patient.getBirthDate()));
+                cs.setString(3, patient.getEmail());
+                cs.setString(4, patient.getPassword());
+                cs.setString(5, patient.getPhone());
+                cs.registerOutParameter(6, Types.INTEGER);
+                cs.execute();
+                return 0;
+            });
+        }
 
         return patients;
     }
 
     public List<Pair<Integer, String>> insertEquipments() {
         String sql = """
-                INSERT INTO equipment (name)
+                INSERT INTO equipments (name)
                 VALUES (?)
                 """;
 
@@ -206,7 +194,7 @@ public class SampleDataLoader implements CommandLineRunner {
 
     public List<Clinic> insertClinics(int amount) {
         String sql = """
-                INSERT INTO clinic (name, phone, location)
+                INSERT INTO clinics (name, phone, location)
                 VALUES (?, ?, ?)
                 """;
 

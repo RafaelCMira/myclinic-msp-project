@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.util.List;
 
 @Component
-class PatientMapper implements RowMapper<Patient> {
+public class PatientMapper implements RowMapper<Patient> {
 
     static PatientDTO toDTO(Patient patient) {
         return new PatientDTO(
