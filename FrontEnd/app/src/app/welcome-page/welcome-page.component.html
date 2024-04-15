@@ -1,0 +1,16 @@
+<div class="landing-page" style="text-align: center;">
+    <h2>Welcome to MyClinic</h2>
+    <p>The best place to schedule medical appointments.</p>
+    <div *ngIf="this.roleService.getSelectedRole() === 'none'">
+      <button pButton label="I'm a doctor" class="p-button-lg" (click)="selectRole('doctor')"></button>
+      <button pButton label="I'm a patient" class="p-button-lg" (click)="selectRole('patient')"></button>
+    </div>
+
+    <div *ngIf="this.roleService.getSelectedRole() !== 'none'">
+      <button pButton label="Login" class="p-button-lg" (click)="this.navigateToLogin()"></button>
+      <button pButton label="Register" class="p-button-lg" (click)="this.navigateToRegister()"></button>
+    </div>
+
+</div>
+
+

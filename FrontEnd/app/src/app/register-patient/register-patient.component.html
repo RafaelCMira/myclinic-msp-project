@@ -1,0 +1,28 @@
+<div class="form">
+  <h2>Register</h2>
+  <div class="field">
+    <label>Name</label>
+    <input type="text" pInputText [(ngModel)]="user.name" name="name" required>
+  </div>
+  <div class="field">
+    <label>Birth Date</label>
+    <p-calendar [(ngModel)]="user.birthDate" name="birthDate" [showIcon]="true" required></p-calendar>
+  </div>
+  <div class="field">
+    <label>Email</label>
+    <input type="email" pInputText [(ngModel)]="user.email" name="email" required>
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <input type="password" pInputText [(ngModel)]="user.password" name="password" required>
+  </div>
+  <div class="field">
+    <label>Phone</label>
+    <input type="text" pInputText [(ngModel)]="user.phone" name="phone" required>
+  </div>
+  <button *ngIf="selectedRole === 'patient'"
+          type="button" pButton (click)="submitPatientForm()" label="Register patient"></button>
+
+  <button *ngIf="selectedRole === 'doctor'"
+          type="button" pButton (click)="submitDoctorForm()" label="Register doctor"></button>
+</div>

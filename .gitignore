@@ -36,6 +36,7 @@ build/
 ### Frontend ###
 
 FrontEnd/node_modules
+FrontEnd/.angular
 
 # Logs
 FrontEnd/logs
@@ -77,3 +78,4 @@ FrontEnd/.node_repl_history
 
 # Generated files
 FrontEnd/dist
+/FrontEnd/app/.angular/
