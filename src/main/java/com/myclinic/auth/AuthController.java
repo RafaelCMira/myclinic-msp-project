@@ -18,19 +18,6 @@ public class AuthController {
         this.authService = authService;
     }
 
-    @PostMapping("/register")
-    ResponseEntity<ApiResponse<UserDTO>> register(@Valid @RequestBody UserDTO userDTO) {
-
-        var res = authService.register(userDTO);
-
-        ApiResponse<UserDTO> response = ApiResponse.<UserDTO>builder()
-                .status(ApiResponse.Status.SUCCESS.name())
-                .result(res)
-                .build();
-
-        return ResponseEntity.ok().body(response);
-    }
-
     @PostMapping("/login")
     ResponseEntity<ApiResponse<String>> login(@Valid @RequestBody LoginDTO loginDTO) {
         authService.login(loginDTO.email(), loginDTO.password());
