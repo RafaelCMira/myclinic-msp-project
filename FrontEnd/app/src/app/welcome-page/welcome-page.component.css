@@ -8,8 +8,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
-.landing-page h2, .landing-page p{
+.landing-page h2, .landing-page p {
     color: black;
+}
+
+.landing-page button {
+    margin: 10px;
 }

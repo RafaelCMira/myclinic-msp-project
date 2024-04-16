@@ -12,7 +12,6 @@ export class WelcomePageComponent {
 
   selectRole(role: string): void {
     this.roleService.setSelectedRole(role);
-    console.log(this.roleService.getSelectedRole())
   }
 
   navigateToLogin(): void {

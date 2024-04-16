@@ -7,11 +7,15 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class DoctorService {
-  private apiUrl = 'http://localhost:8080/api/v1/doctor';
+  private apiUrl = 'http://localhost:8080/api/v1';
 
   constructor(private http: HttpClient) {}
 
   createDoctor(user: User): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}`, user);
+    return this.http.post<any>(`${this.apiUrl}/doctor`, user);
+  }
+
+  loginDoctor(user: User): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/login`, user);
   }
 }

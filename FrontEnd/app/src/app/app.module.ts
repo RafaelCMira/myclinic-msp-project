@@ -8,13 +8,17 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule} from "primeng/button";
-import { RegisterPatientComponent } from './register-patient/register-patient.component';
+import { RegisterComponent } from './register/register.component';
 import {FormsModule} from "@angular/forms";
 import {CalendarModule} from "primeng/calendar";
 import { HttpClientModule } from '@angular/common/http';
 import { InputTextModule } from 'primeng/inputtext';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { LoginComponent } from './login/login/login.component';
+import { WelcomePanelComponent } from './welcome-panel/welcome-panel.component';
+import {PanelModule} from "primeng/panel";
+import { MessagesModule } from 'primeng/messages';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -22,8 +26,9 @@ import { LoginComponent } from './login/login/login.component';
     HeaderComponent,
     WelcomePageComponent,
     FooterComponent,
-    RegisterPatientComponent,
-    LoginComponent
+    RegisterComponent,
+    LoginComponent,
+    WelcomePanelComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +40,13 @@ import { LoginComponent } from './login/login/login.component';
     HttpClientModule,
     InputTextModule,
     BrowserAnimationsModule,
+    PanelModule,
+    MenubarModule,
+    MessagesModule,
+
 
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

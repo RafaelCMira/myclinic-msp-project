@@ -3,6 +3,8 @@ import {User} from "../../services/user/user.model";
 import {PatientService} from "../../services/patient/patient.service";
 import {DoctorService} from "../../services/doctor/doctor.service";
 import {RoleService} from "../../services/role/role.service";
+import {Router} from "@angular/router";
+import {Message, MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-login',
@@ -12,43 +14,50 @@ import {RoleService} from "../../services/role/role.service";
 export class LoginComponent {
 
   user: User = new User();
-  selectedRole: string = 'patient';
+  selectedRole: string;
+  messages: Message[] = [];
 
   constructor(private patientService: PatientService,
               private doctorService: DoctorService,
-              private roleService: RoleService) {}
-
-  ngOnInit(): void {
+              private router: Router,
+              private roleService: RoleService,
+              private messageService: MessageService) {
     this.selectedRole = this.roleService.getSelectedRole();
   }
 
-  submitPatientForm(): void {
-    this.patientService.createPatient(this.user).subscribe(
-      () => {
-        // Form submitted successfully
-        console.log('Patient created successfully');
-        // Reset the form
-        this.user = new User();
-      },
-      (error) => {
-        // Handle error
-        console.error('Error creating Patient:', error);
-      }
-    );
+  ngOnInit(): void {
+    this.selectedRole = this.roleService.getSelectedRole();
+    console.log(this.selectedRole)
   }
 
-  submitDoctorForm(): void {
-    this.doctorService.createDoctor(this.user).subscribe(
-      () => {
-        // Form submitted successfully
-        console.log('Doctor created successfully');
-        // Reset the form
-        this.user = new User();
-      },
-      (error) => {
-        // Handle error
-        console.error('Error creating doctor:', error);
-      }
-    );
+
+  submitForm(): void {
+    let loginObservable;
+    let type = this.selectedRole
+    if (type === 'patient') {
+      loginObservable = this.patientService.loginPatient(this.user);
+    } else if (type === 'doctor') {
+      loginObservable = this.doctorService.loginDoctor(this.user);
+    }
+
+    if (loginObservable) {
+      loginObservable.subscribe(
+        () => {
+          // Form submitted successfully
+          console.log(`${type} logged in successfully`);
+          // Reset the form
+          this.user = new User();
+          this.roleService.setLoggedInStatus(true);
+          this.router.navigate(['/panel']);
+        },
+        (error) => {
+          // Handle error
+          console.error(`Error logging in ${type}:`, error);
+          this.messages.push({ severity: 'error', summary: 'Error', detail: `Error logging in ${type}: ${error.message}` });
+          this.messageService.add({severity:'error', summary:'Error', detail:`Error logging in ${type}: ${error.message}`});
+        }
+      );
+    }
   }
+
 }

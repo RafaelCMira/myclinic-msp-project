@@ -1,15 +1,16 @@
-<div class="form">
-  <h2>Login</h2>
-  <div class="field">
-    <label>Email</label>
-    <input type="email" pInputText [(ngModel)]="user.email" name="email" required>
+<div class="form-container">
+  <div class="form">
+    <h2>Login</h2>
+    <div class="field">
+      <label>Email</label>
+      <input type="email" pInputText [(ngModel)]="user.email" name="email" required>
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" pInputText [(ngModel)]="user.password" name="password" required>
+    </div>
+    <button type="button" pButton (click)="submitForm()" label="Login"></button>
   </div>
-  <div class="field">
-    <label>Password</label>
-    <input type="password" pInputText [(ngModel)]="user.password" name="password" required>
-  </div>
-  <button *ngIf="selectedRole === 'patient'"
-          type="button" pButton (click)="submitPatientForm()" label="Login patient"></button>
-  <button *ngIf="selectedRole === 'doctor'"
-          type="button" pButton (click)="submitDoctorForm()" label="Login doctor"></button>
 </div>
+
+  <p-messages [(value)]="messages" [enableService]="false" [closable]="false"></p-messages>

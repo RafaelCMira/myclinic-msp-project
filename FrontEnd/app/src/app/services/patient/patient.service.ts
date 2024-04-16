@@ -8,11 +8,15 @@ import {Observable} from "rxjs";
 })
 export class PatientService {
 
-  private apiUrl = 'http://localhost:8080/api/v1/patient';
+  private apiUrl = 'http://localhost:8080/api/v1';
 
   constructor(private http: HttpClient) {}
 
   createPatient(user: User): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}`, user);
+    return this.http.post<any>(`${this.apiUrl}/patient`, user);
+  }
+
+  loginPatient(user: User): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/login`, user);
   }
 }

@@ -3,18 +3,20 @@ import { User} from "../services/user/user.model";
 import {RoleService} from "../services/role/role.service";
 import {PatientService} from "../services/patient/patient.service";
 import {DoctorService} from "../services/doctor/doctor.service";
+import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-register-patient',
-  templateUrl: './register-patient.component.html',
-  styleUrls: ['./register-patient.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class RegisterPatientComponent {
+export class RegisterComponent {
   user: User = new User();
   selectedRole: string = 'patient';
 
   constructor(private patientService: PatientService,
               private doctorService: DoctorService,
+              private router: Router,
               private roleService: RoleService) {}
 
   ngOnInit(): void {
@@ -28,6 +30,7 @@ export class RegisterPatientComponent {
         console.log('Patient created successfully');
         // Reset the form
         this.user = new User();
+        this.router.navigate(['/login'])
       },
       (error) => {
         // Handle error
@@ -43,6 +46,7 @@ export class RegisterPatientComponent {
         console.log('Doctor created successfully');
         // Reset the form
         this.user = new User();
+        this.router.navigate(['/login'])
       },
       (error) => {
         // Handle error

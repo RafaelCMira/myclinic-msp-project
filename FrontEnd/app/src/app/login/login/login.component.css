@@ -1,0 +1,10 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.form {
+  width: 300px; /* Adjust width as needed */
+}

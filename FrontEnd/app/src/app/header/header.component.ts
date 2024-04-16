@@ -8,7 +8,7 @@ import {RoleService} from "../services/role/role.service";
 })
 export class HeaderComponent {
 
-    selectedRole: string = 'patient';
+    selectedRole: string;
 
     noneMenuItems: any[] = [
         { label: 'Home', routerLink: '/' },
@@ -16,23 +16,42 @@ export class HeaderComponent {
     ];
 
     patientMenuItems: any[] = [
-        { label: 'Home', routerLink: '/' },
-        { label: 'About', routerLink: '/about' },
+        { label: 'Home', routerLink: '/panel' },
+        { label: 'About', routerLink: '/panel' },
         { label: 'Appointments', routerLink: '/appointment' },
         { label: 'Prescriptions', routerLink: '/prescription' },
     ];
 
     doctorMenuItems: any[] = [
-        { label: 'Home', routerLink: '/' },
-        { label: 'About', routerLink: '/about' },
+        { label: 'Home', routerLink: '/panel' },
+        { label: 'About', routerLink: '/panel' },
         { label: 'Appointments', routerLink: '/appointment' },
     ];
 
     constructor(private roleService: RoleService) {
-
+      this.selectedRole = this.roleService.getSelectedRole();
+      // this.roleService.selectedRoleChanged.subscribe(role => {
+      //   this.selectedRole = role;
+      // });
     }
 
     ngOnInit(): void {
-      this.selectedRole = this.roleService.getSelectedRole();
+      this.updateSelectedRole();
+      // Subscribe to changes in the selected role
+      this.roleService.selectedRoleChanged.subscribe(() => {
+        this.updateSelectedRole();
+      });
+      // Subscribe to changes in login status
+      this.roleService.loggedInStatusChanged.subscribe(() => {
+        this.updateSelectedRole();
+      });
+    }
+
+    updateSelectedRole(): void {
+      if (this.roleService.isLoggedIn()) {
+        this.selectedRole = this.roleService.getSelectedRole();
+      } else {
+        this.selectedRole = 'none';
+      }
     }
 }
