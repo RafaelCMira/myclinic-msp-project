@@ -2,29 +2,40 @@
 <bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1nmxrrg" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="17.2.1">
   <bpmn:collaboration id="Collaboration_0eh9hit">
     <bpmn:participant id="Participant_1s3ylsg" name="Doctor" processRef="Process_1x3sfq5" />
-    <bpmn:participant id="Participant_0dqg594" name="Doctor see patient information" processRef="Process_12ul9fx" />
+    <bpmn:participant id="Participant_0dqg594" name="Doctor sees patient information" processRef="Process_12ul9fx" />
     <bpmn:messageFlow id="Flow_0ti3haa" sourceRef="Participant_1s3ylsg" targetRef="StartEvent_1j1m1r8" />
     <bpmn:messageFlow id="Flow_1chig3y" sourceRef="Event_0y093s7" targetRef="Participant_1s3ylsg" />
     <bpmn:messageFlow id="Flow_0ch7gbc" sourceRef="Event_0diy93p" targetRef="Participant_1s3ylsg" />
   </bpmn:collaboration>
   <bpmn:process id="Process_1x3sfq5" isExecutable="false" />
   <bpmn:process id="Process_12ul9fx">
-    <bpmn:startEvent id="StartEvent_1j1m1r8" name="Want to see patient">
-      <bpmn:dataOutputAssociation id="DataOutputAssociation_0zqrv0s">
-        <bpmn:targetRef>DataObjectReference_000o90b</bpmn:targetRef>
-      </bpmn:dataOutputAssociation>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0flzai4" />
-    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1g4h7iv" name="No" sourceRef="Gateway_1qp9fht" targetRef="Event_0diy93p" />
+    <bpmn:sequenceFlow id="Flow_04q7s3e" sourceRef="Activity_0ca96wj" targetRef="Event_0y093s7" />
+    <bpmn:sequenceFlow id="Flow_1jh8610" name="Yes" sourceRef="Gateway_1qp9fht" targetRef="Activity_0ca96wj" />
     <bpmn:sequenceFlow id="Flow_1jm4mt6" sourceRef="Activity_06d1flp" targetRef="Gateway_1qp9fht" />
-    <bpmn:task id="Activity_06d1flp" name="Verify if doctor has this patient">
-      <bpmn:outgoing>Flow_1jm4mt6</bpmn:outgoing>
-      <bpmn:property id="Property_1t9dmro" name="__targetRef_placeholder" />
-      <bpmn:dataInputAssociation id="DataInputAssociation_0ofo1cj">
-        <bpmn:sourceRef>DataObjectReference_000o90b</bpmn:sourceRef>
-        <bpmn:targetRef>Property_1t9dmro</bpmn:targetRef>
+    <bpmn:sequenceFlow id="Flow_1axa8bs" sourceRef="StartEvent_1j1m1r8" targetRef="Activity_06d1flp" />
+    <bpmn:dataObjectReference id="DataObjectReference_0j87eic" name="Patient information" dataObjectRef="DataObject_0qoj89v" />
+    <bpmn:dataObject id="DataObject_0qoj89v" />
+    <bpmn:endEvent id="Event_0y093s7" name="Patient information">
+      <bpmn:incoming>Flow_04q7s3e</bpmn:incoming>
+      <bpmn:property id="Property_1n4wxu4" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="DataInputAssociation_1xwwapn">
+        <bpmn:sourceRef>DataObjectReference_0j87eic</bpmn:sourceRef>
+        <bpmn:targetRef>Property_1n4wxu4</bpmn:targetRef>
       </bpmn:dataInputAssociation>
-    </bpmn:task>
-    <bpmn:dataStoreReference id="DataStoreReference_021mzds" name="Patient DB" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_08hohid" />
+    </bpmn:endEvent>
+    <bpmn:dataObjectReference id="DataObjectReference_000o90b" name="Patient details" dataObjectRef="DataObject_15e3sgk" />
+    <bpmn:dataObject id="DataObject_15e3sgk" />
+    <bpmn:endEvent id="Event_0diy93p" name="Notify Doctor">
+      <bpmn:incoming>Flow_1g4h7iv</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1bwefoz" />
+    </bpmn:endEvent>
+    <bpmn:exclusiveGateway id="Gateway_1qp9fht" name="Is his patient?">
+      <bpmn:incoming>Flow_1jm4mt6</bpmn:incoming>
+      <bpmn:outgoing>Flow_1jh8610</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1g4h7iv</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
     <bpmn:task id="Activity_0ca96wj" name="Obtain patient information">
       <bpmn:incoming>Flow_1jh8610</bpmn:incoming>
       <bpmn:outgoing>Flow_04q7s3e</bpmn:outgoing>
@@ -37,31 +48,23 @@
         <bpmn:targetRef>DataObjectReference_0j87eic</bpmn:targetRef>
       </bpmn:dataOutputAssociation>
     </bpmn:task>
-    <bpmn:exclusiveGateway id="Gateway_1qp9fht" name="Is his patient?">
-      <bpmn:incoming>Flow_1jm4mt6</bpmn:incoming>
-      <bpmn:outgoing>Flow_1jh8610</bpmn:outgoing>
-      <bpmn:outgoing>Flow_1g4h7iv</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:endEvent id="Event_0diy93p" name="Notify Doctor">
-      <bpmn:incoming>Flow_1g4h7iv</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_1bwefoz" />
-    </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_1jh8610" name="Yes" sourceRef="Gateway_1qp9fht" targetRef="Activity_0ca96wj" />
-    <bpmn:sequenceFlow id="Flow_04q7s3e" sourceRef="Activity_0ca96wj" targetRef="Event_0y093s7" />
-    <bpmn:sequenceFlow id="Flow_1g4h7iv" name="No" sourceRef="Gateway_1qp9fht" targetRef="Event_0diy93p" />
-    <bpmn:dataObjectReference id="DataObjectReference_000o90b" name="Patient details" dataObjectRef="DataObject_15e3sgk" />
-    <bpmn:dataObject id="DataObject_15e3sgk" />
-    <bpmn:endEvent id="Event_0y093s7" name="Patient information">
-      <bpmn:incoming>Flow_04q7s3e</bpmn:incoming>
-      <bpmn:property id="Property_1n4wxu4" name="__targetRef_placeholder" />
-      <bpmn:dataInputAssociation id="DataInputAssociation_1xwwapn">
-        <bpmn:sourceRef>DataObjectReference_0j87eic</bpmn:sourceRef>
-        <bpmn:targetRef>Property_1n4wxu4</bpmn:targetRef>
+    <bpmn:dataStoreReference id="DataStoreReference_021mzds" name="Patient DB" />
+    <bpmn:task id="Activity_06d1flp" name="Verify if doctor has this patient">
+      <bpmn:incoming>Flow_1axa8bs</bpmn:incoming>
+      <bpmn:outgoing>Flow_1jm4mt6</bpmn:outgoing>
+      <bpmn:property id="Property_1t9dmro" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="DataInputAssociation_0ofo1cj">
+        <bpmn:sourceRef>DataObjectReference_000o90b</bpmn:sourceRef>
+        <bpmn:targetRef>Property_1t9dmro</bpmn:targetRef>
       </bpmn:dataInputAssociation>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_08hohid" />
-    </bpmn:endEvent>
-    <bpmn:dataObjectReference id="DataObjectReference_0j87eic" name="Patient Details" dataObjectRef="DataObject_0qoj89v" />
-    <bpmn:dataObject id="DataObject_0qoj89v" />
+    </bpmn:task>
+    <bpmn:startEvent id="StartEvent_1j1m1r8" name="Want to see patient">
+      <bpmn:outgoing>Flow_1axa8bs</bpmn:outgoing>
+      <bpmn:dataOutputAssociation id="DataOutputAssociation_0zqrv0s">
+        <bpmn:targetRef>DataObjectReference_000o90b</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0flzai4" />
+    </bpmn:startEvent>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0eh9hit">
@@ -120,7 +123,7 @@
       <bpmndi:BPMNShape id="DataObjectReference_0j87eic_di" bpmnElement="DataObjectReference_0j87eic">
         <dc:Bounds x="922" y="305" width="36" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="904" y="362" width="72" height="14" />
+          <dc:Bounds x="913" y="362" width="55" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1jm4mt6_di" bpmnElement="Flow_1jm4mt6">
@@ -146,25 +149,17 @@
           <dc:Bounds x="588" y="306" width="15" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="DataInputAssociation_0ofo1cj_di" bpmnElement="DataInputAssociation_0ofo1cj">
-        <di:waypoint x="328" y="322" />
-        <di:waypoint x="380" y="270" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ti3haa_di" bpmnElement="Flow_0ti3haa">
-        <di:waypoint x="224" y="148" />
-        <di:waypoint x="224" y="242" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1chig3y_di" bpmnElement="Flow_1chig3y">
-        <di:waypoint x="1010" y="242" />
-        <di:waypoint x="1010" y="148" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ch7gbc_di" bpmnElement="Flow_0ch7gbc">
-        <di:waypoint x="710" y="352" />
-        <di:waypoint x="710" y="148" />
+      <bpmndi:BPMNEdge id="Flow_1axa8bs_di" bpmnElement="Flow_1axa8bs">
+        <di:waypoint x="242" y="260" />
+        <di:waypoint x="380" y="260" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="DataOutputAssociation_0zqrv0s_di" bpmnElement="DataOutputAssociation_0zqrv0s">
         <di:waypoint x="237" y="272" />
         <di:waypoint x="292" y="323" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="DataInputAssociation_0ofo1cj_di" bpmnElement="DataInputAssociation_0ofo1cj">
+        <di:waypoint x="328" y="322" />
+        <di:waypoint x="380" y="270" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="DataInputAssociation_1cy7iy2_di" bpmnElement="DataInputAssociation_1cy7iy2">
         <di:waypoint x="840" y="345" />
@@ -177,6 +172,18 @@
       <bpmndi:BPMNEdge id="DataInputAssociation_1xwwapn_di" bpmnElement="DataInputAssociation_1xwwapn">
         <di:waypoint x="958" y="312" />
         <di:waypoint x="997" y="273" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ti3haa_di" bpmnElement="Flow_0ti3haa">
+        <di:waypoint x="224" y="148" />
+        <di:waypoint x="224" y="242" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1chig3y_di" bpmnElement="Flow_1chig3y">
+        <di:waypoint x="1010" y="242" />
+        <di:waypoint x="1010" y="148" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ch7gbc_di" bpmnElement="Flow_0ch7gbc">
+        <di:waypoint x="710" y="352" />
+        <di:waypoint x="710" y="148" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
