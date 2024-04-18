@@ -22,9 +22,12 @@ export class ScheduleAppointmentComponent {
   }
 
   submitScheduleForm(): void {
-    this.appointment.hour += ':00.000';
-    this.appointment.duration += ':00.000';
-    console.log(this.appointment.duration)
+    const date = new Date(this.appointment.date);
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based, so add 1
+    const day = date.getDate().toString().padStart(2, '0');
+    this.appointment.date = `${year}-${month}-${day}`;
+    console.log(this.appointment.date)
     this.appointmentService.createAppointment(this.appointment).subscribe(
       () => {
         // Form submitted successfully
