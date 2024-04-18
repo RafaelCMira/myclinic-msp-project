@@ -1,5 +1,5 @@
 export class Appointment {
-  patientId!: number;
+  patientId!: string;
   doctorId!: number;
   clinicId!: number;
   date!: string; // Assuming you're using a string format for date, adjust as needed

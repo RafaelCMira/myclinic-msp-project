@@ -32,6 +32,8 @@ export class LoginComponent {
   submitForm(): void {
     let loginObservable;
     let type = this.selectedRole;
+    console.log(type)
+
     if (type === 'patient') {
       loginObservable = this.patientService.loginPatient(this.user);
     } else if (type === 'doctor') {
@@ -39,27 +41,33 @@ export class LoginComponent {
     }
 
     if (loginObservable) {
-
       loginObservable.subscribe(
-        (userId: number) => { // Receive the user ID upon successful login
-          // Form submitted successfully
-          console.log(`${type} logged in successfully`);
-          // Reset the form
-          this.user = new User();
-          // Set the logged-in status along with the user ID
-          console.log(userId)
-          this.roleService.setLoggedInStatus(true, userId);
-          this.router.navigate(['/panel']);
+        (response: any) => {
+          // Check if the response contains the user ID attribute
+          if (response && response.result && response.result.id) {
+            console.log(`${type} logged in successfully`);
+            this.user = new User();
+            // Access the user ID from the response object
+            const userId = response.result.id;
+            console.log(userId);
+            this.roleService.setLoggedInStatus(true, userId);
+            // Save the user ID in local storage
+            localStorage.setItem('userId', userId);
+            this.router.navigate(['/panel']);
+          } else {
+            console.error(`Error logging in ${type}: Response does not contain user ID`);
+            // Handle error
+          }
         },
         (error) => {
-          // Handle error
           console.error(`Error logging in ${type}:`, error);
-          this.messages.push({ severity: 'error', summary: 'Error', detail: `Error logging in ${type}: ${error.message}` });
-          this.messageService.add({ severity: 'error', summary: 'Error', detail: `Error logging in ${type}: ${error.message}` });
+          // Handle error
         }
       );
     }
   }
+
+
 
 }
 

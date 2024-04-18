@@ -7,7 +7,7 @@ import {Observable, Subject} from 'rxjs';
 export class RoleService {
   private selectedRole: string;
   private loggedIn: boolean;
-  private loggedInUserId!: number; // Store the logged-in user's ID
+  private loggedInUserId!: string; // Store the logged-in user's ID
 
   // Subject to notify subscribers when the selected role changes
   selectedRoleChanged: Subject<string> = new Subject<string>();
@@ -29,11 +29,8 @@ export class RoleService {
     return this.selectedRole;
   }
 
-  getUserId(email: string, password: string): Observable<number> {
-    // Make an HTTP request to your backend to retrieve the user ID
-    return this.http.post<number>(`${this.apiUrl}/user-id`, { email, password });
-  }
-  setLoggedInStatus(status: boolean, userId: number): void {
+
+  setLoggedInStatus(status: boolean, userId: string): void {
     this.loggedIn = status;
     this.loggedInUserId = userId; // Store the logged-in user's ID
     // Notify subscribers about the change in login status
@@ -44,7 +41,7 @@ export class RoleService {
     return this.loggedIn;
   }
 
-  getLoggedInUserId(): number {
+  getLoggedInUserId(): string {
     return this.loggedInUserId; // Return the logged-in user's ID
   }
 }

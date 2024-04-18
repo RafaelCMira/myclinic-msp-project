@@ -21,4 +21,9 @@
     <input type="number" [(ngModel)]="appointment.doctorId" name="doctorId" class="input-field" required>
   </div>
   <button type="button" pButton (click)="submitScheduleForm()" label="Register Appointment"></button>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
 </div>
