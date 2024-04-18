@@ -1,14 +1,24 @@
 <div class="form">
-    <h2>Schedule Appointment</h2>
-    <!--<div class="field">
-      <label>Type of appointment</label>
-      <input type="text" pInputText [(ngModel)]="appointment.name" name="name" required>
-    </div>-->
-    <div class="field">
-      <label>Appointment Date</label>
-      <p-calendar [(ngModel)]="appointment.date" name="date" required></p-calendar>
-    </div>
-    
-  
-    <button type="button" pButton (click)="submitScheduleForm()" label="Register Appointment"></button>
+  <h2>Schedule Appointment</h2>
+  <div class="field">
+    <label class="label">Appointment Date</label>
+    <p-calendar [(ngModel)]="appointment.date" name="date" class="input-field" required></p-calendar>
+  </div>
+  <div class="field">
+    <label class="label">Appointment Hour</label>
+    <input type="time" [(ngModel)]="appointment.hour" name="hour" class="input-field" required>
+  </div>
+  <div class="field">
+      <label>Duration (hours:minutes)</label>
+      <input type="time" [(ngModel)]="appointment.duration" name="duration" class="input-field" required>
+  </div>
+  <div class="field">
+    <label class="label">Clinic ID</label>
+    <input type="number" [(ngModel)]="appointment.clinicId" name="clinicId" class="input-field" required>
+  </div>
+  <div class="field">
+    <label class="label">Doctor ID</label>
+    <input type="number" [(ngModel)]="appointment.doctorId" name="doctorId" class="input-field" required>
+  </div>
+  <button type="button" pButton (click)="submitScheduleForm()" label="Register Appointment"></button>
 </div>
