@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2024-04-18T13:50:39.333Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" version="24.2.5" etag="v8Ic0B8JPK0miHbWK4mZ" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-18T13:50:54.800Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="WZ0AfC3SlmsHihGzxydV" version="24.2.5" type="github">
   <diagram name="Page-1" id="8n5bJtVqCGtxwi0kSFsB">
-    <mxGraphModel>
+    <mxGraphModel dx="5259" dy="316" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="LGJ-wTnE4W0dE83CbK06-1" value="&lt;b&gt;Schedule exam&lt;/b&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#dae8fc;strokeColor=#000000;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-3756" y="598" width="126" height="29" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
