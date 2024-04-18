@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2024-04-18T13:54:11.263Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" version="24.2.5" etag="aA9LYQDGPaxZN3wV7MEd" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-18T13:54:24.016Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="9mLTKo3SDWZhXtKG8GLM" version="24.2.5" type="github">
   <diagram name="Page-1" id="2KkPdRFUcKXrVxvmrppy">
-    <mxGraphModel>
+    <mxGraphModel dx="3259" dy="316" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="ZiL3H2gjiar3ugQNmTWt-1" value="&lt;b&gt;Send appointment reminders&lt;/b&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#dae8fc;strokeColor=#000000;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1802" y="481" width="207" height="29" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
