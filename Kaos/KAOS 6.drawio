@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2024-04-18T13:52:35.177Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" version="24.2.5" etag="STCM_a_Q1eDao5hP0RCp" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-18T13:52:46.861Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="z6tM-tp4M9e2E7vJt_SE" version="24.2.5" type="github">
   <diagram name="Page-1" id="9FohH9dn8nELttwxLQUG">
-    <mxGraphModel>
+    <mxGraphModel dx="4059" dy="316" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="NV-K2T3rAOAY85SuftBQ-1" value="&lt;b&gt;Schedule online appointment&lt;/b&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#dae8fc;strokeColor=#000000;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-2669" y="573" width="207" height="29" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
