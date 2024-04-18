@@ -1,0 +1,14 @@
+<div class="form">
+    <h2>Schedule Appointment</h2>
+    <!--<div class="field">
+      <label>Type of appointment</label>
+      <input type="text" pInputText [(ngModel)]="appointment.name" name="name" required>
+    </div>-->
+    <div class="field">
+      <label>Appointment Date</label>
+      <p-calendar [(ngModel)]="appointment.date" name="date" required></p-calendar>
+    </div>
+    
+  
+    <button type="button" pButton (click)="submitScheduleForm()" label="Register Appointment"></button>
+</div>
