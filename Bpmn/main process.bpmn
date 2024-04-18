@@ -92,14 +92,6 @@
     <bpmn:endEvent id="Event_0bsmosk">
       <bpmn:incoming>Flow_0l4ys57</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:subProcess id="Activity_15t52wj" name="Notify Patient and Doctor">
-      <bpmn:incoming>Flow_0i3u7eq</bpmn:incoming>
-      <bpmn:startEvent id="Event_193s4g4" />
-    </bpmn:subProcess>
-    <bpmn:subProcess id="Activity_1d30v52" name="Collect analytics from equipments">
-      <bpmn:incoming>Flow_0pkzzjc</bpmn:incoming>
-      <bpmn:startEvent id="Event_0py28t7" />
-    </bpmn:subProcess>
     <bpmn:startEvent id="Event_0vlz5hs" name="1 day before appointment">
       <bpmn:outgoing>Flow_0i3u7eq</bpmn:outgoing>
       <bpmn:timerEventDefinition id="TimerEventDefinition_01okhxg" />
@@ -213,6 +205,24 @@
       <bpmn:incoming>Flow_01tf3um</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_01tf3um" sourceRef="Activity_0achhpt" targetRef="Event_1tirbhc" />
+    <bpmn:subProcess id="Activity_1d30v52" name="Collect analytics from equipments">
+      <bpmn:incoming>Flow_0pkzzjc</bpmn:incoming>
+      <bpmn:outgoing>Flow_0pgt9fh</bpmn:outgoing>
+      <bpmn:startEvent id="Event_0py28t7" />
+    </bpmn:subProcess>
+    <bpmn:endEvent id="Event_04h952b">
+      <bpmn:incoming>Flow_0pgt9fh</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0pgt9fh" sourceRef="Activity_1d30v52" targetRef="Event_04h952b" />
+    <bpmn:subProcess id="Activity_15t52wj" name="Notify Patient and Doctor">
+      <bpmn:incoming>Flow_0i3u7eq</bpmn:incoming>
+      <bpmn:outgoing>Flow_1yu2obw</bpmn:outgoing>
+      <bpmn:startEvent id="Event_193s4g4" />
+    </bpmn:subProcess>
+    <bpmn:endEvent id="Event_0lfeyw2">
+      <bpmn:incoming>Flow_1yu2obw</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1yu2obw" sourceRef="Activity_15t52wj" targetRef="Event_0lfeyw2" />
   </bpmn:process>
   <bpmn:process id="Process_0csatct" />
   <bpmn:process id="Process_01nq8ai">
@@ -221,7 +231,7 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1xrps5v">
       <bpmndi:BPMNShape id="Participant_1q0sqrm_di" bpmnElement="Participant_1q0sqrm" isHorizontal="true">
-        <dc:Bounds x="160" y="192" width="1770" height="1458" />
+        <dc:Bounds x="160" y="192" width="1490" height="1458" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0hs915c_di" bpmnElement="Gateway_0hs915c">
@@ -230,17 +240,36 @@
       <bpmndi:BPMNShape id="BPMNShape_13cmu5z" bpmnElement="Gateway_0bylcdu">
         <dc:Bounds x="595" y="1345" width="50" height="50" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_06s7wfu" bpmnElement="Activity_12y2fux" isExpanded="false" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="570" y="1540" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_12r5pu4_di" bpmnElement="Event_12r5pu4" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
         <dc:Bounds x="702" y="1562" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0glxb7s" bpmnElement="Activity_19bqznh" isExpanded="false" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="730" y="1440" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1v9kfmj_di" bpmnElement="Event_1v9kfmj" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
         <dc:Bounds x="872" y="1462" width="36" height="36" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1of87v2" bpmnElement="Activity_0x1ca3f" isExpanded="false" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="570" y="1180" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1n4frkt_di" bpmnElement="Event_1n4frkt" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
         <dc:Bounds x="722" y="1202" width="36" height="36" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ebm500_di" bpmnElement="Activity_0zjn1lo" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="985" y="1390" width="100" height="80" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1qfc24j_di" bpmnElement="Event_1qfc24j" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
         <dc:Bounds x="1152" y="1412" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0i80vrl" bpmnElement="Activity_0gkex8m" isExpanded="false" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
+        <dc:Bounds x="810" y="1180" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_1i4i87m" bpmnElement="Event_0bsmosk" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
         <dc:Bounds x="962" y="1202" width="36" height="36" />
@@ -269,57 +298,6 @@
           <dc:Bounds x="225" y="1333" width="69" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_014g34v_di" bpmnElement="Event_014g34v" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="1102" y="512" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_06bmuy8_di" bpmnElement="Event_06bmuy8" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="1182" y="642" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0e8ezsb_di" bpmnElement="Event_0e8ezsb" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="1272" y="752" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0ynlc44_di" bpmnElement="Event_0ynlc44" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="1382" y="862" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0udcokg_di" bpmnElement="Event_0udcokg" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="1592" y="1102" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1jdvoww_di" bpmnElement="Event_1jdvoww" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="932" y="412" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_00zpdqy_di" bpmnElement="Event_00zpdqy" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="1462" y="982" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0c1f5ij" bpmnElement="Event_1tirbhc" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="842" y="272" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_06s7wfu" bpmnElement="Activity_12y2fux" isExpanded="false" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
-        <dc:Bounds x="570" y="1540" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0glxb7s" bpmnElement="Activity_19bqznh" isExpanded="false" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
-        <dc:Bounds x="730" y="1440" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_1of87v2" bpmnElement="Activity_0x1ca3f" isExpanded="false" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
-        <dc:Bounds x="570" y="1180" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0ebm500_di" bpmnElement="Activity_0zjn1lo" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
-        <dc:Bounds x="985" y="1390" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0i80vrl" bpmnElement="Activity_0gkex8m" isExpanded="false" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
-        <dc:Bounds x="810" y="1180" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0wdoghe" bpmnElement="Activity_15t52wj" isExpanded="false" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
-        <dc:Bounds x="460" y="850" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_1jfre3j" bpmnElement="Activity_1d30v52" isExpanded="false" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
-        <dc:Bounds x="460" y="1040" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_02k7fzd" bpmnElement="Activity_1c133pe" isExpanded="false" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
         <dc:Bounds x="1030" y="620" width="100" height="80" />
         <bpmndi:BPMNLabel />
@@ -344,13 +322,51 @@
         <dc:Bounds x="1450" y="1080" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_014g34v_di" bpmnElement="Event_014g34v" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="1102" y="512" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_06bmuy8_di" bpmnElement="Event_06bmuy8" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="1182" y="642" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0e8ezsb_di" bpmnElement="Event_0e8ezsb" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="1272" y="752" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0ynlc44_di" bpmnElement="Event_0ynlc44" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="1382" y="862" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0udcokg_di" bpmnElement="Event_0udcokg" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="1592" y="1102" width="36" height="36" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_02ajkkt_di" bpmnElement="Activity_02ajkkt" isExpanded="false" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
         <dc:Bounds x="790" y="390" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1jdvoww_di" bpmnElement="Event_1jdvoww" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="932" y="412" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_00zpdqy_di" bpmnElement="Event_00zpdqy" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="1462" y="982" width="36" height="36" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_056z3g0" bpmnElement="Activity_0achhpt" isExpanded="false" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
         <dc:Bounds x="670" y="250" width="100" height="80" />
         <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0c1f5ij" bpmnElement="Event_1tirbhc" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="842" y="272" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1jfre3j" bpmnElement="Activity_1d30v52" isExpanded="false" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
+        <dc:Bounds x="350" y="1040" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_04h952b_di" bpmnElement="Event_04h952b" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="522" y="1062" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0wdoghe" bpmnElement="Activity_15t52wj" isExpanded="false" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="350" y="850" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0lfeyw2_di" bpmnElement="Event_0lfeyw2" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="522" y="872" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1bc5s2l_di" bpmnElement="Flow_1bc5s2l">
         <di:waypoint x="278" y="660" />
@@ -454,11 +470,11 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_0cl3efg" bpmnElement="Flow_0i3u7eq">
         <di:waypoint x="278" y="890" />
-        <di:waypoint x="460" y="890" />
+        <di:waypoint x="350" y="890" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0pkzzjc_di" bpmnElement="Flow_0pkzzjc">
         <di:waypoint x="278" y="1080" />
-        <di:waypoint x="460" y="1080" />
+        <di:waypoint x="350" y="1080" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0e5rt5u_di" bpmnElement="Flow_0e5rt5u">
         <di:waypoint x="1130" y="660" />
@@ -492,12 +508,20 @@
         <di:waypoint x="770" y="290" />
         <di:waypoint x="842" y="290" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0pgt9fh_di" bpmnElement="Flow_0pgt9fh">
+        <di:waypoint x="450" y="1080" />
+        <di:waypoint x="522" y="1080" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1yu2obw_di" bpmnElement="Flow_1yu2obw">
+        <di:waypoint x="450" y="890" />
+        <di:waypoint x="522" y="890" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Participant_18eb3es_di" bpmnElement="Participant_18eb3es" isHorizontal="true">
-        <dc:Bounds x="160" y="80" width="1770" height="80" />
+        <dc:Bounds x="160" y="100" width="1490" height="60" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_1ml1wqu" bpmnElement="Participant_01vsvtp" isHorizontal="true">
-        <dc:Bounds x="160" y="1690" width="1770" height="80" />
+        <dc:Bounds x="160" y="1690" width="1490" height="60" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0lywsnx_di" bpmnElement="Flow_0lywsnx">
