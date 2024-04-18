@@ -16,8 +16,7 @@ class UserMapper implements RowMapper<User> {
                 user.getBirthDate(),
                 user.getEmail(),
                 user.getPassword(),
-                user.getPhone(),
-                user.getRole()
+                user.getPhone()
         );
     }
 
@@ -28,8 +27,7 @@ class UserMapper implements RowMapper<User> {
                 userDTO.birthDate(),
                 userDTO.email(),
                 userDTO.password(),
-                userDTO.phone(),
-                userDTO.role()
+                userDTO.phone()
         );
     }
 
@@ -41,8 +39,7 @@ class UserMapper implements RowMapper<User> {
                 Utility.getLocalDateOrNull(rs, "birth_date"),
                 Utility.getStringOrNull(rs, "email"),
                 Utility.getStringOrNull(rs, "password"),
-                Utility.getStringOrNull(rs, "phone"),
-                Utility.getStringOrNull(rs, "role")
+                Utility.getStringOrNull(rs, "phone")
         );
     }
 }
