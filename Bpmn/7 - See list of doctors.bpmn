@@ -123,8 +123,8 @@
         <di:waypoint x="1022" y="400" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_0sfjnf7_di" bpmnElement="Association_0sfjnf7">
-        <di:waypoint x="611" y="385" />
-        <di:waypoint x="464" y="135" />
+        <di:waypoint x="610" y="385" />
+        <di:waypoint x="448" y="137" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1w8xoy7_di" bpmnElement="Flow_1w8xoy7">
         <di:waypoint x="500" y="360" />
@@ -147,7 +147,7 @@
         <di:waypoint x="350" y="440" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="TextAnnotation_103a1wp_di" bpmnElement="TextAnnotation_103a1wp">
-        <dc:Bounds x="390" y="80" width="99.99305040770942" height="54.85544848035582" />
+        <dc:Bounds x="390" y="110" width="180" height="27" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
