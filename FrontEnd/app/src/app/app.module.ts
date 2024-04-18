@@ -19,6 +19,8 @@ import { WelcomePanelComponent } from './welcome-panel/welcome-panel.component';
 import {PanelModule} from "primeng/panel";
 import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
+import { ScheduleAppointmentComponent} from "./schedule-appointment/schedule-appointment.component";
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MessageService } from 'primeng/api';
     FooterComponent,
     RegisterComponent,
     LoginComponent,
-    WelcomePanelComponent
+    WelcomePanelComponent,
+    ScheduleAppointmentComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,8 @@ import { MessageService } from 'primeng/api';
     PanelModule,
     MenubarModule,
     MessagesModule,
+    CalendarModule,
+
 
 
   ],

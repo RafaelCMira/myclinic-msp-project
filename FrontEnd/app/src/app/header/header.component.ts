@@ -19,7 +19,6 @@ export class HeaderComponent {
         { label: 'Home', routerLink: '/panel' },
         { label: 'About', routerLink: '/panel' },
         { label: 'Appointments', routerLink: '/appointment' },
-        { label: 'Prescriptions', routerLink: '/prescription' },
     ];
 
     doctorMenuItems: any[] = [
