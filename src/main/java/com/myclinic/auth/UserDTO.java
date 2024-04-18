@@ -1,10 +1,12 @@
 package com.myclinic.auth;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public record UserDTO(
         Integer id,
 
@@ -21,22 +23,7 @@ public record UserDTO(
         String password,
 
         @NotBlank(message = "phone is mandatory")
-        String phone,
-
-        @NotBlank(message = "role is mandatory")
-        String role
+        String phone
 ) {
-
-    public static UserDTO withId(UserDTO user, Integer newId) {
-        return new UserDTO(
-                newId,
-                user.name(),
-                user.birthDate(),
-                user.email(),
-                user.password(),
-                user.phone(),
-                user.role()
-        );
-    }
 
 }

@@ -19,12 +19,12 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    ResponseEntity<ApiResponse<String>> login(@Valid @RequestBody LoginDTO loginDTO) {
-        authService.login(loginDTO.email(), loginDTO.password());
+    ResponseEntity<ApiResponse<UserDTO>> login(@Valid @RequestBody LoginDTO loginDTO) {
+        var user = authService.login(loginDTO.email(), loginDTO.password());
 
-        ApiResponse<String> response = ApiResponse.<String>builder()
+        ApiResponse<UserDTO> response = ApiResponse.<UserDTO>builder()
                 .status(ApiResponse.Status.SUCCESS.name())
-                .result("Success login!")
+                .result(user)
                 .build();
 
         return ResponseEntity.ok().body(response);
