@@ -11,6 +11,7 @@ import {
 import { WelcomePageComponent } from "./welcome-page/welcome-page.component";
 import { RegisterComponent } from "./register/register.component";
 import { ScheduleAppointmentComponent } from "./schedule-appointment/schedule-appointment.component";
+import { ScheduleExamComponent } from "./schedule-exam/schedule-exam.component";
 import { LoginComponent } from "./login/login/login.component";
 import { WelcomePanelComponent } from "./welcome-panel/welcome-panel.component";
 import { RoleService } from "./services/role/role.service";
@@ -38,17 +39,15 @@ export class AuthGuard implements CanActivate {
 
 const routes: Routes = [
   // Default route for logged-in users
-  {
-    path: '',
-    canActivate: [AuthGuard],
-    component: WelcomePanelComponent
-  },
+  { path: '', canActivate: [AuthGuard], component: WelcomePanelComponent },
+  { path: 'appointment', canActivate: [AuthGuard], component: ScheduleAppointmentComponent },
+  { path: 'exam', canActivate: [AuthGuard], component: ScheduleExamComponent },
+
   // Default route for non-logged-in users
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'panel', component: WelcomePanelComponent },
-  { path: 'appointment', component: ScheduleAppointmentComponent },
   { path: '**', redirectTo: 'welcome' }
 ];
 

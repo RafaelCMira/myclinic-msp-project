@@ -20,7 +20,7 @@ import {PanelModule} from "primeng/panel";
 import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
 import { ScheduleAppointmentComponent} from "./schedule-appointment/schedule-appointment.component";
-
+import { ScheduleExamComponent} from "./schedule-exam/schedule-exam.component";
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { ScheduleAppointmentComponent} from "./schedule-appointment/schedule-app
     LoginComponent,
     WelcomePanelComponent,
     ScheduleAppointmentComponent,
-
+    ScheduleExamComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Appointment } from '../services/appointment/appointment.model';
 import { RoleService } from '../services/role/role.service';
 import { AppointmentService} from "../services/appointment/appointment.service";
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-schedule-appointment',
@@ -15,7 +14,6 @@ export class ScheduleAppointmentComponent {
   errorMessage: string = '';
 
   constructor(private appointmentService: AppointmentService,
-              private router: Router,
               private roleService: RoleService) {}
 
   ngOnInit(): void {

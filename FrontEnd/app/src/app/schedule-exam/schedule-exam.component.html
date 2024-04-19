@@ -1,0 +1,25 @@
+<div class="form">
+    <h2>Schedule Exam</h2>
+    <div class="field">
+      <label class="label">Exam Date</label>
+      <p-calendar [(ngModel)]="exam.date" name="date" class="input-field" required></p-calendar>
+    </div>
+    <div class="field">
+      <label class="label">Exam Hour</label>
+      <input type="time" [(ngModel)]="exam.hour" name="hour" class="input-field" required>
+    </div>
+    <div class="field">
+      <label class="label">Equipment ID</label>
+      <input type="number" [(ngModel)]="exam.equipmentId" name="clinicId" class="input-field" required>
+    </div>
+    <div class="field">
+      <label class="label">Clinic ID</label>
+      <input type="number" [(ngModel)]="exam.clinicId" name="clinicId" class="input-field" required>
+    </div>
+    <button type="button" pButton (click)="submitScheduleForm()" label="Register Exam"></button>
+  
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  
+  </div>

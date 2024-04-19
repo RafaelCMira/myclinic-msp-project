@@ -1,0 +1,17 @@
+.form {
+    width: 300px;
+    margin: 0 auto; /* Center the form horizontally */
+  }
+  
+  .field {
+    margin-bottom: 10px; /* Add spacing between fields */
+  }
+  
+  .label {
+    display: block; /* Ensure labels are displayed on their own line */
+  }
+  
+  .input-field {
+    width: 100%; /* Make input fields take up full width */
+  }
+  
