@@ -12,10 +12,10 @@ import { Message, MessageService } from 'primeng/api';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
   user: User = new User();
   selectedRole: string;
   messages: Message[] = [];
+  errorMessage: string = '';
 
   constructor(private patientService: PatientService,
               private doctorService: DoctorService,
@@ -61,7 +61,7 @@ export class LoginComponent {
         },
         (error) => {
           console.error(`Error logging in ${type}:`, error);
-          // Handle error
+          this.errorMessage = 'Error logging in. Please try again later.';
         }
       );
     }

@@ -19,12 +19,14 @@ export class HeaderComponent {
         { label: 'Home', routerLink: '/panel' },
         { label: 'About', routerLink: '/panel' },
         { label: 'Appointments', routerLink: '/appointment' },
+        { label: 'Exams', routerLink: '/exam' },
     ];
 
     doctorMenuItems: any[] = [
         { label: 'Home', routerLink: '/panel' },
         { label: 'About', routerLink: '/panel' },
         { label: 'Appointments', routerLink: '/appointment' },
+        { label: 'Exams', routerLink: '/exam' },
     ];
 
     constructor(private roleService: RoleService) {

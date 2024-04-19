@@ -1,5 +1,8 @@
 <div class="form">
   <h2>Register</h2>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
   <div class="field">
     <label>Name</label>
     <input type="text" pInputText [(ngModel)]="user.name" name="name" required>
@@ -23,6 +26,6 @@
   <button *ngIf="selectedRole === 'patient'"
           type="button" pButton (click)="submitPatientForm()" label="Register patient"></button>
 
-  <button *ngIf="selectedRole === 'doctor'"
+  <button class="submit-form" *ngIf="selectedRole === 'doctor'"
           type="button" pButton (click)="submitDoctorForm()" label="Register doctor"></button>
 </div>

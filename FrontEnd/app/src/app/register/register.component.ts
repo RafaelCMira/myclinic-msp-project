@@ -13,6 +13,8 @@ import {Router} from "@angular/router";
 export class RegisterComponent {
   user: User = new User();
   selectedRole: string = 'patient';
+  errorMessage: string = '';
+  private phoneRegex: RegExp = /^\d{9}$/;
 
   constructor(private patientService: PatientService,
               private doctorService: DoctorService,
@@ -24,6 +26,11 @@ export class RegisterComponent {
   }
 
   submitPatientForm(): void {
+    if (!this.phoneRegex.test(this.user.phone)) {
+      this.errorMessage = 'Phone number should be 9 digits.';
+      return;
+    }
+
     this.patientService.createPatient(this.user).subscribe(
       () => {
         // Form submitted successfully
@@ -33,13 +40,19 @@ export class RegisterComponent {
         this.router.navigate(['/login'])
       },
       (error) => {
-        // Handle error
+        this.errorMessage = 'Error creating Patient. Please try again later.';
         console.error('Error creating Patient:', error);
       }
     );
   }
 
   submitDoctorForm(): void {
+
+    if (!this.phoneRegex.test(this.user.phone)) {
+      this.errorMessage = 'Phone number should be 9 digits.';
+      return;
+    }
+
     this.doctorService.createDoctor(this.user).subscribe(
       () => {
         // Form submitted successfully
@@ -49,7 +62,7 @@ export class RegisterComponent {
         this.router.navigate(['/login'])
       },
       (error) => {
-        // Handle error
+        this.errorMessage = 'Error creating Patient. Please try again later.';
         console.error('Error creating doctor:', error);
       }
     );

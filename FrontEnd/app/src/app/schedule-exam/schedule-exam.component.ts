@@ -22,6 +22,24 @@ export class ScheduleExamComponent {
 
   submitScheduleForm(): void {
     const date = new Date(this.exam.date);
+
+    if (isNaN(date.getTime()) || date < new Date()) {
+      this.errorMessage = 'Exam date must be valid and at least from the current day.';
+      return;
+    }
+  
+    const maxDate = new Date();
+    maxDate.setMonth(maxDate.getMonth() + 2);
+    if (date > maxDate) {
+      this.errorMessage = 'Exam date must be within 2 months from today.';
+      return;
+    }
+  
+    if (date.getMinutes() < 15) {
+      this.errorMessage = 'Exam must be scheduled at least 15 minutes from now.';
+      return;
+    }
+
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based, so add 1
     const day = date.getDate().toString().padStart(2, '0');
@@ -39,7 +57,7 @@ export class ScheduleExamComponent {
           this.exam = new Exam();
         },
         (error) => {
-          // Handle error
+          this.errorMessage = 'Error creating appointment. Please try again later.';
           console.error('Error creating exam:', error);
         }
       );

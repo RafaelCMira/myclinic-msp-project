@@ -1,3 +1,21 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 
+.field {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    border: 2px solid red;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button.submit-form {
+    margin-top: 10px;
+}

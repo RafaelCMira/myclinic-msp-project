@@ -1,5 +1,8 @@
 <div class="form">
   <h2>Schedule Appointment</h2>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
   <div class="field">
     <label class="label">Appointment Date</label>
     <p-calendar [(ngModel)]="appointment.date" name="date" class="input-field" required></p-calendar>
@@ -20,10 +23,5 @@
     <label class="label">Doctor ID</label>
     <input type="number" [(ngModel)]="appointment.doctorId" name="doctorId" class="input-field" required>
   </div>
-  <button type="button" pButton (click)="submitScheduleForm()" label="Register Appointment"></button>
-
-  <div *ngIf="errorMessage" class="error-message">
-    {{ errorMessage }}
-  </div>
-
+  <button class="submit-form" type="button" pButton (click)="submitScheduleForm()" label="Register Appointment"></button>
 </div>
