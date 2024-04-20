@@ -23,6 +23,22 @@
     <label>Phone</label>
     <input type="text" pInputText [(ngModel)]="user.phone" name="phone" required>
   </div>
+  <div *ngIf="selectedRole === 'patient'" class="field">
+    <label>Upload Id Card</label>
+    <p-fileUpload  name="file" url="/upload" (onUpload)="onUpload($event)"></p-fileUpload>
+  </div>
+  <div *ngIf="selectedRole === 'doctor'" class="field">
+    <label>Upload Id Card</label>
+    <p-fileUpload  name="file" url="/upload" (onUpload)="onUpload($event)"></p-fileUpload>
+  </div>
+  <div *ngIf="selectedRole === 'doctor'" class="field">
+    <label>Upload Medical Graduation</label>
+    <p-fileUpload  name="file" url="/upload" (onUpload)="onUpload($event)"></p-fileUpload>
+  </div>
+  <div *ngIf="selectedRole === 'doctor'" class="field">
+    <label>Upload Criminal Record</label>
+    <p-fileUpload  name="file" url="/upload" (onUpload)="onUpload($event)"></p-fileUpload>
+  </div>
   <button *ngIf="selectedRole === 'patient'"
           type="button" pButton (click)="submitPatientForm()" label="Register patient"></button>
 

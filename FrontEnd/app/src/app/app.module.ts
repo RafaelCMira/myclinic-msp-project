@@ -22,6 +22,7 @@ import { MessageService } from 'primeng/api';
 import { ScheduleAppointmentComponent} from "./schedule-appointment/schedule-appointment.component";
 import { ScheduleExamComponent} from "./schedule-exam/schedule-exam.component";
 import { DropdownModule } from 'primeng/dropdown';
+import { FileUploadModule } from 'primeng/fileupload';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { DropdownModule } from 'primeng/dropdown';
     MessagesModule,
     CalendarModule,
     DropdownModule,
-
+    FileUploadModule,
 
   ],
   providers: [MessageService],

@@ -67,4 +67,9 @@ export class RegisterComponent {
       }
     );
   }
+  
+  onUpload(event: any) {
+    // Handle file upload event here
+    console.log(event.files);
+  }
 }
