@@ -14,6 +14,22 @@ export class ScheduleAppointmentComponent {
   selectedRole: string = 'patient';
   errorMessage: string = '';
 
+  clinics = [
+    { id: '1', label: 'West Clinic', value: 'wc' },
+    { id: '2', label: 'South Clinic', value: 'sc' }
+  ];
+
+  doctors = [
+    { id: '1', label: 'Ms. Hai Haag', value: 'd1' },
+    { id: '2', label: 'Gillian Padberg III', value: 'd2' },
+    { id: '3', label: 'Dottie Shields I', value: 'd3' },
+    { id: '4', label: 'Miguel Sporer', value: 'd4' },
+    { id: '5', label: 'Sherwood Ebert', value: 'd5' }
+  ];
+
+  doctorId: number | undefined;
+  clinicId: number | undefined;
+
   constructor(private appointmentService: AppointmentService,
               private roleService: RoleService,
               private router: Router) {}
@@ -22,7 +38,7 @@ export class ScheduleAppointmentComponent {
     this.selectedRole = this.roleService.getSelectedRole();
   }
 
-  submitScheduleForm(): void {
+  submitScheduleForm(duration: number): void {
     const date = new Date(this.appointment.date);
 
     if (isNaN(date.getTime()) || date < new Date()) {
@@ -47,7 +63,15 @@ export class ScheduleAppointmentComponent {
     const day = date.getDate().toString().padStart(2, '0');
     this.appointment.date = `${year}-${month}-${day}`;
 
+    const durationHours = Math.floor(duration / 60);
+    const durationMinutes = duration % 60;
+    const formattedDuration = `${durationHours.toString().padStart(2, '0')}:${durationMinutes.toString().padStart(2, '0')}:00`;
+    this.appointment.duration = formattedDuration;
+
     const userId = localStorage.getItem('userId');
+
+    console.log(this.appointment)
+
     if (userId) {
       this.appointment.patientId = userId;
       console.log(this.appointment.date)

@@ -14,6 +14,25 @@ export class ScheduleExamComponent {
   selectedRole: string = 'patient';
   errorMessage: string = '';
 
+  clinics = [
+    { id: '1', label: 'West Clinic', value: 'wc' },
+    { id: '2', label: 'South Clinic', value: 'sc' }
+  ];
+
+  equipments = [
+    { id: '1', label: 'Electrocardiogram', value: 'd1' },
+    { id: '2', label: 'X-ray machine', value: 'd2' },
+    { id: '3', label: 'Ultrasound machine', value: 'd3' },
+    { id: '4', label: 'MRI machine', value: 'd4' },
+    { id: '5', label: 'CT scanner', value: 'd5' },
+    { id: '6', label: 'Blood pressure monitor', value: 'd6' },
+    { id: '7', label: 'Stethoscope', value: 'd7' },
+    { id: '8', label: 'Thermometer', value: 'd8' }
+  ];
+
+  equipmentId: number | undefined;
+  clinicId: number | undefined;
+
   constructor(private examService: ExamService,
               private roleService: RoleService,
               private router: Router) {}

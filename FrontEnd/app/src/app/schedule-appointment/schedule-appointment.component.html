@@ -12,16 +12,16 @@
     <input type="time" [(ngModel)]="appointment.hour" name="hour" class="input-field" required>
   </div>
   <div class="field">
-      <label>Duration (hours:minutes)</label>
-      <input type="time" [(ngModel)]="appointment.duration" name="duration" class="input-field" required>
+      <label>Duration (minutes)</label>
+      <input type="number" #durationInput class="input-field" required>
   </div>
   <div class="field">
     <label class="label">Clinic ID</label>
-    <input type="number" [(ngModel)]="appointment.clinicId" name="clinicId" class="input-field" required>
+    <p-dropdown [options]="clinics" [(ngModel)]="clinicId" [showClear]="true" optionLabel="label" optionValue="id"placeholder="Select a Clinic"></p-dropdown>
   </div>
   <div class="field">
     <label class="label">Doctor ID</label>
-    <input type="number" [(ngModel)]="appointment.doctorId" name="doctorId" class="input-field" required>
+    <p-dropdown [options]="doctors" [(ngModel)]="doctorId" [showClear]="true" optionLabel="label" optionValue="id" placeholder="Select a Doctor"></p-dropdown>
   </div>
-  <button class="submit-form" type="button" pButton (click)="submitScheduleForm()" label="Register Appointment"></button>
+  <button class="submit-form" type="button" pButton (click)="submitScheduleForm(+durationInput.value)" label="Register Appointment"></button>
 </div>

@@ -13,11 +13,11 @@
     </div>
     <div class="field">
       <label class="label">Equipment ID</label>
-      <input type="number" [(ngModel)]="exam.equipmentId" name="clinicId" class="input-field" required>
+      <p-dropdown [options]="equipments" [(ngModel)]="equipmentId" [showClear]="true" optionLabel="label" optionValue="id"placeholder="Select a Equipment"></p-dropdown>
     </div>
     <div class="field">
       <label class="label">Clinic ID</label>
-      <input type="number" [(ngModel)]="exam.clinicId" name="clinicId" class="input-field" required>
+      <p-dropdown [options]="clinics" [(ngModel)]="clinicId" [showClear]="true" optionLabel="label" optionValue="id"placeholder="Select a Clinic"></p-dropdown>
     </div>
     <button class="submit-form" type="button" pButton (click)="submitScheduleForm()" label="Register Exam"></button>
   </div>

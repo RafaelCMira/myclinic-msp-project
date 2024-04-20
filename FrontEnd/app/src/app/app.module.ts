@@ -21,6 +21,7 @@ import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
 import { ScheduleAppointmentComponent} from "./schedule-appointment/schedule-appointment.component";
 import { ScheduleExamComponent} from "./schedule-exam/schedule-exam.component";
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { ScheduleExamComponent} from "./schedule-exam/schedule-exam.component";
     MenubarModule,
     MessagesModule,
     CalendarModule,
-
+    DropdownModule,
 
 
   ],
