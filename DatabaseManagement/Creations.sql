@@ -85,7 +85,7 @@ CREATE TABLE exams
     date         DATE              NOT NULL,
     hour         TIME              NOT NULL,
     description  TEXT              NOT NULL,
-    result       TEXT              NOT NULL,
+    result       VARCHAR(50) NOT NULL DEFAULT 'unrealized',
     clinic_id    SMALLINT UNSIGNED NOT NULL,
     equipment_id SMALLINT UNSIGNED NOT NULL,
     PRIMARY KEY (patient_id, date, hour)

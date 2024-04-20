@@ -21,8 +21,8 @@ class ExamRepository {
     //region Insert
     void insertExam(Exam exam) {
         String query = """
-                INSERT INTO exams (patient_id, clinic_id, equipment_id, date, hour, description, result)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO exams (patient_id, clinic_id, equipment_id, date, hour, description)
+                VALUES (?, ?, ?, ?, ?, ?)
                 """;
 
         db.update(
@@ -32,8 +32,7 @@ class ExamRepository {
                 exam.getEquipmentId(),
                 exam.getDate(),
                 exam.getHour(),
-                exam.getDescription(),
-                exam.getResult()
+                exam.getDescription()
         );
     }
     //endregion
