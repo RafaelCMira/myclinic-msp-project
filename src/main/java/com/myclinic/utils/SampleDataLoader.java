@@ -9,7 +9,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.CallableStatementCallback;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -19,7 +18,7 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component // Uncomment this line to enable the data loader
+//@Component // Uncomment this line to enable the data loader
 public class SampleDataLoader implements CommandLineRunner {
 
     private final JdbcTemplate jdbcTemplate;
