@@ -13,7 +13,7 @@
   </div>
   <div class="field">
       <label>Duration (minutes)</label>
-      <input type="number" #durationInput class="input-field" required>
+      <p-dropdown [options]="durations" [(ngModel)]="duration" [showClear]="true" optionLabel="label" optionValue="id"placeholder="Select a Duration"></p-dropdown>
   </div>
   <div class="field">
     <label class="label">Clinic ID</label>
@@ -23,5 +23,5 @@
     <label class="label">Doctor ID</label>
     <p-dropdown [options]="doctors" [(ngModel)]="doctorId" [showClear]="true" optionLabel="label" optionValue="id" placeholder="Select a Doctor"></p-dropdown>
   </div>
-  <button class="submit-form" type="button" pButton (click)="submitScheduleForm(+durationInput.value)" label="Register Appointment"></button>
+  <button class="submit-form" type="button" pButton (click)="submitScheduleForm()" label="Register Appointment"></button>
 </div>

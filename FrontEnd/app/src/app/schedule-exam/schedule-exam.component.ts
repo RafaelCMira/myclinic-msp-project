@@ -66,10 +66,24 @@ export class ScheduleExamComponent {
     const day = date.getDate().toString().padStart(2, '0');
     this.exam.date = `${year}-${month}-${day}`;
 
+    if (this.clinicId !== undefined) {
+      this.exam.clinicId = +this.clinicId;
+    } else {
+      this.errorMessage = 'Please select a clinic.';
+      return;
+    }
+
+    if (this.equipmentId !== undefined) {
+      this.exam.equipmentId = +this.equipmentId;
+    } else {
+      this.errorMessage = 'Please select a doctor.';
+      return;
+    }
+    
     const userId = localStorage.getItem('userId');
     if (userId) {
       this.exam.patientId = userId;
-      console.log(this.exam.date)
+      console.log(this.exam)
       this.examService.createExam(this.exam).subscribe(
         () => {
           // Form submitted successfully

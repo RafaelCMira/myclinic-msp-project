@@ -19,5 +19,9 @@
       <label class="label">Clinic ID</label>
       <p-dropdown [options]="clinics" [(ngModel)]="clinicId" [showClear]="true" optionLabel="label" optionValue="id"placeholder="Select a Clinic"></p-dropdown>
     </div>
+    <div class="field">
+      <label class="label">Description</label>
+      <input type="text" [(ngModel)]="exam.description" name="description" class="input-field" required>
+    </div>
     <button class="submit-form" type="button" pButton (click)="submitScheduleForm()" label="Register Exam"></button>
   </div>

@@ -27,8 +27,16 @@ export class ScheduleAppointmentComponent {
     { id: '5', label: 'Sherwood Ebert', value: 'd5' }
   ];
 
+  durations = [
+    { id: '1', label: '15 Minutes', value: '15' },
+    { id: '2', label: '30 Minutes', value: '30' },
+    { id: '3', label: '45 Minutes', value: '45' },
+    { id: '4', label: '60 Minutes', value: '60' },
+  ];
+
   doctorId: number | undefined;
   clinicId: number | undefined;
+  duration: number | undefined;
 
   constructor(private appointmentService: AppointmentService,
               private roleService: RoleService,
@@ -38,7 +46,7 @@ export class ScheduleAppointmentComponent {
     this.selectedRole = this.roleService.getSelectedRole();
   }
 
-  submitScheduleForm(duration: number): void {
+  submitScheduleForm(): void {
     const date = new Date(this.appointment.date);
 
     if (isNaN(date.getTime()) || date < new Date()) {
@@ -52,29 +60,36 @@ export class ScheduleAppointmentComponent {
       this.errorMessage = 'Appointment date must be within 2 months from today.';
       return;
     }
-  
-    if (date.getMinutes() > 15) {
-      this.errorMessage = 'Appointment must be scheduled at least 15 minutes.';
-      return;
-    }
 
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based, so add 1
     const day = date.getDate().toString().padStart(2, '0');
     this.appointment.date = `${year}-${month}-${day}`;
 
-    const durationHours = Math.floor(duration / 60);
-    const durationMinutes = duration % 60;
+    const durationHours = Math.floor(this.duration! / 60);
+    const durationMinutes = this.duration! % 60;
     const formattedDuration = `${durationHours.toString().padStart(2, '0')}:${durationMinutes.toString().padStart(2, '0')}:00`;
     this.appointment.duration = formattedDuration;
 
-    const userId = localStorage.getItem('userId');
+    if (this.clinicId !== undefined) {
+      this.appointment.clinicId = +this.clinicId;
+    } else {
+      this.errorMessage = 'Please select a clinic.';
+      return;
+    }
 
-    console.log(this.appointment)
+    if (this.doctorId !== undefined) {
+      this.appointment.doctorId = +this.doctorId;
+    } else {
+      this.errorMessage = 'Please select a doctor.';
+      return;
+    }
+
+    const userId = localStorage.getItem('userId');
 
     if (userId) {
       this.appointment.patientId = userId;
-      console.log(this.appointment.date)
+      console.log(this.appointment)
       this.appointmentService.createAppointment(this.appointment).subscribe(
         () => {
           // Form submitted successfully
