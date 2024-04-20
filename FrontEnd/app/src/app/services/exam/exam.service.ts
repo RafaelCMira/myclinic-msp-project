@@ -13,6 +13,6 @@ export class ExamService {
   constructor(private http: HttpClient) {}
 
   createExam(exam: Exam): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/patient`, exam);
+    return this.http.post<any>(`${this.apiUrl}/exam`, exam);
   }
 }

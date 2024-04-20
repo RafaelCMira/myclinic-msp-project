@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Exam } from '../services/exam/exam.model';
 import { RoleService } from '../services/role/role.service';
 import { ExamService} from "../services/exam/exam.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-schedule-exam',
@@ -14,7 +15,8 @@ export class ScheduleExamComponent {
   errorMessage: string = '';
 
   constructor(private examService: ExamService,
-              private roleService: RoleService) {}
+              private roleService: RoleService,
+              private router: Router) {}
 
   ngOnInit(): void {
     this.selectedRole = this.roleService.getSelectedRole();
@@ -24,7 +26,7 @@ export class ScheduleExamComponent {
     const date = new Date(this.exam.date);
 
     if (isNaN(date.getTime()) || date < new Date()) {
-      this.errorMessage = 'Exam date must be valid and at least from the current day.';
+      this.errorMessage = 'Exam date must be valid and at least from the next day.';
       return;
     }
   
@@ -35,8 +37,8 @@ export class ScheduleExamComponent {
       return;
     }
   
-    if (date.getMinutes() < 15) {
-      this.errorMessage = 'Exam must be scheduled at least 15 minutes from now.';
+    if (date.getMinutes() > 15) {
+      this.errorMessage = 'Exam must be scheduled at least 15 minutes.';
       return;
     }
 
@@ -55,6 +57,7 @@ export class ScheduleExamComponent {
           console.log('Exam created successfully');
           // Reset the form
           this.exam = new Exam();
+          this.router.navigate(['/panel']);
         },
         (error) => {
           this.errorMessage = 'Error creating appointment. Please try again later.';
