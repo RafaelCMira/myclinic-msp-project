@@ -9,6 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.CallableStatementCallback;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -18,7 +19,7 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Component // Uncomment this line to enable the data loader
+@Component // Uncomment this line to enable the data loader
 public class SampleDataLoader implements CommandLineRunner {
 
     private final JdbcTemplate jdbcTemplate;
@@ -31,12 +32,12 @@ public class SampleDataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        var doctors = insertDoctors(15);
-        var drugs = insertDrugs(30);
-        var specialities = insertSpecialities();
-        var patients = insertPatients(50);
+        var doctors = insertDoctors(5);
+        // var drugs = insertDrugs(30);
+        // var specialities = insertSpecialities();
+        var patients = insertPatients(5);
         var equipments = insertEquipments();
-        var clinics = insertClinics(5);
+        var clinics = insertClinics(2);
     }
 
     public List<Doctor> insertDoctors(int amount) {
