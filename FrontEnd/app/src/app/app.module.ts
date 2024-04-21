@@ -23,6 +23,8 @@ import { ScheduleAppointmentComponent} from "./schedule-appointment/schedule-app
 import { ScheduleExamComponent} from "./schedule-exam/schedule-exam.component";
 import { DropdownModule } from 'primeng/dropdown';
 import { FileUploadModule } from 'primeng/fileupload';
+import {MessageModule} from "primeng/message";
+import {ToastModule} from "primeng/toast";
 
 @NgModule({
   declarations: [
@@ -49,9 +51,11 @@ import { FileUploadModule } from 'primeng/fileupload';
     PanelModule,
     MenubarModule,
     MessagesModule,
+    MessageModule,
     CalendarModule,
     DropdownModule,
     FileUploadModule,
+    ToastModule,
 
   ],
   providers: [MessageService],

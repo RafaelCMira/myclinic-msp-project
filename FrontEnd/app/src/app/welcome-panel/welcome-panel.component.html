@@ -4,6 +4,18 @@
       <p>Welcome to our medical care site! We are dedicated to providing you with the best healthcare services.</p>
       <p>Our experienced team of doctors and staff are here to assist you with all your medical needs.</p>
       <p>Feel free to explore our site to learn more about our services and how we can help you.</p>
+      <hr>
+      <h3>Your Appointments:</h3>
+      <ul>
+        <li *ngFor="let appointment of appointments" class="appointment-item">
+          <span>{{ appointment.date }} - {{ appointment.hour }}, duration: {{ appointment.duration }}</span>
+          <button pButton type="button" label="Check-in" (click)="checkIn(appointment)"></button>
+        </li>
+      </ul>
     </div>
   </ng-template>
 </p-panel>
+<p-toast></p-toast>
+<!--<p-messages [(value)]="messages"-->
+<!--  [enableService]="false">-->
+<!--</p-messages>-->
