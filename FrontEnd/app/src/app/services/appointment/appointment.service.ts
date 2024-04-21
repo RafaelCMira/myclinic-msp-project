@@ -16,4 +16,7 @@ export class AppointmentService {
     return this.http.post<any>(`${this.apiUrl}`, appointment);
   }
 
+  getAppointments(userId: number): Observable<any> {
+    return this.http.get<Appointment[]>(`${this.apiUrl}?patientId=${userId}`);
+  }
 }

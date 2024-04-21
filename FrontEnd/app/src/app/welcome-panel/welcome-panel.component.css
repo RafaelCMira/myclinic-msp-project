@@ -1,0 +1,9 @@
+.appointment-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust the value as needed */
+}
+
+.appointment-item span {
+  margin-right: 10px; /* Adjust the value as needed */
+}
