@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_1ls4pkz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="17.2.1">
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_1ls4pkz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="17.3.0">
   <bpmn:collaboration id="Collaboration_0zakpk0">
     <bpmn:participant id="Participant_0qhenal" name="Patient" processRef="Process_0fot3n6" />
     <bpmn:participant id="Participant_1oj9z5c" name="MyClinic" processRef="Process_12hveil" />
@@ -21,12 +21,6 @@
       <bpmn:incoming>Flow_0so34hc</bpmn:incoming>
       <bpmn:outgoing>Flow_16i7ieq</bpmn:outgoing>
     </bpmn:sendTask>
-    <bpmn:startEvent id="Event_023j9pr" name="When is time for the online appointment">
-      <bpmn:outgoing>Flow_0so34hc</bpmn:outgoing>
-      <bpmn:conditionalEventDefinition id="ConditionalEventDefinition_1bk9834">
-        <bpmn:condition xsi:type="bpmn:tFormalExpression" />
-      </bpmn:conditionalEventDefinition>
-    </bpmn:startEvent>
     <bpmn:task id="Activity_0cvsapy" name="Wait for participants to enter in the meeting">
       <bpmn:incoming>Flow_16i7ieq</bpmn:incoming>
       <bpmn:outgoing>Flow_0l4f3qf</bpmn:outgoing>
@@ -194,6 +188,9 @@
         <bpmn:condition xsi:type="bpmn:tFormalExpression" />
       </bpmn:conditionalEventDefinition>
     </bpmn:intermediateCatchEvent>
+    <bpmn:startEvent id="Event_023j9pr">
+      <bpmn:outgoing>Flow_0so34hc</bpmn:outgoing>
+    </bpmn:startEvent>
   </bpmn:process>
   <bpmn:process id="Process_1wijgt5" isExecutable="false" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
@@ -208,12 +205,6 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0sqaz51_di" bpmnElement="Activity_1lppp49">
         <dc:Bounds x="310" y="580" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1tspyhc_di" bpmnElement="Event_023j9pr" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
-        <dc:Bounds x="222" y="602" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="201" y="645" width="80" height="40" />
-        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0cvsapy_di" bpmnElement="Activity_0cvsapy">
         <dc:Bounds x="470" y="580" width="100" height="80" />
@@ -358,6 +349,12 @@
         <dc:Bounds x="702" y="802" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="687" y="845" width="67" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1euqpzh_di" bpmnElement="Event_023j9pr" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="222" y="602" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="201" y="645" width="80" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0so34hc_di" bpmnElement="Flow_0so34hc">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_1ls4pkz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="17.2.1">
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_1ls4pkz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="17.3.0">
   <bpmn:collaboration id="Collaboration_0zakpk0">
     <bpmn:participant id="Participant_0qhenal" name="Patient" processRef="Process_0fot3n6" />
     <bpmn:participant id="Participant_1oj9z5c" name="Schedule Appointment" processRef="Process_12hveil" />
@@ -23,8 +23,7 @@ Clinic, doctor and date / hour available (request for that doctor in particular)
   <bpmn:process id="Process_0fot3n6" isExecutable="false" />
   <bpmn:process id="Process_12hveil">
     <bpmn:serviceTask id="Activity_0bran9d" name="Confirm appointment">
-      <bpmn:incoming>Flow_1tle2wm</bpmn:incoming>
-      <bpmn:incoming>Flow_07zqdmo</bpmn:incoming>
+      <bpmn:incoming>Flow_1pu91ge</bpmn:incoming>
       <bpmn:outgoing>Flow_0nus87q</bpmn:outgoing>
       <bpmn:dataOutputAssociation id="DataOutputAssociation_08kssl7">
         <bpmn:targetRef>DataStoreReference_02ifu68</bpmn:targetRef>
@@ -59,7 +58,7 @@ Clinic, doctor and date / hour available (request for that doctor in particular)
     <bpmn:exclusiveGateway id="Gateway_01cz8dm" name="Any alternative accepted?">
       <bpmn:incoming>Flow_1p5yxy5</bpmn:incoming>
       <bpmn:outgoing>Flow_0nl3spy</bpmn:outgoing>
-      <bpmn:outgoing>Flow_07zqdmo</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0hg5iio</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:endEvent id="Event_1w11px4" name="End">
       <bpmn:incoming>Flow_0nl3spy</bpmn:incoming>
@@ -120,8 +119,7 @@ Clinic, doctor and date / hour available (request for that doctor in particular)
       <bpmn:outgoing>Flow_151sb6l</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_07dww6c" />
     </bpmn:intermediateCatchEvent>
-    <bpmn:sequenceFlow id="Flow_1tle2wm" name="Yes" sourceRef="Gateway_0zo39h9" targetRef="Activity_0bran9d" />
-    <bpmn:sequenceFlow id="Flow_07zqdmo" sourceRef="Gateway_01cz8dm" targetRef="Activity_0bran9d" />
+    <bpmn:sequenceFlow id="Flow_1tle2wm" name="Yes" sourceRef="Gateway_0zo39h9" targetRef="Gateway_1srzrj9" />
     <bpmn:sequenceFlow id="Flow_0nus87q" sourceRef="Activity_0bran9d" targetRef="Event_152ogv3" />
     <bpmn:sequenceFlow id="Flow_0dm8hkf" sourceRef="Activity_1ch68mf" targetRef="Gateway_0zo39h9" />
     <bpmn:sequenceFlow id="Flow_1qcj9qm" name="No" sourceRef="Gateway_0zo39h9" targetRef="Activity_00ahb1q" />
@@ -135,9 +133,20 @@ Clinic, doctor and date / hour available (request for that doctor in particular)
     <bpmn:sequenceFlow id="Flow_0gluvwx" sourceRef="Event_023j9pr" targetRef="Gateway_1gby8mu" />
     <bpmn:sequenceFlow id="Flow_151sb6l" sourceRef="Event_0uz2m24" targetRef="Gateway_1gby8mu" />
     <bpmn:sequenceFlow id="Flow_1556oas" sourceRef="Activity_0zy7yvg" targetRef="Event_0uz2m24" />
+    <bpmn:exclusiveGateway id="Gateway_1srzrj9">
+      <bpmn:incoming>Flow_1tle2wm</bpmn:incoming>
+      <bpmn:incoming>Flow_0hg5iio</bpmn:incoming>
+      <bpmn:outgoing>Flow_1pu91ge</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0hg5iio" name="Yes" sourceRef="Gateway_01cz8dm" targetRef="Gateway_1srzrj9" />
+    <bpmn:sequenceFlow id="Flow_1pu91ge" sourceRef="Gateway_1srzrj9" targetRef="Activity_0bran9d" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0zakpk0">
+      <bpmndi:BPMNShape id="Participant_0qhenal_di" bpmnElement="Participant_0qhenal" isHorizontal="true">
+        <dc:Bounds x="160" y="240" width="1730" height="62" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_1oj9z5c_di" bpmnElement="Participant_1oj9z5c" isHorizontal="true">
         <dc:Bounds x="160" y="340" width="1730" height="400" />
         <bpmndi:BPMNLabel />
@@ -167,7 +176,7 @@ Clinic, doctor and date / hour available (request for that doctor in particular)
       <bpmndi:BPMNShape id="Gateway_0zo39h9_di" bpmnElement="Gateway_0zo39h9" isMarkerVisible="true">
         <dc:Bounds x="1045" y="455" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1045" y="425" width="50" height="14" />
+          <dc:Bounds x="1055" y="431" width="50" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_0mftp65" bpmnElement="DataStoreReference_1hwiwzh">
@@ -241,17 +250,15 @@ Clinic, doctor and date / hour available (request for that doctor in particular)
           <dc:Bounds x="848" y="583" width="58" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1srzrj9_di" bpmnElement="Gateway_1srzrj9" isMarkerVisible="true">
+        <dc:Bounds x="1445" y="455" width="50" height="50" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1tle2wm_di" bpmnElement="Flow_1tle2wm">
         <di:waypoint x="1095" y="480" />
-        <di:waypoint x="1590" y="480" />
+        <di:waypoint x="1445" y="480" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1335" y="462" width="18" height="14" />
+          <dc:Bounds x="1262" y="462" width="18" height="14" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_07zqdmo_di" bpmnElement="Flow_07zqdmo">
-        <di:waypoint x="1470" y="555" />
-        <di:waypoint x="1470" y="500" />
-        <di:waypoint x="1590" y="500" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0nus87q_di" bpmnElement="Flow_0nus87q">
         <di:waypoint x="1690" y="480" />
@@ -321,13 +328,16 @@ Clinic, doctor and date / hour available (request for that doctor in particular)
         <di:waypoint x="770" y="590" />
         <di:waypoint x="802" y="590" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Participant_0qhenal_di" bpmnElement="Participant_0qhenal" isHorizontal="true">
-        <dc:Bounds x="160" y="240" width="1730" height="62" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Association_00xmz25_di" bpmnElement="Association_00xmz25">
-        <di:waypoint x="1061" y="464" />
-        <di:waypoint x="894" y="193" />
+      <bpmndi:BPMNEdge id="Flow_0hg5iio_di" bpmnElement="Flow_0hg5iio">
+        <di:waypoint x="1470" y="555" />
+        <di:waypoint x="1470" y="505" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1476" y="527" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pu91ge_di" bpmnElement="Flow_1pu91ge">
+        <di:waypoint x="1495" y="480" />
+        <di:waypoint x="1590" y="480" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="TextAnnotation_1jtpz8w_di" bpmnElement="TextAnnotation_1jtpz8w">
         <dc:Bounds x="610" y="80" width="600" height="113" />
@@ -345,29 +355,25 @@ Clinic, doctor and date / hour available (request for that doctor in particular)
         <di:waypoint x="1768" y="550" />
         <di:waypoint x="1818" y="493" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1k89iw2_di" bpmnElement="Flow_1k89iw2">
-        <di:waypoint x="1830" y="462" />
-        <di:waypoint x="1830" y="302" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="DataInputAssociation_15mpbb5_di" bpmnElement="DataInputAssociation_15mpbb5">
         <di:waypoint x="1200" y="655" />
         <di:waypoint x="1200" y="620" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0dompie_di" bpmnElement="Flow_0dompie">
-        <di:waypoint x="1370" y="302" />
-        <di:waypoint x="1370" y="562" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1cfqjp5_di" bpmnElement="Flow_1cfqjp5">
-        <di:waypoint x="1200" y="540" />
-        <di:waypoint x="1200" y="302" />
+      <bpmndi:BPMNEdge id="DataInputAssociation_0j7dkz6_di" bpmnElement="DataInputAssociation_0j7dkz6">
+        <di:waypoint x="358" y="402" />
+        <di:waypoint x="430" y="448" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="DataOutputAssociation_1hn5rfa_di" bpmnElement="DataOutputAssociation_1hn5rfa">
         <di:waypoint x="254" y="468" />
         <di:waypoint x="322" y="410" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="DataInputAssociation_0j7dkz6_di" bpmnElement="DataInputAssociation_0j7dkz6">
-        <di:waypoint x="358" y="402" />
-        <di:waypoint x="430" y="448" />
+      <bpmndi:BPMNEdge id="DataInputAssociation_0c1s78m_di" bpmnElement="DataInputAssociation_0c1s78m">
+        <di:waypoint x="950" y="565" />
+        <di:waypoint x="950" y="520" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_00xmz25_di" bpmnElement="Association_00xmz25">
+        <di:waypoint x="1061" y="464" />
+        <di:waypoint x="894" y="193" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0k23xsz_di" bpmnElement="Flow_0k23xsz">
         <di:waypoint x="240" y="302" />
@@ -376,17 +382,25 @@ Clinic, doctor and date / hour available (request for that doctor in particular)
           <dc:Bounds x="304" y="259" width="63" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_03yy9wf_di" bpmnElement="Flow_03yy9wf">
-        <di:waypoint x="720" y="550" />
-        <di:waypoint x="720" y="302" />
+      <bpmndi:BPMNEdge id="Flow_1k89iw2_di" bpmnElement="Flow_1k89iw2">
+        <di:waypoint x="1830" y="462" />
+        <di:waypoint x="1830" y="302" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="DataInputAssociation_0c1s78m_di" bpmnElement="DataInputAssociation_0c1s78m">
-        <di:waypoint x="950" y="565" />
-        <di:waypoint x="950" y="520" />
+      <bpmndi:BPMNEdge id="Flow_1cfqjp5_di" bpmnElement="Flow_1cfqjp5">
+        <di:waypoint x="1200" y="540" />
+        <di:waypoint x="1200" y="302" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0dompie_di" bpmnElement="Flow_0dompie">
+        <di:waypoint x="1370" y="302" />
+        <di:waypoint x="1370" y="562" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_048a0k2_di" bpmnElement="Flow_048a0k2">
         <di:waypoint x="820" y="302" />
         <di:waypoint x="820" y="572" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03yy9wf_di" bpmnElement="Flow_03yy9wf">
+        <di:waypoint x="720" y="550" />
+        <di:waypoint x="720" y="302" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

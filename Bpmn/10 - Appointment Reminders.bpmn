@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_0rki8ga" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="17.2.1">
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_0rki8ga" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="17.3.0">
   <bpmn:collaboration id="Collaboration_0f3zojk">
     <bpmn:participant id="Participant_0h8es74" name="User" processRef="Process_0anlown" />
     <bpmn:participant id="Participant_0lc50pi" name="MyClinic" processRef="Process_153iro7" />
@@ -7,10 +7,6 @@
   </bpmn:collaboration>
   <bpmn:process id="Process_0anlown" isExecutable="false" />
   <bpmn:process id="Process_153iro7">
-    <bpmn:startEvent id="StartEvent_13w03s6" name="1 Day before appointment">
-      <bpmn:outgoing>Flow_1mt6kx6</bpmn:outgoing>
-      <bpmn:timerEventDefinition id="TimerEventDefinition_1b5rcxc" />
-    </bpmn:startEvent>
     <bpmn:sequenceFlow id="Flow_1mt6kx6" sourceRef="StartEvent_13w03s6" targetRef="Activity_0sxcmok" />
     <bpmn:serviceTask id="Activity_0sxcmok" name="Generate the reminders">
       <bpmn:incoming>Flow_1mt6kx6</bpmn:incoming>
@@ -37,6 +33,9 @@
     <bpmn:sequenceFlow id="Flow_16120zj" sourceRef="Activity_0sxcmok" targetRef="Event_0lztc80" />
     <bpmn:dataObjectReference id="DataObjectReference_05noapg" name="Appointment details" dataObjectRef="DataObject_10g25lb" />
     <bpmn:dataObject id="DataObject_10g25lb" />
+    <bpmn:startEvent id="StartEvent_13w03s6">
+      <bpmn:outgoing>Flow_1mt6kx6</bpmn:outgoing>
+    </bpmn:startEvent>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0f3zojk">
@@ -47,12 +46,6 @@
       <bpmndi:BPMNShape id="Participant_0lc50pi_di" bpmnElement="Participant_0lc50pi" isHorizontal="true">
         <dc:Bounds x="180" y="170" width="500" height="270" />
         <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_07tntxc_di" bpmnElement="StartEvent_13w03s6" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
-        <dc:Bounds x="252" y="222" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="238" y="268" width="64" height="27" />
-        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0ds5i5s_di" bpmnElement="Activity_0sxcmok">
         <dc:Bounds x="350" y="200" width="100" height="80" />
@@ -74,6 +67,12 @@
         <dc:Bounds x="512" y="295" width="36" height="50" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="499" y="352" width="62" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0go6fvt_di" bpmnElement="StartEvent_13w03s6" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="252" y="222" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="239" y="268" width="63" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1mt6kx6_di" bpmnElement="Flow_1mt6kx6">
