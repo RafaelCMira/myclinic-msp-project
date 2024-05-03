@@ -1,6 +1,6 @@
 package com.myclinic.clinic;
 
-record ClinicDTO(
+public record ClinicDTO(
         Integer id,
         String name,
         String phone,
