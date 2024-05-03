@@ -4,6 +4,6 @@ import java.util.Optional;
 
 public record ClinicFilterDTO(
         Optional<String> location,
-        Optional<String> speciality
+        Optional<Integer> speciality
 ) {
 }

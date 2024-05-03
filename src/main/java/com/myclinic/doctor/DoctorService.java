@@ -69,14 +69,22 @@ class DoctorService {
     }
 
     List<DoctorDTO> getDoctorsByFilter(DoctorFilterDTO filter) {
+        Validations.validate(filter);
+
         List<Doctor> doctors;
+
         if (filter.speciality().isPresent()) {
-            String speciality = filter.speciality().get();
-            Validations.validate(speciality);
-            doctors = doctorRepository.getBySpeciality(speciality);
+            if (filter.clinic().isPresent()) {
+                doctors = doctorRepository.getBySpecialityAndClinic(filter.speciality().get(), filter.clinic().get());
+            } else {
+                doctors = doctorRepository.getBySpeciality(filter.speciality().get());
+            }
+        } else if (filter.clinic().isPresent()) {
+            doctors = doctorRepository.getByClinic(filter.clinic().get());
         } else {
             doctors = doctorRepository.getAll();
         }
+
 
         return DoctorMapper.toDTO(doctors);
     }

@@ -115,7 +115,7 @@ class DoctorRepository {
     }
 
 
-    List<Doctor> getBySpeciality(String speciality) {
+    List<Doctor> getBySpeciality(int speciality) {
         String query = """
                 SELECT
                     doctor_id AS id,
@@ -126,12 +126,48 @@ class DoctorRepository {
                 FROM
                     users u INNER JOIN doctors d ON u.user_id = d.doctor_id
                     INNER JOIN doctor_specialities USING(doctor_id)
-                    INNER JOIN specialities USING(speciality_id)
                 WHERE
-                    specialities.name = ?
+                    speciality_id = ?
                 """;
 
         return db.query(query, doctorMapper, speciality);
+    }
+
+    List<Doctor> getByClinic(int clinic) {
+        String query = """
+                SELECT
+                    doctor_id AS id,
+                    u.name,
+                    u.email,
+                    u.phone,
+                    u.birth_date
+                FROM
+                    users u INNER JOIN doctors d ON u.user_id = d.doctor_id
+                    INNER JOIN clinic_doctors USING(doctor_id)
+                WHERE
+                    clinic_id = ?
+                """;
+
+        return db.query(query, doctorMapper, clinic);
+    }
+
+    List<Doctor> getBySpecialityAndClinic(int clinic, int speciality) {
+        String query = """
+                SELECT
+                    doctor_id AS id,
+                    u.name,
+                    u.email,
+                    u.phone,
+                    u.birth_date
+                FROM
+                    users u INNER JOIN doctors d ON u.user_id = d.doctor_id
+                    INNER JOIN clinic_doctors USING(doctor_id)
+                    INNER JOIN doctor_specialities USING(doctor_id)
+                WHERE
+                    clinic_id = ? AND speciality_id = ?
+                """;
+
+        return db.query(query, doctorMapper, clinic, speciality);
     }
     //endregion
 }

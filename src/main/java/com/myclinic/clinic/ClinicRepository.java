@@ -42,7 +42,7 @@ class ClinicRepository {
         return db.query(query, clinicMapper, location);
     }
 
-    List<Clinic> getClinicsBySpeciality(String speciality) {
+    List<Clinic> getClinicsBySpeciality(int speciality) {
         String query = """
                 SELECT
                     clinic_id as id,
@@ -53,12 +53,12 @@ class ClinicRepository {
                     INNER JOIN clinic_specialities using(clinic_id)
                     INNER JOIN specialities USING(speciality_id)
                 WHERE
-                    specialities.name = ?
+                    speciality_id = ?
                 """;
         return db.query(query, clinicMapper, speciality);
     }
 
-    List<Clinic> getClinicsByLocationAndSpeciality(String location, String speciality) {
+    List<Clinic> getClinicsByLocationAndSpeciality(String location, int speciality) {
         String query = """
                 SELECT
                     clinic_id as id,
@@ -69,10 +69,10 @@ class ClinicRepository {
                     INNER JOIN clinic_specialities using(clinic_id)
                     INNER JOIN specialities USING(speciality_id)
                 WHERE
-                    specialities.name = ?
-                    AND location = ?
+                    location = ?
+                    AND speciality_id = ?
                 """;
-        return db.query(query, clinicMapper, speciality, location);
+        return db.query(query, clinicMapper, location, speciality);
     }
 
 
