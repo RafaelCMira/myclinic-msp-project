@@ -46,12 +46,14 @@ class ClinicRepository {
         String query = """
                 SELECT
                     clinic_id as id,
-                    name,
+                    clinics.name,
                     phone,
                     location
                 FROM clinics
-                    INNER JOIN clinic_specialities on clinics.id = clinic_specialities.clinic_id
-                WHERE specialities.name = ?
+                    INNER JOIN clinic_specialities using(clinic_id)
+                    INNER JOIN specialities USING(speciality_id)
+                WHERE
+                    specialities.name = ?
                 """;
         return db.query(query, clinicMapper, speciality);
     }
@@ -60,16 +62,17 @@ class ClinicRepository {
         String query = """
                 SELECT
                     clinic_id as id,
-                    name,
+                    clinics.name,
                     phone,
                     location
                 FROM clinics
-                    INNER JOIN clinic_specialities on clinics.id = clinic_specialities.clinic_id
+                    INNER JOIN clinic_specialities using(clinic_id)
+                    INNER JOIN specialities USING(speciality_id)
                 WHERE
-                    location = ?
-                    AND specialities.name = ?
+                    specialities.name = ?
+                    AND location = ?
                 """;
-        return db.query(query, clinicMapper, location, speciality);
+        return db.query(query, clinicMapper, speciality, location);
     }
 
 
