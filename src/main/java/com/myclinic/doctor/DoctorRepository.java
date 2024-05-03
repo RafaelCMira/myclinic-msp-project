@@ -113,5 +113,25 @@ class DoctorRepository {
 
         return db.query(query, doctorMapper);
     }
+
+
+    List<Doctor> getBySpeciality(String speciality) {
+        String query = """
+                SELECT
+                    doctor_id AS id,
+                    u.name,
+                    u.email,
+                    u.phone,
+                    u.birth_date
+                FROM
+                    users u INNER JOIN doctors d ON u.user_id = d.doctor_id
+                    INNER JOIN doctor_specialities USING(doctor_id)
+                    INNER JOIN specialities USING(speciality_id)
+                WHERE
+                    specialities.name = ?
+                """;
+
+        return db.query(query, doctorMapper, speciality);
+    }
     //endregion
 }

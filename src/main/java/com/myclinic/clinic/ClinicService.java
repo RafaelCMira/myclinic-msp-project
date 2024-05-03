@@ -15,8 +15,6 @@ class ClinicService {
     }
 
     List<ClinicDTO> getClinicsByFilter(ClinicFilterDTO filter) {
-        Validations.validate(filter);
-
         if (filter.location().isPresent()) {
             if (filter.speciality().isPresent()) {
                 return getClinicsByLocationAndSpeciality(filter.location().get(), filter.speciality().get());

@@ -68,8 +68,16 @@ class DoctorService {
         return DoctorMapper.toDTO(doctor);
     }
 
-    List<DoctorDTO> getAll() {
-        var doctors = doctorRepository.getAll();
+    List<DoctorDTO> getDoctorsByFilter(DoctorFilterDTO filter) {
+        List<Doctor> doctors;
+        if (filter.speciality().isPresent()) {
+            String speciality = filter.speciality().get();
+            Validations.validate(speciality);
+            doctors = doctorRepository.getBySpeciality(speciality);
+        } else {
+            doctors = doctorRepository.getAll();
+        }
+
         return DoctorMapper.toDTO(doctors);
     }
     //endregion

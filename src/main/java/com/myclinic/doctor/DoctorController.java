@@ -60,7 +60,7 @@ class DoctorController {
         return ResponseEntity.ok().body(response);
     }
     //endregion
-    
+
     //region Get
     @GetMapping("/{id}")
     ResponseEntity<ApiResponse<DoctorDTO>> getDoctor(@PathVariable Integer id) {
@@ -75,8 +75,8 @@ class DoctorController {
     }
 
     @GetMapping()
-    ResponseEntity<ApiResponse<List<DoctorDTO>>> getAllDoctors() {
-        var doctors = doctorService.getAll();
+    ResponseEntity<ApiResponse<List<DoctorDTO>>> getDoctorsByFilter(DoctorFilterDTO filter) {
+        var doctors = doctorService.getDoctorsByFilter(filter);
 
         ApiResponse<List<DoctorDTO>> response = ApiResponse.<List<DoctorDTO>>builder()
                 .status(ApiResponse.Status.SUCCESS.name())
