@@ -95,7 +95,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/doctor",
+							"raw": "localhost:8080/api/v1/doctor/1",
 							"host": [
 								"localhost"
 							],
@@ -103,7 +103,8 @@
 							"path": [
 								"api",
 								"v1",
-								"doctor"
+								"doctor",
+								"1"
 							]
 						}
 					},
@@ -115,7 +116,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/doctor",
+							"raw": "localhost:8080/api/v1/doctor?speciality=1&clinic=3",
 							"host": [
 								"localhost"
 							],
@@ -124,6 +125,16 @@
 								"api",
 								"v1",
 								"doctor"
+							],
+							"query": [
+								{
+									"key": "speciality",
+									"value": "1"
+								},
+								{
+									"key": "clinic",
+									"value": "3"
+								}
 							]
 						}
 					},
@@ -141,7 +152,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"toni\",\r\n    \"birthDate\": \"2000-01-10\",\r\n    \"email\": \"a@gmail.com\",\r\n    \"password\": \"toni\",\r\n    \"phone\": \"123-456-7890\"\r\n}",
+							"raw": "{\r\n    \"name\": \"toni\",\r\n    \"birthDate\": \"2000-01-10\",\r\n    \"email\": \"a@gsfdgsdfgail.com\",\r\n    \"password\": \"toni\",\r\n    \"phone\": \"123-456-7890\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -246,7 +257,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"patientId\": 6,\r\n    \"doctorId\": 1,\r\n    \"clinicId\": 1,\r\n    \"date\": \"2024-04-22\",\r\n    \"hour\": \"11:36\",\r\n    \"duration\": \"00:12:00\"\r\n}",
+							"raw": "{\r\n    \"patientId\": 6,\r\n    \"doctorId\": 1,\r\n    \"clinicId\": 1,\r\n    \"date\": \"2024-04-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"duration\": \"00:12:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -303,7 +314,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/appointment?patientId=4&doctorId=3",
+							"raw": "localhost:8080/api/v1/appointment?patientId=4&doctorId=3&clinicId=&date=&hour=&duration=",
 							"host": [
 								"localhost"
 							],
@@ -324,23 +335,19 @@
 								},
 								{
 									"key": "clinicId",
-									"value": "",
-									"disabled": true
+									"value": ""
 								},
 								{
 									"key": "date",
-									"value": "",
-									"disabled": true
+									"value": ""
 								},
 								{
 									"key": "hour",
-									"value": "",
-									"disabled": true
+									"value": ""
 								},
 								{
 									"key": "duration",
-									"value": null,
-									"disabled": true
+									"value": ""
 								}
 							]
 						}
@@ -358,7 +365,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/clinic?speciality=Dermatologist",
+							"raw": "localhost:8080/api/v1/clinic?speciality=1",
 							"host": [
 								"localhost"
 							],
@@ -371,12 +378,48 @@
 							"query": [
 								{
 									"key": "location",
-									"value": "New Sal",
+									"value": "Amadora",
 									"disabled": true
 								},
 								{
 									"key": "speciality",
-									"value": "Dermatologist"
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Speciality",
+			"item": [
+				{
+					"name": "Speciality",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/clinic?speciality=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clinic"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "Amadora",
+									"disabled": true
+								},
+								{
+									"key": "speciality",
+									"value": "1"
 								}
 							]
 						}
@@ -395,7 +438,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"patientId\": 7,\r\n    \"clinicId\": 1,\r\n    \"equipmentId\": 2,\r\n    \"date\": \"2024-04-24\",\r\n    \"hour\": \"15:44\",\r\n    \"description\": \"some random motive\"\r\n}\r\n\r\n",
+							"raw": "{\r\n    \"patientId\": 10,\r\n    \"clinicId\": 1,\r\n    \"equipmentId\": 2,\r\n    \"date\": \"2025-04-24\",\r\n    \"hour\": \"15:44\",\r\n    \"description\": \"some random motive\"\r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -452,7 +495,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/exam?result=alive",
+							"raw": "localhost:8080/api/v1/exam",
 							"host": [
 								"localhost"
 							],
@@ -492,10 +535,6 @@
 									"key": "description",
 									"value": "",
 									"disabled": true
-								},
-								{
-									"key": "result",
-									"value": "alive"
 								}
 							]
 						}
