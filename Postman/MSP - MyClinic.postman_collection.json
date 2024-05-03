@@ -108,6 +108,26 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Doctor by filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/doctor",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"doctor"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -121,7 +141,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"ADNRE\",\r\n    \"birthDate\": \"2000-01-10\",\r\n    \"email\": \"a@gmail.com\",\r\n    \"password\": \"111\",\r\n    \"phone\": \"123-456-7890\"\r\n}",
+							"raw": "{\r\n    \"name\": \"toni\",\r\n    \"birthDate\": \"2000-01-10\",\r\n    \"email\": \"a@gmail.com\",\r\n    \"password\": \"toni\",\r\n    \"phone\": \"123-456-7890\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -226,7 +246,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"patientId\": 4,\r\n    \"doctorId\": 3,\r\n    \"clinicId\":\"1\",\r\n    \"date\": \"2020-02-10\",\r\n    \"hour\": \"10:00:03\",\r\n    \"duration\": \"10:00\"\r\n}",
+							"raw": "{\r\n    \"patientId\": 6,\r\n    \"doctorId\": 1,\r\n    \"clinicId\": 1,\r\n    \"date\": \"2024-04-22\",\r\n    \"hour\": \"11:36\",\r\n    \"duration\": \"00:12:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -330,6 +350,42 @@
 			]
 		},
 		{
+			"name": "Clinic",
+			"item": [
+				{
+					"name": "Clinic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/clinic?speciality=Dermatologist",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clinic"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "New Sal",
+									"disabled": true
+								},
+								{
+									"key": "speciality",
+									"value": "Dermatologist"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Exam",
 			"item": [
 				{
@@ -339,7 +395,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"patientId\": 15,\r\n    \"clinicId\": \"1\",\r\n    \"equipmentId\": 1,\r\n    \"date\": \"2023-02-10\",\r\n    \"hour\": \"10:00:00\",\r\n    \"description\": \"some random motive\",\r\n    \"result\": \"dead\"\r\n}",
+							"raw": "{\r\n    \"patientId\": 7,\r\n    \"clinicId\": 1,\r\n    \"equipmentId\": 2,\r\n    \"date\": \"2024-04-24\",\r\n    \"hour\": \"15:44\",\r\n    \"description\": \"some random motive\"\r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -487,7 +543,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"toni\",\r\n    \"password\": \"toni\"\r\n}",
+							"raw": "{\r\n    \"email\": \"a@gmail.com\",\r\n    \"password\": \"toni\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
