@@ -4,8 +4,10 @@ import com.github.javafaker.Faker;
 import com.myclinic.clinic.Clinic;
 import com.myclinic.doctor.Doctor;
 import com.myclinic.patient.Patient;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.CallableStatementCallback;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //@Component // Uncomment this line to enable the data loader
+@Slf4j
 public class SampleDataLoader implements CommandLineRunner {
 
     private final JdbcTemplate jdbcTemplate;
@@ -31,12 +34,19 @@ public class SampleDataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        var doctors = insertDoctors(5);
-        // var drugs = insertDrugs(30);
-        // var specialities = insertSpecialities();
-        var patients = insertPatients(5);
+        log.info("Loading sample data...");
+        var doctors = insertDoctors(10);
+        var drugs = insertDrugs(20);
+        var specialities = insertSpecialities();
+        var patients = insertPatients(10);
         var equipments = insertEquipments();
-        var clinics = insertClinics(2);
+        var clinics = insertClinics(5);
+
+        insertDoctorSpecialities(doctors, specialities);
+        insertClinicSpecialities(clinics, specialities);
+        insertClinicDoctors(doctors, clinics);
+
+        log.info("Sample data loaded successfully.");
     }
 
     public List<Doctor> insertDoctors(int amount) {
@@ -198,11 +208,17 @@ public class SampleDataLoader implements CommandLineRunner {
                 VALUES (?, ?, ?)
                 """;
 
+        String[] locations = {
+                "Lisboa", "Porto", "Coimbra", "Faro", "Braga", "Aveiro", "Viseu", "Leiria", "Viana do Castelo", "Setúbal", "Évora", "Beja",
+                "Castelo Branco", "Guarda", "Santarém", "Vila Real", "Bragança", "Portalegre", "Angra do Heroísmo", "Horta", "Ponta Delgada",
+                "ALmada", "Amadora", "Aveiro", "Barreiro", "Cascais", "Gondomar", "Guimarães"
+        };
+
         List<Clinic> clinics = new ArrayList<>(amount);
         for (int i = 1; i < amount + 1; i++) {
             String name = faker.name().fullName();
             String phone = faker.phoneNumber().cellPhone();
-            String location = faker.address().city();
+            String location = locations[faker.random().nextInt(0, locations.length - 1)];
             clinics.add(new Clinic(i, name, phone, location));
         }
 
@@ -222,6 +238,62 @@ public class SampleDataLoader implements CommandLineRunner {
         });
 
         return clinics;
+    }
+
+    void insertDoctorSpecialities(List<Doctor> doctors, List<Pair<Integer, String>> specialities) {
+        String sql = """
+                INSERT INTO doctor_specialities (doctor_id, speciality_id)
+                VALUES (?, ?)
+                """;
+
+        for (Doctor doctor : doctors) {
+            int doctorId = doctor.getId();
+            int specialityId = faker.random().nextInt(1, specialities.size());
+            jdbcTemplate.update(sql, doctorId, specialityId);
+        }
+    }
+
+    void insertClinicSpecialities(List<Clinic> clinics, List<Pair<Integer, String>> specialities) {
+        String sql = """
+                INSERT INTO clinic_specialities (clinic_id, speciality_id)
+                VALUES (?, ?)
+                """;
+
+        for (Clinic clinic : clinics) {
+            int clinicId = clinic.getId();
+
+            for (int i = 0; i < faker.random().nextInt(1, specialities.size()); i++) {
+                int specialityId = faker.random().nextInt(1, specialities.size());
+                try {
+                    jdbcTemplate.update(sql, clinicId, specialityId);
+                } catch (DuplicateKeyException ignore) {
+
+                }
+
+            }
+
+        }
+    }
+
+    void insertClinicDoctors(List<Doctor> doctors, List<Clinic> clinics) {
+        String sql = """
+                INSERT INTO clinic_doctors (clinic_id, doctor_id)
+                VALUES (?, ?)
+                """;
+
+        for (Clinic clinic : clinics) {
+            int clinicId = clinic.getId();
+
+            for (int i = 0; i < faker.random().nextInt(1, doctors.size()); i++) {
+                int doctorId = faker.random().nextInt(1, doctors.size());
+                try {
+                    jdbcTemplate.update(sql, clinicId, doctorId);
+                } catch (DuplicateKeyException ignore) {
+
+                }
+            }
+
+        }
     }
 
 }
