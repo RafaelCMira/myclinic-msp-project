@@ -18,4 +18,6 @@ public class Appointment {
     private LocalDate date;
     private LocalTime hour;
     private LocalTime duration;
+    private Integer rating;
+    private String review;
 }

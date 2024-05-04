@@ -37,6 +37,18 @@ class OnlineAppointmentService {
     }
     //endregion
 
+    //region Update
+    void reviewAppointment(AppointmentDTO appointmentDTO) {
+        Validations.validate(appointmentDTO);
+
+        var appointment = AppointmentMapper.fromDTO(appointmentDTO);
+        var res = onlineAppointmentRepository.reviewAppointment(appointment);
+
+        if (res == 0)
+            throw new NotFoundException(AppointmentErrorMessages.APPOINTMENT_NOT_FOUND.formatMsg(appointmentDTO));
+    }
+    //endregion
+
     //region delete
     void deleteAppointment(AppointmentDTO appointmentDTO) {
         Validations.validate(appointmentDTO);

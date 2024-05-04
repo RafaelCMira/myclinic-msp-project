@@ -85,15 +85,21 @@ class DoctorRepository {
                     u.name,
                     u.email,
                     u.phone,
-                    u.birth_date
+                    u.birth_date,
+                    COALESCE(
+                        (SELECT
+                            ROUND(AVG(rating), 1) as rating
+                            FROM presential_appointments
+                            WHERE doctor_id = ? AND rating != -1
+                        ), -1
+                    ) as rating
                 FROM
-                    users u INNER JOIN doctors d
-                    ON u.user_id = d.doctor_id
+                    users u INNER JOIN doctors d ON u.user_id = d.doctor_id
                 WHERE
                     doctor_id = ?
                 """;
 
-        return db.query(query, doctorMapper, doctorId)
+        return db.query(query, doctorMapper, doctorId, doctorId)
                 .stream()
                 .findFirst();
     }
@@ -101,14 +107,20 @@ class DoctorRepository {
     List<Doctor> getAll() {
         String query = """
                 SELECT
-                    user_id AS id,
+                    doctor_id AS id,
                     u.name,
                     u.email,
                     u.phone,
-                    u.birth_date
+                    u.birth_date,
+                    COALESCE(
+                            (SELECT
+                                ROUND(AVG(rating), 1) as rating
+                                FROM presential_appointments
+                                WHERE doctor_id = d.doctor_id AND rating != -1
+                            ), -1
+                    ) as rating
                 FROM
-                    users u INNER JOIN doctors d
-                    ON u.user_id = d.doctor_id
+                    users u INNER JOIN doctors d ON u.user_id = d.doctor_id
                 """;
 
         return db.query(query, doctorMapper);
@@ -122,7 +134,14 @@ class DoctorRepository {
                     u.name,
                     u.email,
                     u.phone,
-                    u.birth_date
+                    u.birth_date,
+                    COALESCE(
+                        (SELECT
+                            ROUND(AVG(rating), 1) as rating
+                            FROM presential_appointments
+                            WHERE doctor_id = d.doctor_id AND rating != -1
+                        ), -1
+                    ) as rating
                 FROM
                     users u INNER JOIN doctors d ON u.user_id = d.doctor_id
                     INNER JOIN doctor_specialities USING(doctor_id)
@@ -140,7 +159,14 @@ class DoctorRepository {
                     u.name,
                     u.email,
                     u.phone,
-                    u.birth_date
+                    u.birth_date,
+                    COALESCE(
+                        (SELECT
+                            ROUND(AVG(rating), 1) as rating
+                            FROM presential_appointments
+                            WHERE doctor_id = d.doctor_id AND rating != -1
+                        ), -1
+                    ) as rating
                 FROM
                     users u INNER JOIN doctors d ON u.user_id = d.doctor_id
                     INNER JOIN clinic_doctors USING(doctor_id)
@@ -158,7 +184,14 @@ class DoctorRepository {
                     u.name,
                     u.email,
                     u.phone,
-                    u.birth_date
+                    u.birth_date,
+                    COALESCE(
+                        (SELECT
+                            ROUND(AVG(rating), 1) as rating
+                            FROM presential_appointments
+                            WHERE doctor_id = d.doctor_id AND rating != -1
+                        ), -1
+                    ) as rating
                 FROM
                     users u INNER JOIN doctors d ON u.user_id = d.doctor_id
                     INNER JOIN clinic_doctors USING(doctor_id)

@@ -25,7 +25,9 @@ public record DoctorDTO(
         String password,
 
         @NotBlank(message = "phone is mandatory")
-        String phone
+        String phone,
+
+        Double rating
 
         // add list of specialties
 
@@ -42,7 +44,9 @@ public record DoctorDTO(
                 doctor.birthDate(),
                 doctor.email(),
                 doctor.password(),
-                doctor.phone());
+                doctor.phone(),
+                doctor.rating()
+        );
     }
 
 }

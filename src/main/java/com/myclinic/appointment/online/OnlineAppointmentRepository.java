@@ -36,6 +36,31 @@ class OnlineAppointmentRepository {
                 appointment.getDuration()
         );
     }
+
+    int reviewAppointment(Appointment appointment) {
+        String query = """
+                UPDATE
+                    online_appointments
+                SET
+                    rating = ?,
+                    review = ?
+                WHERE
+                    patient_id = ?
+                    AND doctor_id = ?
+                    AND date = ?
+                    AND hour = ?
+                """;
+
+        return db.update(
+                query,
+                appointment.getRating(),
+                appointment.getReview(),
+                appointment.getPatientId(),
+                appointment.getDoctorId(),
+                appointment.getDate(),
+                appointment.getHour()
+        );
+    }
     //endregion
 
     //region Delete
@@ -74,7 +99,9 @@ class OnlineAppointmentRepository {
                     doctor_id,
                     date,
                     hour,
-                    duration
+                    duration,
+                    rating,
+                    review
                 FROM
                     online_appointments
                 WHERE

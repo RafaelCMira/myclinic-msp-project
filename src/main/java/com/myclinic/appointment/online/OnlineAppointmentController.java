@@ -34,6 +34,19 @@ class OnlineAppointmentController {
     }
     //endregion
 
+    //region Update
+    @PutMapping()
+    ResponseEntity<ApiResponse<Void>> reviewAppointment(@Valid @RequestBody AppointmentDTO appointmentDTO) {
+        onlineAppointmentService.reviewAppointment(appointmentDTO);
+
+        ApiResponse<Void> response = ApiResponse.<Void>builder()
+                .status(ApiResponse.Status.SUCCESS.name())
+                .build();
+
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(response);
+    }
+    //endregion
+
     //region delete
     @DeleteMapping()
     ResponseEntity<ApiResponse<String>> deleteAppointment(@Valid @RequestBody AppointmentDTO appointmentDTO) {

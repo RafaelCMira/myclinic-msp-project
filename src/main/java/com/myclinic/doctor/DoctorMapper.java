@@ -17,7 +17,8 @@ public class DoctorMapper implements RowMapper<Doctor> {
                 doctor.getBirthDate(),
                 doctor.getEmail(),
                 doctor.getPassword(),
-                doctor.getPhone()
+                doctor.getPhone(),
+                doctor.getRating()
         );
     }
 
@@ -32,7 +33,8 @@ public class DoctorMapper implements RowMapper<Doctor> {
                 doctorDTO.birthDate(),
                 doctorDTO.email(),
                 doctorDTO.password(),
-                doctorDTO.phone()
+                doctorDTO.phone(),
+                doctorDTO.rating()
         );
     }
 
@@ -44,7 +46,8 @@ public class DoctorMapper implements RowMapper<Doctor> {
                 Utility.getLocalDateOrNull(rs, "birth_date"),
                 Utility.getStringOrNull(rs, "email"),
                 Utility.getStringOrNull(rs, "password"),
-                Utility.getStringOrNull(rs, "phone")
+                Utility.getStringOrNull(rs, "phone"),
+                Utility.getDoubleOrNull(rs, "rating")
         );
     }
 }

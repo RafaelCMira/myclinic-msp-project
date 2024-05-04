@@ -32,6 +32,19 @@ class AppointmentController {
     }
     //endregion
 
+    //region Update
+    @PutMapping()
+    ResponseEntity<ApiResponse<Void>> reviewAppointment(@Valid @RequestBody AppointmentDTO appointmentDTO) {
+        appointmentService.reviewAppointment(appointmentDTO);
+
+        ApiResponse<Void> response = ApiResponse.<Void>builder()
+                .status(ApiResponse.Status.SUCCESS.name())
+                .build();
+
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(response);
+    }
+    //endregion
+
     //region delete
     @DeleteMapping()
     ResponseEntity<ApiResponse<String>> deleteAppointment(@Valid @RequestBody AppointmentDTO appointmentDTO) {
@@ -39,21 +52,20 @@ class AppointmentController {
 
         ApiResponse<String> response = ApiResponse.<String>builder()
                 .status(ApiResponse.Status.SUCCESS.name())
-                .result("Appointment deleted")
                 .build();
 
-        return ResponseEntity.ok().body(response);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(response);
     }
     //endregion
 
     //region Get
     @GetMapping()
     ResponseEntity<ApiResponse<List<AppointmentDTO>>> getAppointments(AppointmentFilterDTO filter) {
-        var appointment = appointmentService.getAppointments(filter);
+        var appointments = appointmentService.getAppointments(filter);
 
         ApiResponse<List<AppointmentDTO>> response = ApiResponse.<List<AppointmentDTO>>builder()
                 .status(ApiResponse.Status.SUCCESS.name())
-                .result(appointment)
+                .result(appointments)
                 .build();
 
         return ResponseEntity.ok().body(response);

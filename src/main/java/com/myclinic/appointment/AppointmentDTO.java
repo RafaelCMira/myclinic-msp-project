@@ -12,6 +12,8 @@ public record AppointmentDTO(
         Integer clinicId,
         LocalDate date,
         LocalTime hour,
-        LocalTime duration
+        LocalTime duration,
+        Integer rating,
+        String review
 ) {
 }

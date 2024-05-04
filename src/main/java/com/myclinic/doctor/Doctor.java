@@ -1,9 +1,6 @@
 package com.myclinic.doctor;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -11,6 +8,8 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
+@ToString
 public class Doctor {
     private Integer id;
     private String name;
@@ -18,6 +17,8 @@ public class Doctor {
     private String email;
     private String password;
     private String phone;
+
+    private Double rating;
 
     // add list of specialties
 

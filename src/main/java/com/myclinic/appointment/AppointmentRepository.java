@@ -35,6 +35,31 @@ class AppointmentRepository {
                 appointment.getClinicId()
         );
     }
+
+    int reviewAppointment(Appointment appointment) {
+        String query = """
+                UPDATE
+                    presential_appointments
+                SET
+                    rating = ?,
+                    review = ?
+                WHERE
+                    patient_id = ?
+                    AND doctor_id = ?
+                    AND date = ?
+                    AND hour = ?
+                """;
+
+        return db.update(
+                query,
+                appointment.getRating(),
+                appointment.getReview(),
+                appointment.getPatientId(),
+                appointment.getDoctorId(),
+                appointment.getDate(),
+                appointment.getHour()
+        );
+    }
     //endregion
 
     //region Delete
@@ -75,7 +100,9 @@ class AppointmentRepository {
                     clinic_id,
                     date,
                     hour,
-                    duration
+                    duration,
+                    rating,
+                    review
                 FROM
                     presential_appointments
                 WHERE
