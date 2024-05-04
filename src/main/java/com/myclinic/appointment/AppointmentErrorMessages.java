@@ -1,6 +1,6 @@
 package com.myclinic.appointment;
 
-enum AppointmentErrorMessages {
+public enum AppointmentErrorMessages {
     APPOINTMENT_NOT_FOUND("Appointment not found"),
 
     INSERTING_APPOINTMENT_DB_ERROR("Error inserting Appointment in the database"),
@@ -12,7 +12,7 @@ enum AppointmentErrorMessages {
         this.message = message;
     }
 
-    String formatMsg(Object param) {
+    public String formatMsg(Object param) {
         return this.message + ": " + param;
     }
 }

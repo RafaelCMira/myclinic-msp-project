@@ -1,5 +1,7 @@
-package com.myclinic.appointment;
+package com.myclinic.appointment.online;
 
+import com.myclinic.appointment.Appointment;
+import com.myclinic.appointment.AppointmentMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -7,12 +9,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-class AppointmentRepository {
+class OnlineAppointmentRepository {
 
-    private final JdbcTemplate db;
     private final AppointmentMapper appointmentMapper;
+    private final JdbcTemplate db;
 
-    AppointmentRepository(JdbcTemplate db, AppointmentMapper appointmentMapper) {
+    OnlineAppointmentRepository(JdbcTemplate db, AppointmentMapper appointmentMapper) {
         this.db = db;
         this.appointmentMapper = appointmentMapper;
     }
@@ -21,8 +23,8 @@ class AppointmentRepository {
     void insertAppointment(Appointment appointment) {
         String query = """
                 INSERT INTO
-                    presential_appointments (patient_id, doctor_id, date, hour, duration, clinic_id)
-                VALUES (?, ?, ?, ?, ?, ?)
+                    online_appointments (patient_id, doctor_id, date, hour, duration)
+                VALUES (?, ?, ?, ?, ?)
                 """;
 
         db.update(
@@ -31,8 +33,7 @@ class AppointmentRepository {
                 appointment.getDoctorId(),
                 appointment.getDate(),
                 appointment.getHour(),
-                appointment.getDuration(),
-                appointment.getClinicId()
+                appointment.getDuration()
         );
     }
     //endregion
@@ -41,7 +42,7 @@ class AppointmentRepository {
     int deleteAppointment(Appointment appointment) {
         String query = """
                 DELETE FROM
-                    presential_appointments
+                    online_appointments
                 WHERE
                     patient_id = ?
                     AND doctor_id = ?
@@ -63,7 +64,6 @@ class AppointmentRepository {
     List<Appointment> findByFilter(
             Optional<Integer> patientId,
             Optional<Integer> doctorId,
-            Optional<Integer> clinicId,
             Optional<String> date,
             Optional<String> hour,
             Optional<String> duration) {
@@ -72,12 +72,11 @@ class AppointmentRepository {
                 SELECT
                     patient_id,
                     doctor_id,
-                    clinic_id,
                     date,
                     hour,
                     duration
                 FROM
-                    presential_appointments
+                    online_appointments
                 WHERE
                     1=1
                 """
@@ -89,10 +88,6 @@ class AppointmentRepository {
 
         doctorId.ifPresent(
                 id -> query.append(" AND doctor_id = ").append(id)
-        );
-
-        clinicId.ifPresent(
-                id -> query.append(" AND clinic_id = ").append(id)
         );
 
         date.ifPresent(
@@ -110,5 +105,6 @@ class AppointmentRepository {
         return db.query(query.toString(), appointmentMapper);
     }
     //endregion
+
 
 }

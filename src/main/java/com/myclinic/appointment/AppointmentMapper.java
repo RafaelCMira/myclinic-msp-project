@@ -8,9 +8,9 @@ import java.sql.ResultSet;
 import java.util.List;
 
 @Component
-class AppointmentMapper implements RowMapper<Appointment> {
+public class AppointmentMapper implements RowMapper<Appointment> {
 
-    static AppointmentDTO toDTO(Appointment appointment) {
+    public static AppointmentDTO toDTO(Appointment appointment) {
         return new AppointmentDTO(
                 appointment.getPatientId(),
                 appointment.getDoctorId(),
@@ -21,11 +21,11 @@ class AppointmentMapper implements RowMapper<Appointment> {
         );
     }
 
-    static List<AppointmentDTO> toDTO(List<Appointment> appointments) {
+    public static List<AppointmentDTO> toDTO(List<Appointment> appointments) {
         return appointments == null ? List.of() : appointments.stream().map(AppointmentMapper::toDTO).toList();
     }
 
-    static Appointment fromDTO(AppointmentDTO appointmentDTO) {
+    public static Appointment fromDTO(AppointmentDTO appointmentDTO) {
         return new Appointment(
                 appointmentDTO.patientId(),
                 appointmentDTO.doctorId(),
