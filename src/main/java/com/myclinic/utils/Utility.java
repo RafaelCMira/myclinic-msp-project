@@ -19,6 +19,14 @@ public class Utility {
         }
     }
 
+    public static Double getDoubleOrNull(ResultSet rs, String columnName) {
+        try {
+            return rs.getDouble(columnName);
+        } catch (SQLException ignored) {
+            return null;
+        }
+    }
+
     public static String getStringOrNull(ResultSet rs, String columnName) {
         try {
             return rs.getString(columnName);

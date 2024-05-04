@@ -57,7 +57,7 @@ public class SampleDataLoader implements CommandLineRunner {
             String email = faker.internet().emailAddress();
             String password = faker.internet().password();
             String phone = faker.phoneNumber().cellPhone();
-            doctors.add(new Doctor(i, name, birthDate, email, password, phone));
+            doctors.add(new Doctor(i, name, birthDate, email, password, phone, null));
         }
 
         for (Doctor doctor : doctors) {
