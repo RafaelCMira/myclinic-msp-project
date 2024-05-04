@@ -85,7 +85,7 @@ CREATE TABLE exams
     date         DATE              NOT NULL,
     hour         TIME              NOT NULL,
     description  TEXT              NOT NULL,
-    result       VARCHAR(50) NOT NULL DEFAULT 'unrealized',
+    result       VARCHAR(50)       NOT NULL DEFAULT 'unrealized',
     clinic_id    SMALLINT UNSIGNED NOT NULL,
     equipment_id SMALLINT UNSIGNED NOT NULL,
     PRIMARY KEY (patient_id, date, hour)
@@ -98,6 +98,10 @@ CREATE TABLE online_appointments
     date       DATE              NOT NULL,
     hour       TIME              NOT NULL,
     duration   TIME              NOT NULL,
+    rating     TINYINT           NOT NULL DEFAULT -1,
+    review     TEXT,
+    UNIQUE (patient_id, date, hour),
+    UNIQUE (doctor_id, date, hour),
     PRIMARY KEY (patient_id, doctor_id, date, hour)
 );
 
@@ -108,7 +112,11 @@ CREATE TABLE presential_appointments
     date       DATE              NOT NULL,
     hour       TIME              NOT NULL,
     duration   TIME              NOT NULL,
+    rating     TINYINT           NOT NULL DEFAULT -1,
+    review     TEXT,
     clinic_id  SMALLINT UNSIGNED NOT NULL,
+    UNIQUE (patient_id, date, hour),
+    UNIQUE (doctor_id, date, hour),
     PRIMARY KEY (patient_id, doctor_id, date, hour)
 );
 
