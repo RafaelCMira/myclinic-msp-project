@@ -116,7 +116,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/doctor?speciality=1&clinic=3",
+							"raw": "localhost:8080/api/v1/doctor",
 							"host": [
 								"localhost"
 							],
@@ -129,11 +129,13 @@
 							"query": [
 								{
 									"key": "speciality",
-									"value": "1"
+									"value": "1",
+									"disabled": true
 								},
 								{
 									"key": "clinic",
-									"value": "3"
+									"value": "3",
+									"disabled": true
 								}
 							]
 						}
@@ -251,13 +253,127 @@
 			"name": "Appointment",
 			"item": [
 				{
+					"name": "online",
+					"item": [
+						{
+							"name": "Online appointment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"patientId\": 13,\r\n    \"doctorId\": 2,\r\n    \"date\": \"2024-04-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"duration\": \"00:12:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/online-appointment",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"online-appointment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Online appointment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"patientId\": 4,\r\n    \"doctorId\": 3,\r\n    \"date\": \"2020-02-10\",\r\n    \"hour\": \"10:00:03\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/online-appointment",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"online-appointment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Online appointment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/online-appointment?patientId=13",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"online-appointment"
+									],
+									"query": [
+										{
+											"key": "patientId",
+											"value": "13"
+										},
+										{
+											"key": "doctorId",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "clinicId",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "date",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "hour",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "duration",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "Appointment",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"patientId\": 6,\r\n    \"doctorId\": 1,\r\n    \"clinicId\": 1,\r\n    \"date\": \"2024-04-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"duration\": \"00:12:00\"\r\n}",
+							"raw": "{\r\n    \"patientId\": 6,\r\n    \"doctorId\": 1,\r\n    \"date\": \"2024-04-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"duration\": \"00:12:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -314,7 +430,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/appointment?patientId=4&doctorId=3&clinicId=&date=&hour=&duration=",
+							"raw": "localhost:8080/api/v1/appointment?date=2024-04-22&doctorId=2",
 							"host": [
 								"localhost"
 							],
@@ -327,27 +443,31 @@
 							"query": [
 								{
 									"key": "patientId",
-									"value": "4"
-								},
-								{
-									"key": "doctorId",
-									"value": "3"
+									"value": "4",
+									"disabled": true
 								},
 								{
 									"key": "clinicId",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "date",
-									"value": ""
+									"value": "2024-04-22"
 								},
 								{
 									"key": "hour",
-									"value": ""
+									"value": "",
+									"disabled": true
 								},
 								{
 									"key": "duration",
-									"value": ""
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "doctorId",
+									"value": "2"
 								}
 							]
 						}
@@ -401,7 +521,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/clinic?speciality=1",
+							"raw": "localhost:8080/api/v1/speciality",
 							"host": [
 								"localhost"
 							],
@@ -409,17 +529,13 @@
 							"path": [
 								"api",
 								"v1",
-								"clinic"
+								"speciality"
 							],
 							"query": [
 								{
 									"key": "location",
 									"value": "Amadora",
 									"disabled": true
-								},
-								{
-									"key": "speciality",
-									"value": "1"
 								}
 							]
 						}
