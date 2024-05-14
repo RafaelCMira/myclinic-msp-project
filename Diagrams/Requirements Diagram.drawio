@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-14T13:28:40.592Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="JjtRGlncekoCx8sWJbBX" version="24.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-14T13:41:43.254Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="-DYyg0IcojZAEVsIm5SA" version="24.4.0" type="github">
   <diagram name="Página-1" id="odFwpj1P_mLRmx9RzsQF">
-    <mxGraphModel dx="2967" dy="653" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2654" dy="497" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -293,11 +293,11 @@
         <mxCell id="js9QWIpTAmIStjJIfFOv-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Security&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;19&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
           <mxGeometry x="2775" y="380" width="200" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="js9QWIpTAmIStjJIfFOv-9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Usability&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;20&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+        <mxCell id="js9QWIpTAmIStjJIfFOv-9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Usability&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall comply with usability guidelines&quot;&lt;br&gt;Id=&quot;20&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
           <mxGeometry x="3326" y="380" width="200" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="js9QWIpTAmIStjJIfFOv-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Accessibility&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;21&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
-          <mxGeometry x="4030" y="380" width="200" height="100" as="geometry" />
+        <mxCell id="js9QWIpTAmIStjJIfFOv-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Accessibility&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall be accessable by users with disabilities&quot;&lt;br&gt;Id=&quot;21&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="4030" y="370" width="200" height="110" as="geometry" />
         </mxCell>
         <mxCell id="js9QWIpTAmIStjJIfFOv-11" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-7" target="js9QWIpTAmIStjJIfFOv-6" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -543,13 +543,13 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="js9QWIpTAmIStjJIfFOv-51" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Configurable settings menu provided&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;20.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
-          <mxGeometry x="3250" y="520" width="200" height="100" as="geometry" />
+        <mxCell id="js9QWIpTAmIStjJIfFOv-51" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Configurable settings menu provided&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall allow settings to be configurable in a menu&quot;&lt;br&gt;Id=&quot;20.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="3250" y="520" width="200" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="js9QWIpTAmIStjJIfFOv-52" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Help menu provided&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;20.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+        <mxCell id="js9QWIpTAmIStjJIfFOv-52" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Help menu provided&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have a help menu providing useful information&quot;&lt;br&gt;Id=&quot;20.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
           <mxGeometry x="3460" y="520" width="200" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="js9QWIpTAmIStjJIfFOv-53" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;GUI provided&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;20.3&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+        <mxCell id="js9QWIpTAmIStjJIfFOv-53" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;GUI provided&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall provide a GUI&quot;&lt;br&gt;Id=&quot;20.3&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
           <mxGeometry x="3670" y="520" width="200" height="100" as="geometry" />
         </mxCell>
         <mxCell id="js9QWIpTAmIStjJIfFOv-54" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-9" target="js9QWIpTAmIStjJIfFOv-51" edge="1">
@@ -575,17 +575,17 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="js9QWIpTAmIStjJIfFOv-58" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Color Scheme Choice for daltonism&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;21.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
-          <mxGeometry x="3880" y="520" width="200" height="100" as="geometry" />
+        <mxCell id="js9QWIpTAmIStjJIfFOv-58" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Color Scheme Choice for daltonism&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have a cholor scheme alternative for daltonism&quot;&lt;br&gt;Id=&quot;21.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="3880" y="520" width="200" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="js9QWIpTAmIStjJIfFOv-59" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Proper HTML tags for screen readers&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;21.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
-          <mxGeometry x="4090" y="520" width="200" height="100" as="geometry" />
+        <mxCell id="js9QWIpTAmIStjJIfFOv-59" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Proper HTML tags for screen readers&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have the correct html tags implemented so that screen readers can report the correct information&quot;&lt;br&gt;Id=&quot;21.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="4090" y="520" width="200" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="js9QWIpTAmIStjJIfFOv-60" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Configurable font size&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;21.3&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
-          <mxGeometry x="4300" y="520" width="200" height="100" as="geometry" />
+        <mxCell id="js9QWIpTAmIStjJIfFOv-60" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Configurable font size&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have configurable font size for people with sight disabilites&quot;&lt;br&gt;Id=&quot;21.3&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="4300" y="520" width="200" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="js9QWIpTAmIStjJIfFOv-61" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Alternative text for images&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;21.4&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
-          <mxGeometry x="4510" y="520" width="200" height="100" as="geometry" />
+        <mxCell id="js9QWIpTAmIStjJIfFOv-61" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Alternative text for images&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall be implemented with alternative text for images&quot;&lt;br&gt;Id=&quot;21.4&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="4510" y="520" width="200" height="110" as="geometry" />
         </mxCell>
         <mxCell id="js9QWIpTAmIStjJIfFOv-62" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-10" target="js9QWIpTAmIStjJIfFOv-58" edge="1">
           <mxGeometry relative="1" as="geometry">
