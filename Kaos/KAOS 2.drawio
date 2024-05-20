@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-20T19:24:20.517Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="h0kueJqjW2vh8p57aC7r" version="24.4.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-20T19:35:00.487Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="4u4NSEsauVVpWOX-hT4_" version="24.4.4" type="github">
   <diagram name="Page-1" id="sjmpsNY5L6zh5_jfOdno">
-    <mxGraphModel dx="8150" dy="220" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="7900" dy="74" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -176,7 +176,7 @@
             <mxPoint x="-4974" y="1510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QZRgFoaPWHzqPFfr4_el-9" value="&lt;div&gt;&lt;b&gt;Database controller&lt;/b&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFF2CC;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" parent="1" vertex="1">
+        <mxCell id="QZRgFoaPWHzqPFfr4_el-9" value="&lt;div&gt;&lt;b&gt;Doctor controller&lt;/b&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFF2CC;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="-5507.5" y="1451" width="146" height="38" as="geometry" />
         </mxCell>
         <mxCell id="QZRgFoaPWHzqPFfr4_el-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF0000;strokeWidth=2;" parent="1" vertex="1">
