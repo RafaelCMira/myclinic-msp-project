@@ -26,23 +26,23 @@ export class ReviewDoctorComponent {
     
     
     const userId = localStorage.getItem('userId');
-    if (userId) {
+    //if (userId) {
       console.log(this.review)
-      this.reviewService.createReview(this.review).subscribe(
+     /* this.reviewService.createReview(this.review).subscribe(
         () => {
           // Form submitted successfully
           console.log('Review created successfully');
           // Reset the form
-          this.review = new ReviewDoctor();
-          this.router.navigate(['/panel']);
+         // this.review = new ReviewDoctor();
+          //this.router.navigate(['/panel']);
         },
         (error) => {
           this.errorMessage = 'Error sending review. Please try again later.';
           console.error('Error creating exam:', error);
         }
-      );
-    } else {
+      );*/
+    /*} else {
       this.errorMessage = 'Please log in or authenticate yourself before reviewing a doctor.';
-    }
+    }*/
   }
 }
