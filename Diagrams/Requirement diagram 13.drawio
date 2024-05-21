@@ -1,9 +1,140 @@
-<mxfile host="app.diagrams.net" modified="2024-05-21T13:27:34.213Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" version="24.4.4" etag="G4Eki-T4rXjtqigaLBs7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-21T13:49:17.277Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="-IkvdufXrMHQKsaFmrmg" version="24.4.4" type="github">
   <diagram name="Página-1" id="qtJmnwFwFeLOcwQkmZnU">
-    <mxGraphModel>
+    <mxGraphModel dx="1877" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="DoBYynUEnmm3b60OkJsO-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Review Doctor&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system should enable to review doctor&quot;&lt;br&gt;Id=&quot;13&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="359" y="40" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Review form produced&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system should review the form produced&quot;&lt;br&gt;Id=&quot;13.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="190" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Form filled&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system should get the information filled&quot;&lt;br&gt;Id=&quot;13.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="359" y="190" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Review stored in db&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system should store the review in the database&quot;&lt;br&gt;Id=&quot;13.3&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="627" y="190" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Analytics computed&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system should compute the analytics using the newly stored review&quot;&lt;br&gt;Id=&quot;13.4&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="860" y="190" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-10" value="&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Patient&lt;/b&gt;" style="html=1;align=center;verticalAlign=middle;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="470" y="340" width="80" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-11" value="&amp;lt;&amp;lt;block&amp;gt;&amp;gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Reviews Controller&lt;/b&gt;" style="html=1;align=center;verticalAlign=middle;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="340" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-12" value="&amp;lt;&amp;lt;block&amp;gt;&amp;gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Database Controller&lt;/b&gt;" style="html=1;align=center;verticalAlign=middle;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="672" y="329" width="128" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-13" value="&amp;lt;&amp;lt;block&amp;gt;&amp;gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Analytics Controller&lt;/b&gt;" style="html=1;align=center;verticalAlign=middle;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="840" y="357.5" width="120" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-15" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-1" target="DoBYynUEnmm3b60OkJsO-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="120" as="sourcePoint" />
+            <mxPoint x="150" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-16" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-1" target="DoBYynUEnmm3b60OkJsO-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="120" as="sourcePoint" />
+            <mxPoint x="610" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-17" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-1" target="DoBYynUEnmm3b60OkJsO-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="850" y="60" as="sourcePoint" />
+            <mxPoint x="760" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-18" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-1" target="DoBYynUEnmm3b60OkJsO-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="910" y="90" as="sourcePoint" />
+            <mxPoint x="820" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-23" value="Satisfy" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-12" target="DoBYynUEnmm3b60OkJsO-7">
+          <mxGeometry x="-0.3212" y="-21" relative="1" as="geometry">
+            <mxPoint x="800" y="429" as="sourcePoint" />
+            <mxPoint x="720" y="429" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-24" value="Satisfy" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-11" target="DoBYynUEnmm3b60OkJsO-2">
+          <mxGeometry x="-0.3212" y="-21" relative="1" as="geometry">
+            <mxPoint x="110" y="469" as="sourcePoint" />
+            <mxPoint x="220" y="408" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-25" value="Satisfy" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-10" target="DoBYynUEnmm3b60OkJsO-3">
+          <mxGeometry x="-0.3212" y="-21" relative="1" as="geometry">
+            <mxPoint x="50" y="339" as="sourcePoint" />
+            <mxPoint x="50" y="300" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-28" value="Compute Analytics" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="360" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-32" value="Satisfy" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-13" target="DoBYynUEnmm3b60OkJsO-8">
+          <mxGeometry x="-0.3212" y="-21" relative="1" as="geometry">
+            <mxPoint x="560" y="495" as="sourcePoint" />
+            <mxPoint x="560" y="440" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-33" value="Refine" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-28" target="DoBYynUEnmm3b60OkJsO-8">
+          <mxGeometry x="-0.3212" y="-21" relative="1" as="geometry">
+            <mxPoint x="770" y="527" as="sourcePoint" />
+            <mxPoint x="927" y="410" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-34" value="Performs" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-13" target="DoBYynUEnmm3b60OkJsO-28">
+          <mxGeometry x="0.1667" y="-30" relative="1" as="geometry">
+            <mxPoint x="814.5" y="585" as="sourcePoint" />
+            <mxPoint x="814.5" y="645" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-35" value="&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Form Designer&lt;/b&gt;" style="html=1;align=center;verticalAlign=middle;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="270" y="680" width="100" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-36" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b style=&quot;font-size: 11px; background-color: rgb(255, 255, 255);&quot;&gt;Use Arial or other readable font&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system should register a new patient&quot;&lt;br&gt;Id=&quot;13.1.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="35.5" y="485" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-37" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b style=&quot;font-size: 11px; background-color: rgb(255, 255, 255);&quot;&gt;Font size of at least 13pt&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system should register a new patient&quot;&lt;br&gt;Id=&quot;13.1.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" vertex="1" parent="1">
+          <mxGeometry x="344.5" y="485" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-38" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" edge="1" parent="1" target="DoBYynUEnmm3b60OkJsO-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="444.5" y="435" as="sourcePoint" />
+            <mxPoint x="135.5" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-39" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" edge="1" parent="1" target="DoBYynUEnmm3b60OkJsO-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="444.5" y="435" as="sourcePoint" />
+            <mxPoint x="595.5" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-40" value="Satisfy" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-35" target="DoBYynUEnmm3b60OkJsO-36">
+          <mxGeometry x="-0.3212" y="-21" relative="1" as="geometry">
+            <mxPoint x="200.5" y="710" as="sourcePoint" />
+            <mxPoint x="179.5" y="660" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoBYynUEnmm3b60OkJsO-41" value="Satisfy" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" source="DoBYynUEnmm3b60OkJsO-35" target="DoBYynUEnmm3b60OkJsO-37">
+          <mxGeometry x="-0.3212" y="-21" relative="1" as="geometry">
+            <mxPoint x="302" y="690" as="sourcePoint" />
+            <mxPoint x="200" y="595" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
