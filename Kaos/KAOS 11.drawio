@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-20T21:50:36.663Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="dCaCHutfdLUm-IeqICLx" version="24.4.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-21T15:26:19.440Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="C5J-sUD9LvJHech1QE3S" version="24.4.4" type="github">
   <diagram name="Page-1" id="GOq0J2rVROoGMqk2-0tV">
-    <mxGraphModel dx="3990" dy="365" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3635" dy="320" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -107,7 +107,7 @@
         <mxCell id="a9L5b0YJBNE10wTY4Ymj-33" value="&lt;b&gt;Details ok&lt;/b&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#dae8fc;strokeColor=#000000;strokeWidth=3;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1889.5" y="788" width="125" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="a9L5b0YJBNE10wTY4Ymj-34" value="&lt;b&gt;Doctor notified if details not ok&lt;/b&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#dae8fc;strokeColor=#000000;strokeWidth=3;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" parent="1" vertex="1">
+        <mxCell id="a9L5b0YJBNE10wTY4Ymj-34" value="&lt;b&gt;User notified if details not ok&lt;/b&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#dae8fc;strokeColor=#000000;strokeWidth=3;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1754" y="788" width="217" height="44" as="geometry" />
         </mxCell>
         <mxCell id="a9L5b0YJBNE10wTY4Ymj-35" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFD966;strokeWidth=2;" parent="1" vertex="1">
