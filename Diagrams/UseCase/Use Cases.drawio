@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-22T18:47:16.768Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="AUdUunUvTqab7fkH0xxE" version="24.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-22T18:47:49.742Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="qispHMvwuYRECwzDebWu" version="24.4.6" type="github">
   <diagram name="Page-1" id="YDADZ48Di3xZLX271aUz">
-    <mxGraphModel dx="1786" dy="803" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1192" dy="459" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -23,7 +23,7 @@
           <mxGeometry x="146" y="627" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f0yLnYQP_B_3VWNw2zJM-7" value="Register patient" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;" vertex="1" parent="1">
-          <mxGeometry x="322" y="126" width="120" height="60" as="geometry" />
+          <mxGeometry x="322" y="129" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f0yLnYQP_B_3VWNw2zJM-8" value="Send email" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;" vertex="1" parent="1">
           <mxGeometry x="578" y="129" width="120" height="60" as="geometry" />
