@@ -1,0 +1,72 @@
+<mxlibrary>[
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"\" style=\"group\" vertex=\"1\" connectable=\"0\" parent=\"1\"&gt;&lt;mxGeometry width=\"176\" height=\"81\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;mxCell id=\"3\" value=\"&amp;lt;b&amp;gt;&amp;amp;lt;&amp;amp;lt; Type &amp;amp;gt;&amp;amp;gt;&amp;lt;/b&amp;gt;&amp;lt;div&amp;gt;&amp;lt;b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;div&amp;gt;Name&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;\" style=\"rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;container=0;strokeWidth=2;\" vertex=\"1\" parent=\"2\"&gt;&lt;mxGeometry y=\"16\" width=\"176\" height=\"65\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;mxCell id=\"4\" value=\"\" style=\"rounded=0;whiteSpace=wrap;html=1;container=0;strokeWidth=2;\" vertex=\"1\" parent=\"2\"&gt;&lt;mxGeometry width=\"47.19553072625698\" height=\"16\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 176,
+    "h": 81,
+    "aspect": "fixed",
+    "title": "Requirement"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"\" style=\"endArrow=circlePlus;html=1;rounded=0;strokeWidth=2;endFill=0;\" edge=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"50\" height=\"50\" relative=\"1\" as=\"geometry\"&gt;&lt;mxPoint y=\"59\" as=\"sourcePoint\"/&gt;&lt;mxPoint as=\"targetPoint\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 0.4,
+    "h": 59,
+    "aspect": "fixed",
+    "title": "Containment"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"&amp;lt;p style=&amp;quot;margin:0px;margin-top:4px;text-align:center;&amp;quot;&amp;gt;&amp;amp;lt;&amp;amp;lt;requirement&amp;amp;gt;&amp;amp;gt;&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Requirement name&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;hr&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p style=&amp;quot;margin:0px;margin-left:8px;text-align:left;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Text&amp;amp;nbsp;&amp;lt;/b&amp;gt;= &amp;quot;Requirement description&amp;quot;&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Id&amp;amp;nbsp; &amp;amp;nbsp; &amp;amp;nbsp;&amp;lt;/b&amp;gt;= &amp;quot;1.0&amp;quot;&amp;lt;/p&amp;gt;\" style=\"shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry x=\"-1.1368683772161603e-13\" width=\"200\" height=\"100\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 200,
+    "h": 100,
+    "aspect": "fixed",
+    "title": "Requirement"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"&amp;lt;font style=&amp;quot;font-size: 12px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;&amp;amp;lt;&amp;amp;lt; Refine &amp;amp;gt;&amp;amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;\" style=\"edgeStyle=none;html=1;endArrow=open;endSize=12;dashed=1;verticalAlign=bottom;rounded=0;strokeWidth=2;\" edge=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"160\" relative=\"1\" as=\"geometry\"&gt;&lt;mxPoint as=\"sourcePoint\"/&gt;&lt;mxPoint x=\"160\" as=\"targetPoint\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 160,
+    "h": 0.6896551724137931,
+    "aspect": "fixed",
+    "title": "Refine"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"&amp;lt;font style=&amp;quot;font-size: 12px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;&amp;amp;lt;&amp;amp;lt; Satisfy &amp;amp;gt;&amp;amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;\" style=\"edgeStyle=none;html=1;endArrow=open;endSize=12;dashed=1;verticalAlign=bottom;rounded=0;strokeWidth=2;\" edge=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"160\" relative=\"1\" as=\"geometry\"&gt;&lt;mxPoint y=\"-1.1368683772161603e-13\" as=\"sourcePoint\"/&gt;&lt;mxPoint x=\"160\" y=\"-1.1368683772161603e-13\" as=\"targetPoint\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 160,
+    "h": 0.6896551724137931,
+    "aspect": "fixed",
+    "title": "Satisfy"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"&amp;lt;font style=&amp;quot;font-size: 12px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;&amp;amp;lt;&amp;amp;lt; Derive &amp;amp;gt;&amp;amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;\" style=\"edgeStyle=none;html=1;endArrow=open;endSize=12;dashed=1;verticalAlign=bottom;rounded=0;strokeWidth=2;\" edge=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"160\" relative=\"1\" as=\"geometry\"&gt;&lt;mxPoint as=\"sourcePoint\"/&gt;&lt;mxPoint x=\"160\" as=\"targetPoint\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 160,
+    "h": 0.6896551724137931,
+    "aspect": "fixed",
+    "title": "Derive"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"&amp;lt;span style=&amp;quot;background-color: initial;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;&amp;amp;lt;&amp;amp;lt; Problem &amp;amp;gt;&amp;amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;div&amp;gt;&amp;lt;div style=&amp;quot;font-weight: bold; text-align: left;&amp;quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div style=&amp;quot;&amp;quot;&amp;gt;Description&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;\" style=\"shape=note;size=15;align=center;spacingLeft=0;html=1;whiteSpace=wrap;verticalAlign=top;strokeWidth=2;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"173\" height=\"65\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 173,
+    "h": 65,
+    "aspect": "fixed",
+    "title": "Problem"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"&amp;lt;span style=&amp;quot;background-color: initial;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;&amp;amp;lt;&amp;amp;lt; Rationale &amp;amp;gt;&amp;amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;div&amp;gt;&amp;lt;div style=&amp;quot;font-weight: bold; text-align: left;&amp;quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div style=&amp;quot;&amp;quot;&amp;gt;Problem solution&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;\" style=\"shape=note;size=15;align=center;spacingLeft=0;html=1;whiteSpace=wrap;verticalAlign=top;strokeWidth=2;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"173\" height=\"65\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 173,
+    "h": 65,
+    "aspect": "fixed",
+    "title": "Rationale"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"Use Case\" style=\"shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;fillColor=#CDA2BE;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry x=\"-2.2737367544323206e-13\" width=\"120\" height=\"60\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 119.99999999999999,
+    "h": 59.99999999999999,
+    "aspect": "fixed",
+    "title": "Use Case"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"&amp;amp;lt;&amp;amp;lt; &amp;lt;b&amp;gt;Block &amp;lt;/b&amp;gt;&amp;amp;gt;&amp;amp;gt;&amp;lt;div&amp;gt;&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Block name&amp;lt;/b&amp;gt;&amp;lt;/div&amp;gt;\" style=\"shape=rect;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#FFF2CC;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"120\" height=\"60\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 120.00000000000001,
+    "h": 60.00000000000001,
+    "aspect": "fixed",
+    "title": "Block"
+  }
+]</mxlibrary>

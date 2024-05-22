@@ -14,6 +14,7 @@ import { ScheduleAppointmentComponent } from "./schedule-appointment/schedule-ap
 import { ScheduleExamComponent } from "./schedule-exam/schedule-exam.component";
 import { LoginComponent } from "./login/login/login.component";
 import { WelcomePanelComponent } from "./welcome-panel/welcome-panel.component";
+import { ReviewDoctorComponent } from "./review-doctor/review-doctor.component";
 import { RoleService } from "./services/role/role.service";
 import {Observable} from "rxjs";
 import {DoctorListComponent} from "./doctor-list/doctor-list.component";
@@ -50,6 +51,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'panel', component: WelcomePanelComponent },
+  { path: 'reviewDoctor', component: ReviewDoctorComponent },
   { path: '**', redirectTo: 'welcome' }
 ];
 

@@ -21,7 +21,9 @@ import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
 import { ScheduleAppointmentComponent} from "./schedule-appointment/schedule-appointment.component";
 import { ScheduleExamComponent} from "./schedule-exam/schedule-exam.component";
+import { ReviewDoctorComponent} from "./review-doctor/review-doctor.component";
 import { DropdownModule } from 'primeng/dropdown';
+import { RadioButtonModule } from 'primeng/radiobutton';
 import { FileUploadModule } from 'primeng/fileupload';
 import {MessageModule} from "primeng/message";
 import {ToastModule} from "primeng/toast";
@@ -39,6 +41,7 @@ import {Table, TableModule} from "primeng/table";
     WelcomePanelComponent,
     ScheduleAppointmentComponent,
     ScheduleExamComponent,
+    ReviewDoctorComponent
     DoctorListComponent,
   ],
   imports: [
@@ -59,6 +62,7 @@ import {Table, TableModule} from "primeng/table";
     DropdownModule,
     FileUploadModule,
     ToastModule,
+    RadioButtonModule
     TableModule,
 
 

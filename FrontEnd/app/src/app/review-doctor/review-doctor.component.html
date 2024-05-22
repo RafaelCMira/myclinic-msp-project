@@ -1,0 +1,37 @@
+<div class="form">
+    <h2>Review Doctor</h2>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+    <div class="field">
+      <label class="label">Rate Doctor</label>
+      <div class="options">
+        <div class="field-radiobutton">
+          <p-radioButton name="group1" value="1" [(ngModel)]="review.rating" inputId="option1"></p-radioButton>
+          <label class="optionLabel">1</label>
+        </div>
+        <div class="field-radiobutton">
+          <p-radioButton name="group1" value="2" [(ngModel)]="review.rating" inputId="option2"></p-radioButton>
+          <label class="optionLabel">2</label>
+        </div>
+        <div class="field-radiobutton">
+          <p-radioButton name="group1" value="3" [(ngModel)]="review.rating" inputId="option3"></p-radioButton>
+          <label class="optionLabel">3</label>
+        </div>
+        <div class="field-radiobutton">
+          <p-radioButton name="group1" value="4" [(ngModel)]="review.rating" inputId="option4"></p-radioButton>
+          <label class="optionLabel">4</label>
+        </div>
+        <div class="field-radiobutton">
+          <p-radioButton name="group1" value="5" [(ngModel)]="review.rating" inputId="option5"></p-radioButton>
+          <label class="optionLabel">5</label>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Write your Opinion (Optional)</label>
+      <textarea rows="4" [(ngModel)]="review.opinion" name="opinion" class="input-field"></textarea>
+    </div>
+    
+    <button class="submit-form" type="button" pButton (click)="submitReviewForm()" label="Submit Review"></button>
+</div>
