@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-20T22:49:54.405Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="QXvV4oJbmFQuOh4JW4L2" version="24.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-22T16:53:56.073Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="Bu4wCUXy_YaBedemVQ4l" version="24.4.6" type="github">
   <diagram name="Page-1" id="QZbvU5UdVqbodoA97YqL">
-    <mxGraphModel dx="3259" dy="716" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3434" dy="803" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -61,7 +61,7 @@
             <mxPoint x="-1036" y="441" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="GDvIqiIspNc1gY_K4FjV-19" value="&lt;div&gt;&lt;b&gt;Database controller&lt;/b&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFF2CC;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" parent="1" vertex="1">
+        <mxCell id="GDvIqiIspNc1gY_K4FjV-19" value="&lt;div&gt;&lt;b&gt;Reviews controller&lt;/b&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFF2CC;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1020.5" y="684" width="146" height="38" as="geometry" />
         </mxCell>
         <mxCell id="GDvIqiIspNc1gY_K4FjV-20" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF0000;strokeWidth=2;" parent="1" vertex="1">
@@ -244,11 +244,8 @@
         <mxCell id="B__In8Ob0YahC3zJyNfu-51" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-1490" y="977" width="145" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="B__In8Ob0YahC3zJyNfu-49" value="&lt;b&gt;Form designer&lt;/b&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFF2CC;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" parent="B__In8Ob0YahC3zJyNfu-51" vertex="1">
+        <mxCell id="B__In8Ob0YahC3zJyNfu-49" value="&lt;b&gt;Interface designer&lt;/b&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFF2CC;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" parent="B__In8Ob0YahC3zJyNfu-51" vertex="1">
           <mxGeometry width="145" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="B__In8Ob0YahC3zJyNfu-50" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="B__In8Ob0YahC3zJyNfu-51" vertex="1">
-          <mxGeometry x="14.983050847457434" y="7.75" width="10.372881355932204" height="24.5" as="geometry" />
         </mxCell>
         <mxCell id="B__In8Ob0YahC3zJyNfu-56" value="&lt;b&gt;Compute analytics&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E4B9E7;strokeColor=#000000;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" parent="1" vertex="1">
           <mxGeometry x="-587" y="681" width="120" height="41" as="geometry" />
