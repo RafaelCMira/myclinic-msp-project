@@ -41,7 +41,7 @@ import {Table, TableModule} from "primeng/table";
     WelcomePanelComponent,
     ScheduleAppointmentComponent,
     ScheduleExamComponent,
-    ReviewDoctorComponent
+    ReviewDoctorComponent,
     DoctorListComponent,
   ],
   imports: [
@@ -62,7 +62,7 @@ import {Table, TableModule} from "primeng/table";
     DropdownModule,
     FileUploadModule,
     ToastModule,
-    RadioButtonModule
+    RadioButtonModule,
     TableModule,
 
 
