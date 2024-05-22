@@ -16,6 +16,7 @@ import { LoginComponent } from "./login/login/login.component";
 import { WelcomePanelComponent } from "./welcome-panel/welcome-panel.component";
 import { RoleService } from "./services/role/role.service";
 import {Observable} from "rxjs";
+import {DoctorListComponent} from "./doctor-list/doctor-list.component";
 
 
 @Injectable({
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: '', canActivate: [AuthGuard], component: WelcomePanelComponent },
   { path: 'appointment', canActivate: [AuthGuard], component: ScheduleAppointmentComponent },
   { path: 'exam', canActivate: [AuthGuard], component: ScheduleExamComponent },
+  { path: 'doctor', canActivate: [AuthGuard], component: DoctorListComponent },
 
   // Default route for non-logged-in users
   { path: 'welcome', component: WelcomePageComponent },

@@ -20,6 +20,8 @@ export class HeaderComponent {
         { label: 'About', routerLink: '/panel' },
         { label: 'Appointments', routerLink: '/appointment' },
         { label: 'Exams', routerLink: '/exam' },
+        { label: 'Doctors', routerLink: '/doctor' },
+
     ];
 
     doctorMenuItems: any[] = [

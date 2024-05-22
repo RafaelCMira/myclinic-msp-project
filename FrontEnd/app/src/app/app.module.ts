@@ -25,6 +25,8 @@ import { DropdownModule } from 'primeng/dropdown';
 import { FileUploadModule } from 'primeng/fileupload';
 import {MessageModule} from "primeng/message";
 import {ToastModule} from "primeng/toast";
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
+import {Table, TableModule} from "primeng/table";
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import {ToastModule} from "primeng/toast";
     WelcomePanelComponent,
     ScheduleAppointmentComponent,
     ScheduleExamComponent,
+    DoctorListComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,8 @@ import {ToastModule} from "primeng/toast";
     DropdownModule,
     FileUploadModule,
     ToastModule,
+    TableModule,
+
 
   ],
   providers: [MessageService],
