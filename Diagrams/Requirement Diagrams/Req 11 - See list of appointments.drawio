@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-23T10:28:30.525Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="TBbwtpiRN2--I1r7IdIM" version="24.4.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-23T10:29:21.632Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="j8G-LaAjO6by_51MDLLl" version="24.4.4" type="github">
   <diagram name="Page-1" id="T_TUrl57_qO42ONMsJEx">
     <mxGraphModel dx="1802" dy="410" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -161,6 +161,16 @@
         </mxCell>
         <mxCell id="Kk624B1LERDIwn-k9sA2-4" value="Note: ask professor if this is ok" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="414" y="770" width="181" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="iZoHA22_Y5u8gmJo2MV3-2" value="Display appointments" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;fillColor=#CDA2BE;" vertex="1" parent="1">
+          <mxGeometry x="1848.9999999999998" y="904" width="138" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iZoHA22_Y5u8gmJo2MV3-3" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt; Refine &amp;gt;&amp;gt;&lt;/b&gt;&lt;/font&gt;" style="edgeStyle=none;html=1;endArrow=open;endSize=12;dashed=1;verticalAlign=bottom;rounded=0;strokeWidth=2;" edge="1" source="iZoHA22_Y5u8gmJo2MV3-2" parent="1" target="k6tlBCFo0J_A2OAQhTOj-7">
+          <mxGeometry x="-0.2659" y="-2" width="160" relative="1" as="geometry">
+            <mxPoint x="1745.4299999999998" y="1020" as="sourcePoint" />
+            <mxPoint x="1785.4299999999998" y="945" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
