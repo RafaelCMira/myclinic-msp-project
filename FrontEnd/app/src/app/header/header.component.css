@@ -5,3 +5,27 @@
     border-radius: 17px;
     background-color: #5beeff;
 }
+
+.header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header .container .menu {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    position: relative;
+}
+
+.header .container h1 a,
+.header .container h1 a:visited,
+.header .container h1 a:active {
+    color: black;
+    text-decoration: none;
+}

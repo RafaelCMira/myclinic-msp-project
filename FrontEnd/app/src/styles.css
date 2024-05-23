@@ -19,3 +19,12 @@
 button.submit-form {
     margin-top: 10px;
 }
+
+body {
+    margin: 0;
+}
+
+.insideGrid {
+    width: 1160px;
+    margin: 0 auto;
+}

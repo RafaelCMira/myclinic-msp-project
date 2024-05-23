@@ -1,11 +1,12 @@
-<div class="header">
-    <div class="container">
-        <h1>MyClinic</h1>
+<div class="header ">
+    <div class="container insideGrid">
+        <h1><a href="/">MyClinic</a></h1>
         <!-- Navigation Menu -->
-        <p-menubar *ngIf="selectedRole === 'none'" [model]="noneMenuItems"></p-menubar>
-        <p-menubar *ngIf="selectedRole === 'patient'" [model]="patientMenuItems"></p-menubar>
-        <p-menubar *ngIf="selectedRole === 'doctor'" [model]="doctorMenuItems"></p-menubar>
-
+        <div class="menu">
+            <p-menubar *ngIf="selectedRole === 'none'" [model]="noneMenuItems"></p-menubar>
+            <p-menubar *ngIf="selectedRole === 'patient'" [model]="patientMenuItems"></p-menubar>
+            <p-menubar *ngIf="selectedRole === 'doctor'" [model]="doctorMenuItems"></p-menubar>
+        </div>
     </div>
 </div>
 
