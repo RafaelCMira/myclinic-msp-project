@@ -1,9 +1,53 @@
-<mxfile host="app.diagrams.net" modified="2024-05-24T20:41:45.272Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" version="24.4.8" etag="LE1zlHmCvgKLH5Ji54hN" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-24T21:41:07.283Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="JDZ25HQPy99PRu3CkD1Q" version="24.4.8" type="github">
   <diagram name="Page-1" id="KrauIATV3miGhm9wLqKy">
-    <mxGraphModel>
+    <mxGraphModel dx="1389" dy="954" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="-wZavSzBh2NRzvdPmCQ8-1" value="&lt;b&gt;: Website&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="128" y="195" width="60" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="-wZavSzBh2NRzvdPmCQ8-9" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="-wZavSzBh2NRzvdPmCQ8-1">
+          <mxGeometry x="25" y="62" width="10" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="-wZavSzBh2NRzvdPmCQ8-2" value="&lt;b&gt;: Appointments controller&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="277" y="195" width="154" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="-wZavSzBh2NRzvdPmCQ8-3" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="-82.5" y="195" width="20" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="-wZavSzBh2NRzvdPmCQ8-4" value="User" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-94" y="165" width="43" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="-wZavSzBh2NRzvdPmCQ8-5" value="&lt;b&gt;: Appointment&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="537" y="195" width="88" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="-wZavSzBh2NRzvdPmCQ8-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;margin-left:5px;text-align:left;&quot;&gt;&lt;b&gt;sd&lt;/b&gt;&amp;nbsp;See appointments&lt;/p&gt;" style="html=1;shape=mxgraph.sysml.package;overflow=fill;labelX=125.17;align=left;spacingLeft=5;verticalAlign=top;spacingTop=-3;" vertex="1" parent="1">
+          <mxGeometry x="-364" y="-272" width="1054" height="366" as="geometry" />
+        </mxCell>
+        <mxCell id="-wZavSzBh2NRzvdPmCQ8-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" edge="1" parent="1" source="-wZavSzBh2NRzvdPmCQ8-3" target="-wZavSzBh2NRzvdPmCQ8-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-67.5" y="268" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="43" y="265" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-wZavSzBh2NRzvdPmCQ8-12" value="Click(appointments)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="-wZavSzBh2NRzvdPmCQ8-11">
+          <mxGeometry x="-0.1981" y="-1" relative="1" as="geometry">
+            <mxPoint x="16" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-wZavSzBh2NRzvdPmCQ8-16" value="LoadPage(appointments)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="47" y="307" as="geometry" />
+        </mxCell>
+        <mxCell id="-wZavSzBh2NRzvdPmCQ8-19" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="-wZavSzBh2NRzvdPmCQ8-9" target="-wZavSzBh2NRzvdPmCQ8-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="36" y="317" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
