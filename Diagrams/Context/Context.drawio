@@ -1,9 +1,71 @@
-<mxfile host="app.diagrams.net" modified="2024-05-26T22:29:51.716Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" version="24.4.8" etag="50MmcucV4KEGl2zlil0q" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-26T22:39:34.508Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="auDrZQJ5DUICIQ2Xn-H8" version="24.4.8" type="github">
   <diagram name="Page-1" id="w3UB9u6uiEBpwwJffAFI">
-    <mxGraphModel>
+    <mxGraphModel dx="2049" dy="1147" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="DasESgJ1_zzesj3rviWy-1" value="&lt;b&gt;MyClinic&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="216" y="295" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="DasESgJ1_zzesj3rviWy-2" target="DasESgJ1_zzesj3rviWy-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-2" value="&lt;b&gt;Doctor&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="103" y="295" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" source="DasESgJ1_zzesj3rviWy-8" parent="1" target="DasESgJ1_zzesj3rviWy-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="376" y="417" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-8" value="&lt;b&gt;Patient&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="261" y="407" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="DasESgJ1_zzesj3rviWy-13" target="DasESgJ1_zzesj3rviWy-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="143" y="335" as="sourcePoint" />
+            <mxPoint x="226" y="335" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-19" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="DasESgJ1_zzesj3rviWy-16" target="DasESgJ1_zzesj3rviWy-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="286" y="223" as="sourcePoint" />
+            <mxPoint x="286" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-22" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="DasESgJ1_zzesj3rviWy-20" target="DasESgJ1_zzesj3rviWy-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="271" y="423" as="sourcePoint" />
+            <mxPoint x="321" y="499" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-23" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="436.5" y="355" width="92.5" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-20" value="" style="html=1;whiteSpace=wrap;shape=isoCube2;backgroundOutline=1;isoAngle=15;" vertex="1" parent="DasESgJ1_zzesj3rviWy-23">
+          <mxGeometry y="26" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-21" value="&lt;b&gt;MRI machine&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="DasESgJ1_zzesj3rviWy-23">
+          <mxGeometry x="0.5" width="92" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-24" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="448" y="155" width="100" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-16" value="" style="html=1;whiteSpace=wrap;shape=isoCube2;backgroundOutline=1;isoAngle=15;" vertex="1" parent="DasESgJ1_zzesj3rviWy-24">
+          <mxGeometry x="3.5" y="26" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-17" value="&lt;b&gt;X-ray machine&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="DasESgJ1_zzesj3rviWy-24">
+          <mxGeometry width="100" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-25" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="216.5" y="87" width="121" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-13" value="" style="html=1;whiteSpace=wrap;shape=isoCube2;backgroundOutline=1;isoAngle=15;" vertex="1" parent="DasESgJ1_zzesj3rviWy-25">
+          <mxGeometry x="14.5" y="26" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DasESgJ1_zzesj3rviWy-14" value="&lt;b&gt;Check-in machine&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="DasESgJ1_zzesj3rviWy-25">
+          <mxGeometry width="121" height="26" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
