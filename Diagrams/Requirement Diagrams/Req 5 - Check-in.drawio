@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-27T11:29:23.878Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="VwZARfYWTlLuLk8JC8Sm" version="24.4.8" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-27T11:29:38.197Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="5oS8OucocO5ZRNHcIrXM" version="24.4.8" type="github">
   <diagram name="Page-1" id="pqKrRmiH1XkKmJXzSl1p">
     <mxGraphModel dx="1861" dy="647" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -100,7 +100,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rM3zX1CbjfDdGFKikgZc-4" value="Read card" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;fillColor=#CDA2BE;" parent="1" vertex="1">
-          <mxGeometry x="-176.00000000000023" y="529.5" width="120" height="60" as="geometry" />
+          <mxGeometry x="-136.00000000000023" y="513" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rM3zX1CbjfDdGFKikgZc-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Display message if there aren&#39;t appointments&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;b&gt;Text&amp;nbsp;&lt;/b&gt;= &quot;The ticket should be printed after check-in&quot;&lt;br&gt;&lt;b&gt;Id&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/b&gt;= &quot;1.0&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
           <mxGeometry x="1462" y="429.5" width="200" height="111" as="geometry" />
