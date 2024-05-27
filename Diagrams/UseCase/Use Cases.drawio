@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-23T12:21:33.173Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="X28Hyx4t4iNRjwlxACzR" version="24.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-27T10:28:01.689Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="vHaQz4cnwE_ymkcDht3V" version="24.4.8" type="github">
   <diagram name="Page-1" id="YDADZ48Di3xZLX271aUz">
-    <mxGraphModel dx="1433" dy="580" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1221" dy="647" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -25,11 +25,11 @@
         <mxCell id="f0yLnYQP_B_3VWNw2zJM-8" value="Send email" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;" parent="1" vertex="1">
           <mxGeometry x="578" y="129" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="f0yLnYQP_B_3VWNw2zJM-9" value="Register appointment" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;" parent="1" vertex="1">
+        <mxCell id="f0yLnYQP_B_3VWNw2zJM-9" value="Schedule appointment" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;" parent="1" vertex="1">
           <mxGeometry x="326" y="234" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f0yLnYQP_B_3VWNw2zJM-10" value="Check availability" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;" parent="1" vertex="1">
-          <mxGeometry x="582" y="225" width="120" height="60" as="geometry" />
+          <mxGeometry x="580" y="234" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f0yLnYQP_B_3VWNw2zJM-11" value="&lt;b&gt;&amp;lt;&amp;lt;include&amp;gt;&amp;gt;&lt;/b&gt;" style="edgeStyle=none;html=1;endArrow=open;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;rounded=0;strokeWidth=2;" parent="1" source="f0yLnYQP_B_3VWNw2zJM-9" target="f0yLnYQP_B_3VWNw2zJM-10" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
