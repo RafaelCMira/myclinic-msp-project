@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-28T19:19:35.211Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="nyuc1HoVWtESqrlL2LeG" version="24.4.9" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-28T19:34:35.697Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="1i7sUxuDxVs8hIFmd5kB" version="24.4.9" type="github">
   <diagram name="Page-1" id="ptyI1DgkGx-0nU6MzZ29">
-    <mxGraphModel dx="2189" dy="954" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2019" dy="859" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -19,8 +19,8 @@
         <mxCell id="l48EKnDCiLtibXihTDYW-5" value="" style="html=1;shape=mxgraph.sysml.port;sysMLPortType=flowN;" parent="l48EKnDCiLtibXihTDYW-3" vertex="1">
           <mxGeometry x="50" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="l48EKnDCiLtibXihTDYW-6" value="Id card and clinic history" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-756" y="-226" width="147" height="26" as="geometry" />
+        <mxCell id="l48EKnDCiLtibXihTDYW-6" value="Id card and medical history" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-756" y="-226" width="161" height="26" as="geometry" />
         </mxCell>
         <mxCell id="l48EKnDCiLtibXihTDYW-7" value="" style="endArrow=none;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=2;" parent="1" source="l48EKnDCiLtibXihTDYW-23" target="l48EKnDCiLtibXihTDYW-8" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -28,16 +28,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="l48EKnDCiLtibXihTDYW-8" value="" style="ellipse;html=1;fontSize=11;align=center;fillColor=none;points=[];aspect=fixed;resizable=0;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;flipH=1;" parent="1" vertex="1">
-          <mxGeometry x="-550" y="-296" width="8" height="8" as="geometry" />
+          <mxGeometry x="-575" y="-296" width="8" height="8" as="geometry" />
         </mxCell>
         <mxCell id="l48EKnDCiLtibXihTDYW-9" value="" style="endArrow=none;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=2;" parent="1" source="l48EKnDCiLtibXihTDYW-20" target="l48EKnDCiLtibXihTDYW-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="l48EKnDCiLtibXihTDYW-10" value="" style="shape=requiredInterface;html=1;fontSize=11;align=center;fillColor=none;points=[];aspect=fixed;resizable=0;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;flipH=1;rotation=0;" parent="1" vertex="1">
-          <mxGeometry x="-555" y="-297" width="5" height="10" as="geometry" />
+          <mxGeometry x="-580" y="-297" width="5" height="10" as="geometry" />
         </mxCell>
         <mxCell id="l48EKnDCiLtibXihTDYW-11" value="Validate" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-578.5" y="-287" width="60" height="26" as="geometry" />
+          <mxGeometry x="-601" y="-288" width="60" height="26" as="geometry" />
         </mxCell>
         <mxCell id="l48EKnDCiLtibXihTDYW-12" value="" style="endArrow=none;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=2;" parent="1" source="l48EKnDCiLtibXihTDYW-27" target="l48EKnDCiLtibXihTDYW-13" edge="1">
           <mxGeometry relative="1" as="geometry">
