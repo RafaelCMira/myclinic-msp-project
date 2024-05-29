@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-29T17:04:54.925Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="kK8pA6g0pt6-7ZwtEbkG" version="24.4.10" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-29T17:55:41.061Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="TaHUm2zLD9HekWUWOnqW" version="24.4.10" type="github">
   <diagram name="Page-1" id="KLMLbkz_-PtjeJySUjGt">
-    <mxGraphModel dx="2118" dy="736" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1136" dy="227" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -108,7 +108,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="pco9DQGyCopVpS2-yk5m-24" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Provide details&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;b&gt;Text&amp;nbsp;&lt;/b&gt;= &quot;Patients should provide the appointment details&quot;&lt;br&gt;&lt;b&gt;Id&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/b&gt;= &quot;3.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+        <mxCell id="pco9DQGyCopVpS2-yk5m-24" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Provide details&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;b&gt;Text&amp;nbsp;&lt;/b&gt;= &quot;The system should get the patient appointment details&quot;&lt;br&gt;&lt;b&gt;Id&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/b&gt;= &quot;3.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
           <mxGeometry x="74" y="866" width="200" height="100" as="geometry" />
         </mxCell>
         <mxCell id="pco9DQGyCopVpS2-yk5m-25" value="" style="endArrow=circlePlus;html=1;rounded=0;strokeWidth=1;endFill=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="pco9DQGyCopVpS2-yk5m-24" target="pco9DQGyCopVpS2-yk5m-1" edge="1">
