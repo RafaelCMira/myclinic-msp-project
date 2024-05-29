@@ -489,7 +489,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/appointment?patientId=17&maxDate=2024-05-29",
+							"raw": "localhost:8080/api/v1/appointment?patientId=17&upcoming=true",
 							"host": [
 								"localhost"
 							],
@@ -530,8 +530,8 @@
 									"disabled": true
 								},
 								{
-									"key": "maxDate",
-									"value": "2024-05-29"
+									"key": "upcoming",
+									"value": "true"
 								}
 							]
 						}
