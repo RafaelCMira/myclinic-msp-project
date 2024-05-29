@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-29T16:48:52.791Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="QLz-1T3JCXdEeq-r3HgL" version="24.4.9" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-29T16:50:11.119Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="nxj-LAZ_nqARljNjUUcM" version="24.4.9" type="github">
   <diagram name="Página-1" id="odFwpj1P_mLRmx9RzsQF">
-    <mxGraphModel dx="3259" dy="1136" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3945" dy="1515" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -11,7 +11,7 @@
           <mxGeometry x="400" y="10" width="70" height="50" as="geometry" />
         </mxCell>
         <mxCell id="1v43-9IHqfWxljv2G6Mm-4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Non-Functional Requirements&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;MyClinic NFR&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
-          <mxGeometry x="795" y="127" width="200" height="60" as="geometry" />
+          <mxGeometry x="1136" y="130" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1v43-9IHqfWxljv2G6Mm-43" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Basic Features&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
           <mxGeometry x="-896" y="258" width="200" height="60" as="geometry" />
@@ -32,7 +32,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="js9QWIpTAmIStjJIfFOv-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Quality NFR&#39;s&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
-          <mxGeometry x="1311" y="303" width="200" height="60" as="geometry" />
+          <mxGeometry x="1268" y="303" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="js9QWIpTAmIStjJIfFOv-44" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="jiixLFprqPIUBCIlmw_A-50" target="jiixLFprqPIUBCIlmw_A-56" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -352,7 +352,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="jiixLFprqPIUBCIlmw_A-71" value="&amp;lt;&amp;lt; &lt;b&gt;Block &lt;/b&gt;&amp;gt;&amp;gt;&lt;div&gt;&lt;br&gt;&lt;b&gt;System architect&lt;/b&gt;&lt;/div&gt;" style="shape=rect;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#FFF2CC;" parent="1" vertex="1">
-          <mxGeometry x="1757" y="1072" width="120" height="68" as="geometry" />
+          <mxGeometry x="1820" y="1066" width="120" height="68" as="geometry" />
         </mxCell>
         <mxCell id="jiixLFprqPIUBCIlmw_A-72" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt; Satisfy &amp;gt;&amp;gt;&lt;/b&gt;&lt;/font&gt;" style="edgeStyle=none;html=1;endArrow=open;endSize=12;dashed=1;verticalAlign=bottom;rounded=0;strokeWidth=2;" parent="1" source="jiixLFprqPIUBCIlmw_A-71" target="jiixLFprqPIUBCIlmw_A-43" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
