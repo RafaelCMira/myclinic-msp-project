@@ -27,7 +27,7 @@ export class WelcomePanelComponent implements OnInit {
 
    loadAppointments(): void {
       const userId = +this.roleService.getLoggedInUserId();
-      this.appointmentService.getAppointments(userId).subscribe(
+      this.appointmentService.getAppointments(userId, true).subscribe(
         response => {
           if (response && response.status === 'SUCCESS' && response.result) {
             this.appointments = response.result;

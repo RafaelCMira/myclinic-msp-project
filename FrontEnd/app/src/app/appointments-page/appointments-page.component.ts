@@ -11,7 +11,8 @@ import {Message, MessageService} from "primeng/api";
   styleUrls: ['./appointments-page.component.css']
 })
 export class AppointmentsComponent implements OnInit {
-  appointments: Appointment[] = [];
+  currentAppointments: Appointment[] = [];
+  pastAppointments: Appointment[] = [];
   messages: Message[] = [];
 
   constructor(private appointmentService: AppointmentService,
@@ -20,7 +21,8 @@ export class AppointmentsComponent implements OnInit {
               private messageService: MessageService) {}
 
   ngOnInit(): void {
-    this.loadAppointments();
+    this.loadCurrentAppointments();
+    this.loadPastAppointments();
     this.messages = [{severity:'success',
                       summary:'Check-in Successful',
                       detail:'You have successfully checked in for your appointment.'}];
@@ -30,12 +32,12 @@ export class AppointmentsComponent implements OnInit {
     this.router.navigate(['/schedule-appointment']);
   }
 
-  loadAppointments(): void {
+  loadCurrentAppointments(): void {
     const userId = +this.roleService.getLoggedInUserId();
-    this.appointmentService.getAppointments(userId).subscribe(
+    this.appointmentService.getAppointments(userId, true).subscribe(
       response => {
         if (response && response.status === 'SUCCESS' && response.result) {
-          this.appointments = response.result;
+          this.currentAppointments = response.result;
         } else {
           console.error('Error fetching appointments:', response);
         }
@@ -45,6 +47,22 @@ export class AppointmentsComponent implements OnInit {
       }
     );
  }
+
+ loadPastAppointments(): void {
+  const userId = +this.roleService.getLoggedInUserId();
+  this.appointmentService.getAppointments(userId, false).subscribe(
+    response => {
+      if (response && response.status === 'SUCCESS' && response.result) {
+        this.pastAppointments = response.result;
+      } else {
+        console.error('Error fetching appointments:', response);
+      }
+    },
+    error => {
+      console.error('Error fetching appointments:', error);
+    }
+  );
+}
 
  checkIn(appointment: Appointment): void {
    this.messageService.add({
