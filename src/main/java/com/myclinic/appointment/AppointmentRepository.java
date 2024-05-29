@@ -1,5 +1,6 @@
 package com.myclinic.appointment;
 
+import com.myclinic.utils.Utility;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -90,9 +91,9 @@ class AppointmentRepository {
             Optional<Integer> doctorId,
             Optional<Integer> clinicId,
             Optional<String> date,
-            Optional<String> maxDate,
             Optional<String> hour,
-            Optional<String> duration) {
+            Optional<String> duration,
+            Optional<Boolean> upcomingAppointments) {
 
         StringBuilder query = new StringBuilder("""
                 SELECT
@@ -131,8 +132,16 @@ class AppointmentRepository {
                 s -> query.append(String.format(" AND date = '%s'", s))
         );
 
-        maxDate.ifPresent(
-                s -> query.append(String.format(" AND date <= '%s'", s))
+        upcomingAppointments.ifPresent(
+                upcoming -> {
+                    String currentDate = Utility.getCurrentDate();
+
+                    if (upcoming) {
+                        query.append(String.format(" AND date >= '%s'", currentDate));
+                    } else {
+                        query.append(String.format(" AND date <= '%s'", currentDate));
+                    }
+                }
         );
 
         hour.ifPresent(
