@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2024-05-29T18:22:20.302Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="05ZhvVGDEwbwCOAS37LD" version="24.4.10" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-29T20:41:32.582Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="Uv02U0WCH1GaYyFwCf61" version="24.4.10" type="github">
   <diagram name="Page-1" id="aGtIWoqIngweozj84-rB">
-    <mxGraphModel dx="2449" dy="1147" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2082" dy="945" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="-sJWIc0Cwtn1lKEgGwBn-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;margin-left:10px;text-align:left;&quot;&gt;&lt;b&gt;bdd&lt;/b&gt;&amp;nbsp;Development view&lt;/p&gt;" style="html=1;shape=mxgraph.sysml.package;labelX=142.33;align=left;spacingLeft=10;html=1;overflow=fill;whiteSpace=wrap;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="-200" y="34" width="1603" height="580" as="geometry" />
+        </mxCell>
         <mxCell id="aLUyHMG_e6lteH9gZZ4V-2" value="&amp;lt;&amp;lt; &lt;b&gt;system&amp;nbsp;&lt;/b&gt;&amp;gt;&amp;gt;&lt;div&gt;&lt;br&gt;&lt;b&gt;MyClinic&lt;/b&gt;&lt;/div&gt;" style="shape=rect;html=1;whiteSpace=wrap;align=center;verticalAlign=top;fillColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="431" y="44" width="120" height="60" as="geometry" />
         </mxCell>
