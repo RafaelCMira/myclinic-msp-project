@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 import { Appointment } from '../services/appointment/appointment.model';
 import { RoleService } from '../services/role/role.service';
 import { AppointmentService} from "../services/appointment/appointment.service";
+import { ClinicsService } from "../services/clinics/clinics.service";
 import { Router } from "@angular/router";
+import { SelectItem } from 'primeng/api';
+import { DoctorService } from "../services/doctor/doctor.service";
+import { Doctor } from "../services/doctor/doctor.model";
 
 @Component({
   selector: 'app-schedule-appointment',
@@ -13,19 +17,16 @@ export class ScheduleAppointmentComponent {
   appointment: Appointment = new Appointment();
   selectedRole: string = 'patient';
   errorMessage: string = '';
-
-  clinics = [
-    { id: '1', label: 'West Clinic', value: 'wc' },
-    { id: '2', label: 'South Clinic', value: 'sc' }
-  ];
-
+  clinics: SelectItem[] = [];
+  doctors: SelectItem[] = [];
+/*
   doctors = [
     { id: '1', label: 'Ms. Hai Haag', value: 'd1' },
     { id: '2', label: 'Gillian Padberg III', value: 'd2' },
     { id: '3', label: 'Dottie Shields I', value: 'd3' },
     { id: '4', label: 'Miguel Sporer', value: 'd4' },
     { id: '5', label: 'Sherwood Ebert', value: 'd5' }
-  ];
+  ];*/
 
   durations = [
     { id: '1', label: '15 Minutes', value: '15' },
@@ -40,10 +41,69 @@ export class ScheduleAppointmentComponent {
 
   constructor(private appointmentService: AppointmentService,
               private roleService: RoleService,
+              private clinicsService: ClinicsService,
+              private doctorService: DoctorService,
               private router: Router) {}
 
   ngOnInit(): void {
     this.selectedRole = this.roleService.getSelectedRole();
+    this.loadClinics();
+    this.loadDoctors();
+  }
+
+  loadClinics(): void {
+    this.clinicsService.getClinics().subscribe(
+      response => {
+        if (response.status === 'SUCCESS' && Array.isArray(response.result)) {
+          // Start with an 'All Clinics' option
+          const clinicsArray = [{ label: 'All Clinics', value: null }];
+          
+          // Transform the response.result data to match the desired format
+          response.result.forEach((clinic: any) => {
+            clinicsArray.push({
+              label: `${clinic.name}`,
+              value: clinic.id
+            });
+          });
+
+          // Assign the transformed data to `this.clinics`
+          this.clinics = clinicsArray;
+          console.log(this.clinics)
+        } else {
+          console.error('Unexpected response structure:', response);
+        }
+      },
+      error => {
+        console.error('Error fetching clinics:', error);
+      }
+    );
+  }
+
+  loadDoctors(): void {
+    this.doctorService.getDoctors(undefined, undefined).subscribe(response => {
+        if (response.status === 'SUCCESS' && Array.isArray(response.result)) {
+          // Start with an 'All Clinics' option
+          const doctorsArray = [{ label: 'All Doctors', value: null }];
+          
+          // Transform the response.result data to match the desired format
+          response.result.forEach((doctor: any) => {
+            doctorsArray.push({
+              label: `${doctor.name}`,
+              value: doctor.id
+            });
+          });
+
+          // Assign the transformed data to `this.clinics`
+          this.doctors = doctorsArray;
+          console.log(this.doctors)
+        } else {
+          console.error('Unexpected response structure:', response);
+        }
+      },
+      error => {
+        console.error('Error fetching clinics:', error);
+      }
+    );
   }
 
   submitScheduleForm(): void {
@@ -71,19 +131,22 @@ export class ScheduleAppointmentComponent {
     const formattedDuration = `${durationHours.toString().padStart(2, '0')}:${durationMinutes.toString().padStart(2, '0')}:00`;
     this.appointment.duration = formattedDuration;
 
-    if (this.clinicId !== undefined) {
+    if (this.clinicId !== undefined && this.clinicId > 0) {
       this.appointment.clinicId = +this.clinicId;
     } else {
       this.errorMessage = 'Please select a clinic.';
       return;
     }
 
-    if (this.doctorId !== undefined) {
+    if (this.doctorId !== undefined && this.doctorId > 0) {
       this.appointment.doctorId = +this.doctorId;
     } else {
       this.errorMessage = 'Please select a doctor.';
       return;
     }
+
+    console.log(this.doctorId);
+    console.log(this.clinicId);
 
     const userId = localStorage.getItem('userId');
 
@@ -96,7 +159,7 @@ export class ScheduleAppointmentComponent {
           console.log('Appointment created successfully');
           // Reset the form
           this.appointment = new Appointment();
-          this.router.navigate(['/panel']);
+          this.router.navigate(['/appointments']);
         },
         (error) => {
           this.errorMessage = 'Error creating appointment. Please try again later.';

@@ -1,0 +1,30 @@
+.form {
+  width: 400px;
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.field {
+  margin-bottom: 10px; /* Add spacing between fields */
+}
+
+.label {
+  display: block; /* Ensure labels are displayed on their own line */
+}
+
+.input-field {
+  width: 100%; /* Make input fields take up full width */
+}
+
+.appointment-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust the value as needed */
+}
+
+.appointment-item span {
+  margin-right: 10px; /* Adjust the value as needed */
+}
+
+.appointments-container { 
+  margin-top: 40px;
+}

@@ -4,7 +4,7 @@
   }
   
   .field {
-    margin-bottom: 10px; /* Add spacing between fields */
+    margin-bottom: 30px; /* Add spacing between fields */
   }
   
   .label {
@@ -27,3 +27,11 @@
     align-items: center;
     gap: 5px;
   }
+
+.appointment-details {
+  margin-bottom: 40px;
+}
+
+.appointment-details p {
+  margin-left: 20px;
+}

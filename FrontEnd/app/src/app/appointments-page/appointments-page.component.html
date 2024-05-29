@@ -1,0 +1,17 @@
+<div class="insideGrid appointments-container">
+  <button type="button" pButton (click)="navigateToScheduleAppointment()">Schedule an Appointment</button>
+  <h2>Your Appointments</h2>
+  <ul>
+    <li *ngFor="let appointment of appointments" class="appointment-item">
+      <span>{{ appointment.date }} - {{ appointment.hour }}, duration: {{ appointment.duration }}</span>
+      <button pButton type="button" label="Check-in" (click)="checkIn(appointment)"></button>
+    </li>
+  </ul>
+  <h2>Appointments Atended</h2>
+  <ul>
+    <li *ngFor="let appointment of appointments" class="appointment-item">
+      <span>{{ appointment.date }} - {{ appointment.hour }}, duration: {{ appointment.duration }}</span>
+      <button pButton type="button" label="Review" (click)="review(appointment)"></button>
+    </li>
+  </ul>
+</div>

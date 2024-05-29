@@ -3,6 +3,11 @@
     <div *ngIf="errorMessage" class="error-message">
       {{ errorMessage }}
     </div>
+    <div class="appointment-details">
+      <label class="label">Appointment Details:</label>
+      <p>Date: {{ appointment?.date }}</p>
+      <p>Hour: {{ appointment?.hour }}</p>
+    </div>
     <div class="field">
       <label class="label">Rate Doctor</label>
       <div class="options">

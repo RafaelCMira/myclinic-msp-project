@@ -1,6 +1,8 @@
 // src/app/components/doctor-list/doctor-list.component.ts
 import { Component, OnInit } from '@angular/core';
 import { DoctorService } from "../services/doctor/doctor.service";
+import { ClinicsService } from "../services/clinics/clinics.service";
+import { SpecialitiesService } from "../services/specialities/specialities.service";
 import { Doctor } from "../services/doctor/doctor.model";
 import { SelectItem } from 'primeng/api';
 
@@ -16,39 +18,69 @@ export class DoctorListComponent implements OnInit {
   selectedSpeciality: number | null = null;
   selectedClinic: number | null = null;
 
-  constructor(private doctorService: DoctorService) { }
+  constructor(private doctorService: DoctorService,
+              private clinicsService: ClinicsService,
+              private specialitiesService: SpecialitiesService
+  ) { }
 
   ngOnInit(): void {
-    this.loadMockSpecialities();
-    this.loadMockClinics();
+    this.loadSpecialities();
+    this.loadClinics();
     this.loadDoctors();
   }
 
-  loadMockSpecialities(): void {
-    this.specialities = [
-      { label: 'All Specialities', value: null },
-      { label: 'Cardiologist', value: 1 },
-      { label: 'Dermatologist', value: 2 },
-      { label: 'Endocrinologist', value: 3 },
-      { label: 'Gastroenterologist', value: 4 },
-      { label: 'Neurologist', value: 5 },
-      { label: 'Oncologist', value: 6 },
-      { label: 'Pediatrician', value: 7 },
-      { label: 'Psychiatrist', value: 8 }
-      // Add more mock specialities as needed
-    ];
+  loadSpecialities(): void {
+    this.specialitiesService.getSpecialities().subscribe(
+      response => {
+        if (response.status === 'SUCCESS' && Array.isArray(response.result)) {
+          // Start with an 'All Clinics' option
+          const specialitiesArray = [{ label: 'All Specialitites', value: null }];
+          
+          // Transform the response.result data to match the desired format
+          response.result.forEach((speciality: any) => {
+            specialitiesArray.push({
+              label: `${speciality.name}`,
+              value: speciality.id
+            });
+          });
+
+          // Assign the transformed data to `this.clinics`
+          this.specialities = specialitiesArray;
+        } else {
+          console.error('Unexpected response structure:', response);
+        }
+      },
+      error => {
+        console.error('Error fetching specialities:', error);
+      }
+    );
   }
 
-  loadMockClinics(): void {
-    this.clinics = [
-      { label: 'All Clinics', value: null },
-      { label: 'Clinic Viana do Castelo', value: 1 },
-      { label: 'Clinic Évora', value: 2 },
-      { label: 'Clinic Leiria', value: 3 },
-      { label: 'Clinic Portalegre', value: 4 },
-      { label: 'Clinic Faro', value: 5 }
-      // Add more mock clinics as needed
-    ];
+  loadClinics(): void {
+    this.clinicsService.getClinics().subscribe(
+      response => {
+        if (response.status === 'SUCCESS' && Array.isArray(response.result)) {
+          // Start with an 'All Clinics' option
+          const clinicsArray = [{ label: 'All Clinics', value: null }];
+          
+          // Transform the response.result data to match the desired format
+          response.result.forEach((clinic: any) => {
+            clinicsArray.push({
+              label: `${clinic.name}`,
+              value: clinic.id
+            });
+          });
+
+          // Assign the transformed data to `this.clinics`
+          this.clinics = clinicsArray;
+        } else {
+          console.error('Unexpected response structure:', response);
+        }
+      },
+      error => {
+        console.error('Error fetching clinics:', error);
+      }
+    );
   }
 
   loadDoctors(): void {

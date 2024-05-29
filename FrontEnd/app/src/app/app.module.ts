@@ -28,6 +28,7 @@ import { FileUploadModule } from 'primeng/fileupload';
 import {MessageModule} from "primeng/message";
 import {ToastModule} from "primeng/toast";
 import { DoctorListComponent } from './doctor-list/doctor-list.component';
+import { AppointmentsComponent } from './appointments-page/appointments-page.component';
 import {Table, TableModule} from "primeng/table";
 
 @NgModule({
@@ -43,6 +44,7 @@ import {Table, TableModule} from "primeng/table";
     ScheduleExamComponent,
     ReviewDoctorComponent,
     DoctorListComponent,
+    AppointmentsComponent,
   ],
   imports: [
     BrowserModule,

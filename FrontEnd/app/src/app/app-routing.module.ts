@@ -18,6 +18,8 @@ import { ReviewDoctorComponent } from "./review-doctor/review-doctor.component";
 import { RoleService } from "./services/role/role.service";
 import {Observable} from "rxjs";
 import {DoctorListComponent} from "./doctor-list/doctor-list.component";
+import {AppointmentsComponent} from "./appointments-page/appointments-page.component";
+
 
 
 @Injectable({
@@ -42,7 +44,8 @@ export class AuthGuard implements CanActivate {
 const routes: Routes = [
   // Default route for logged-in users
   { path: '', canActivate: [AuthGuard], component: WelcomePanelComponent },
-  { path: 'appointment', canActivate: [AuthGuard], component: ScheduleAppointmentComponent },
+  { path: 'schedule-appointment', canActivate: [AuthGuard], component: ScheduleAppointmentComponent },
+  { path: 'appointments', canActivate: [AuthGuard], component: AppointmentsComponent },
   { path: 'exam', canActivate: [AuthGuard], component: ScheduleExamComponent },
   { path: 'doctor', canActivate: [AuthGuard], component: DoctorListComponent },
 
@@ -51,7 +54,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'panel', component: WelcomePanelComponent },
-  { path: 'reviewDoctor', component: ReviewDoctorComponent },
+  { path: 'review', component: ReviewDoctorComponent },
   { path: '**', redirectTo: 'welcome' }
 ];
 
