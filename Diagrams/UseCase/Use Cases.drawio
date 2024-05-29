@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-27T11:02:14.859Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="WjYMlNV3QV6tX8p1jNu7" version="24.4.8" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-29T20:30:56.656Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="4b-uqoFsT0CPbWoplF0E" version="24.4.10" type="github">
   <diagram name="Page-1" id="YDADZ48Di3xZLX271aUz">
-    <mxGraphModel dx="1105" dy="549" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="803" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -28,7 +28,7 @@
         <mxCell id="f0yLnYQP_B_3VWNw2zJM-15" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startArrow=none;startFill=0;endArrow=none;endFill=0;" parent="1" source="f0yLnYQP_B_3VWNw2zJM-16" target="f0yLnYQP_B_3VWNw2zJM-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="f0yLnYQP_B_3VWNw2zJM-16" value="Display doctors" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;" parent="1" vertex="1">
+        <mxCell id="f0yLnYQP_B_3VWNw2zJM-16" value="List doctors" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;" parent="1" vertex="1">
           <mxGeometry x="322" y="448" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f0yLnYQP_B_3VWNw2zJM-17" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startArrow=none;startFill=0;endArrow=none;endFill=0;" parent="1" source="f0yLnYQP_B_3VWNw2zJM-19" target="f0yLnYQP_B_3VWNw2zJM-6" edge="1">
@@ -37,7 +37,7 @@
         <mxCell id="f0yLnYQP_B_3VWNw2zJM-18" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startArrow=none;startFill=0;endArrow=none;endFill=0;" parent="1" source="f0yLnYQP_B_3VWNw2zJM-19" target="f0yLnYQP_B_3VWNw2zJM-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="f0yLnYQP_B_3VWNw2zJM-19" value="Display appointments" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;" parent="1" vertex="1">
+        <mxCell id="f0yLnYQP_B_3VWNw2zJM-19" value="List appointments" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;" parent="1" vertex="1">
           <mxGeometry x="322" y="661" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f0yLnYQP_B_3VWNw2zJM-20" value="Di&lt;span style=&quot;background-color: initial;&quot;&gt;splay message&lt;/span&gt;" style="shape=ellipse;html=1;strokeWidth=3;fontStyle=1;whiteSpace=wrap;align=center;perimeter=ellipsePerimeter;" parent="1" vertex="1">
