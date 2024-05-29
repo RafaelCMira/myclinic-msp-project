@@ -10,6 +10,7 @@ public record AppointmentFilterDTO(
         Optional<Integer> doctorId,
         Optional<Integer> clinicId,
         Optional<String> date,
+        Optional<String> maxDate,
         Optional<String> hour,
         Optional<String> duration
 ) {

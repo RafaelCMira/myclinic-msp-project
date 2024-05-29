@@ -66,6 +66,7 @@ class AppointmentService {
                 filter.doctorId(),
                 filter.clinicId(),
                 filter.date(),
+                filter.maxDate(),
                 filter.hour(),
                 filter.duration()
         );

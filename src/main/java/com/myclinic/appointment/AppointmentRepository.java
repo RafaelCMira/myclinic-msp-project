@@ -90,6 +90,7 @@ class AppointmentRepository {
             Optional<Integer> doctorId,
             Optional<Integer> clinicId,
             Optional<String> date,
+            Optional<String> maxDate,
             Optional<String> hour,
             Optional<String> duration) {
 
@@ -97,6 +98,7 @@ class AppointmentRepository {
                 SELECT
                     patient_id,
                     doctor_id,
+                    name as doctor_name,
                     clinic_id,
                     date,
                     hour,
@@ -104,7 +106,7 @@ class AppointmentRepository {
                     rating,
                     review
                 FROM
-                    presential_appointments
+                    presential_appointments INNER JOIN users ON (doctor_id = user_id)
                 WHERE
                     1=1
                 """
@@ -124,6 +126,10 @@ class AppointmentRepository {
 
         date.ifPresent(
                 s -> query.append(String.format(" AND date = '%s'", s))
+        );
+
+        maxDate.ifPresent(
+                s -> query.append(String.format(" AND date <= '%s'", s))
         );
 
         hour.ifPresent(

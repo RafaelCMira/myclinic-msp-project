@@ -70,5 +70,7 @@ class AppointmentController {
 
         return ResponseEntity.ok().body(response);
     }
+
+    // TODO - LIST APPOINTMENTS before current date
     //endregion
 }

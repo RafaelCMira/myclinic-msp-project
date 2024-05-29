@@ -9,6 +9,7 @@ import java.time.LocalTime;
 public record AppointmentDTO(
         Integer patientId,
         Integer doctorId,
+        String doctorName,
         Integer clinicId,
         LocalDate date,
         LocalTime hour,
