@@ -11,6 +11,7 @@ public record AppointmentDTO(
         Integer doctorId,
         String doctorName,
         Integer clinicId,
+        String clinicName,
         LocalDate date,
         LocalTime hour,
         LocalTime duration,

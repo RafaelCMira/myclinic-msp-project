@@ -1,34 +1,393 @@
 {
 	"info": {
-		"_postman_id": "fe1bc0a3-bd80-48c8-8d97-d3d732aa5d89",
-		"name": "Guitar Project",
+		"_postman_id": "526fde2a-d0b6-46df-9152-eded9b17018a",
+		"name": "MSP - MyClinic",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30945116"
 	},
 	"item": [
 		{
-			"name": "Artist",
+			"name": "Doctor",
 			"item": [
 				{
-					"name": "To Fail",
+					"name": "Doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Manu\",\r\n    \"email\": \"manu\",\r\n    \"birthDate\": \"1998-02-10\",\r\n    \"password\": \"111\",\r\n    \"phone\": \"123-456-7890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/doctor",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"New\",\r\n    \"birthDate\": \"2004-02-10\",\r\n    \"email\": \"manu\",\r\n    \"password\": \"newpass\",\r\n    \"phone\": \"123-456-7890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/doctor/122000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"doctor",
+								"122000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/doctor/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"doctor",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/doctor/200",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"doctor",
+								"200"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor by filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/doctor",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"doctor"
+							],
+							"query": [
+								{
+									"key": "speciality",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "clinic",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"toni\",\r\n    \"birthDate\": \"2000-01-10\",\r\n    \"email\": \"a@gsfdgsdfgail.com\",\r\n    \"password\": \"toni\",\r\n    \"phone\": \"123-456-7890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/patient",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"sdgsdfgsdfgdfgd\",\r\n    \"birthDate\": \"2000-01-10\",\r\n    \"email\": \"a@gmail.com\",\r\n    \"password\": \"111\",\r\n    \"phone\": \"123-456-7890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/patient/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/patient/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/patient",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"patient"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "online",
 					"item": [
 						{
-							"name": "Artist By name (SQL injection test)",
+							"name": "Online appointment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"patientId\": 13,\r\n    \"doctorId\": 2,\r\n    \"date\": \"2024-04-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"duration\": \"00:12:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/online-appointment",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"online-appointment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Review online appointment",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"patientId\": 13,\r\n    \"doctorId\": 2,\r\n    \"date\": \"2024-04-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"rating\": 1,\r\n    \"review\": \"Horrible doctor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/online-appointment",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"online-appointment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Online appointment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"patientId\": 4,\r\n    \"doctorId\": 3,\r\n    \"date\": \"2020-02-10\",\r\n    \"hour\": \"10:00:03\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/online-appointment",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"online-appointment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Online appointment",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/artist?name=metallica';--",
+									"raw": "localhost:8080/api/v1/online-appointment",
 									"host": [
-										"{{base_url}}"
+										"localhost"
 									],
+									"port": "8080",
 									"path": [
-										"artist"
+										"api",
+										"v1",
+										"online-appointment"
 									],
 									"query": [
 										{
-											"key": "name",
-											"value": "metallica';--"
+											"key": "patientId",
+											"value": "13",
+											"disabled": true
+										},
+										{
+											"key": "doctorId",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "clinicId",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "date",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "hour",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "duration",
+											"value": "",
+											"disabled": true
 										}
 									]
 								}
@@ -38,47 +397,13 @@
 					]
 				},
 				{
-					"name": "Add Artist",
+					"name": "Appointment",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "data",
-									"value": "{\"name\":\"Artist test\"}",
-									"contentType": "application/json",
-									"type": "text"
-								},
-								{
-									"key": "file",
-									"contentType": "multipart/form-data",
-									"type": "file",
-									"src": "/C:/Users/Rafael/Documents/Napa.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "{{base_url}}/artist",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"artist"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update Artist Name",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Arctic Monkeys\"\r\n}",
+							"raw": "{\r\n    \"patientId\": 17,\r\n    \"doctorId\": 1,\r\n    \"clinicId\": 1,\r\n    \"date\": \"2002-02-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"duration\": \"00:12:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -86,415 +411,374 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/artist/:id",
+							"raw": "localhost:8080/api/v1/appointment",
 							"host": [
-								"{{base_url}}"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
-								"artist",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "18"
-								}
+								"api",
+								"v1",
+								"appointment"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Update Artist Photo",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {
-							"content-type": true
-						}
-					},
+					"name": "Review Appointment",
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/octet-stream"
-							}
-						],
+						"header": [],
 						"body": {
-							"mode": "file",
-							"file": {
-								"src": "/C:/Users/Rafael/Documents/Napa.jpg"
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": 16,\r\n    \"doctorId\": 2,\r\n    \"date\": \"2016-02-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"rating\": \"5\",\r\n    \"review\": \"Very good doctor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/artist/:id/photo",
+							"raw": "localhost:8080/api/v1/appointment",
 							"host": [
-								"{{base_url}}"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
-								"artist",
-								":id",
-								"photo"
+								"api",
+								"v1",
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appointment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": 16,\r\n    \"doctorId\": 2,\r\n    \"date\": \"2016-02-22\",\r\n    \"hour\": \"11:36:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/appointment",
+							"host": [
+								"localhost"
 							],
-							"variable": [
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appointment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/appointment?patientId=17&maxDate=2024-05-29",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"appointment"
+							],
+							"query": [
 								{
-									"key": "id",
+									"key": "patientId",
 									"value": "17"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Artist",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/artist/:id",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"artist",
-								":id"
-							],
-							"query": [
-								{
-									"key": "buildDefaultTab",
-									"value": "true",
-									"disabled": true
 								},
 								{
-									"key": "buildSongs",
-									"value": "true",
-									"disabled": true
-								}
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "18"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Artist songs",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/artist/:artistId/songs",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"artist",
-								":artistId",
-								"songs"
-							],
-							"variable": [
-								{
-									"key": "artistId",
-									"value": "2"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Artist By Name",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/artist?name=",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"artist"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add photo",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {}
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/octet-stream"
-							}
-						],
-						"body": {
-							"mode": "file",
-							"file": {
-								"src": "/C:/Users/Rafael/Documents/mw-694.png"
-							}
-						},
-						"url": {
-							"raw": "{{base_url}}/artist/photo",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"artist",
-								"photo"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Song",
-			"item": [
-				{
-					"name": "Get Song",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/song/165785",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"song",
-								"165785"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get All Songs",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/song",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"song"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": "som",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add Song",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "data",
-									"value": "{\n\"name\": \"Someone Like You\",\n    \"language\": \"English\",\n    \"artistId\": 5\n}",
-									"contentType": "application/json",
-									"type": "text"
-								},
-								{
-									"key": "file",
-									"contentType": "multipart/form-data",
-									"type": "file",
-									"src": "/C:/Users/Rafael/Documents/Universidade/GuitarSite/SpringBoot - GuitarProj/guitarproj/src/main/someone like you - lyrics.txt"
-								}
-							]
-						},
-						"url": {
-							"raw": "{{base_url}}/song",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"song"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Tab",
-			"item": [
-				{
-					"name": "Add Tab",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {}
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "data",
-									"value": "{\"capo\": 1, \"style\": \"mixed\", \"songId\": 4, \"tuningId\": 1}",
-									"contentType": "application/json",
-									"type": "text"
-								},
-								{
-									"key": "file",
-									"contentType": "multipart/form-data",
-									"type": "file",
-									"src": "/C:/Users/Rafael/Documents/Universidade/GuitarSite/SpringBoot - GuitarProj/guitarproj/src/main/Metallica - Nothing Else Matters.txt"
-								}
-							]
-						},
-						"url": {
-							"raw": "{{base_url}}/tabs",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"tabs"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update Tab",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {}
-					},
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "data",
-									"value": "{\"capo\": 1, \"style\": \"mixed\", \"songId\": 4, \"tuningId\": 1}",
-									"contentType": "application/json",
-									"type": "text"
-								},
-								{
-									"key": "file",
-									"contentType": "multipart/form-data",
-									"type": "file",
-									"src": "/C:/Users/Rafael/Documents/Universidade/GuitarSite/SpringBoot - GuitarProj/guitarproj/src/main/Foo Fighters - Everlong.txt"
-								}
-							]
-						},
-						"url": {
-							"raw": "{{base_url}}/tabs/:id",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"tabs",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "27"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get TabsByFilter",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/tabs?artist=adele",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"tabs"
-							],
-							"query": [
-								{
-									"key": "artist",
-									"value": "adele"
-								},
-								{
-									"key": "song",
-									"value": "--;'",
-									"disabled": true
-								},
-								{
-									"key": "tuning",
+									"key": "doctorId",
 									"value": "2",
 									"disabled": true
 								},
 								{
-									"key": "capo",
-									"value": "1",
+									"key": "clinicId",
+									"value": "",
 									"disabled": true
 								},
 								{
-									"key": "style",
-									"value": "wer--;0'asrf--",
+									"key": "date",
+									"value": "2024-04-22",
 									"disabled": true
 								},
 								{
-									"key": "language",
-									"value": "0",
+									"key": "hour",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "duration",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "maxDate",
+									"value": "2024-05-29"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clinic",
+			"item": [
+				{
+					"name": "Clinic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/clinic?speciality=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clinic"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "Amadora",
+									"disabled": true
+								},
+								{
+									"key": "speciality",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Speciality",
+			"item": [
+				{
+					"name": "Speciality",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/speciality",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"speciality"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "Amadora",
 									"disabled": true
 								}
 							]
 						}
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exam",
+			"item": [
+				{
+					"name": "Exam",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": 10,\r\n    \"clinicId\": 1,\r\n    \"equipmentId\": 2,\r\n    \"date\": \"2025-04-24\",\r\n    \"hour\": \"15:44\",\r\n    \"description\": \"some random motive\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/exam",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"exam"
+							]
+						}
+					},
+					"response": []
 				},
 				{
-					"name": "Get Tab",
+					"name": "Exam",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": 4,\r\n    \"date\": \"2022-02-10\",\r\n    \"hour\": \"10:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/exam",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"exam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exam",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/tabs/:id",
+							"raw": "localhost:8080/api/v1/exam",
 							"host": [
-								"{{base_url}}"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
-								"tabs",
-								":id"
+								"api",
+								"v1",
+								"exam"
 							],
-							"variable": [
+							"query": [
 								{
-									"key": "id",
-									"value": "27"
+									"key": "patientId",
+									"value": "%",
+									"disabled": true
+								},
+								{
+									"key": "clinicId",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "equipmentId",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "date",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "hour",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"disabled": true
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Manu\",\r\n    \"email\": \"toni\",\r\n    \"birthDate\": \"1998-02-10\",\r\n    \"password\": \"toni\",\r\n    \"phone\": \"123-456-7890\",\r\n    \"role\": \"patient\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"a@gmail.com\",\r\n    \"password\": \"toni\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"login"
 							]
 						}
 					},

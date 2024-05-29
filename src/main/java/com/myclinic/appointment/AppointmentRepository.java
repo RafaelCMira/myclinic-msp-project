@@ -98,15 +98,18 @@ class AppointmentRepository {
                 SELECT
                     patient_id,
                     doctor_id,
-                    name as doctor_name,
+                    users.name as doctor_name,
                     clinic_id,
+                    clinics.name as clinic_name,
                     date,
                     hour,
                     duration,
                     rating,
                     review
                 FROM
-                    presential_appointments INNER JOIN users ON (doctor_id = user_id)
+                    presential_appointments
+                    INNER JOIN users ON (doctor_id = user_id)
+                    INNER JOIN clinics USING (clinic_id)
                 WHERE
                     1=1
                 """
