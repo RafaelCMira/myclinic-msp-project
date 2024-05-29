@@ -53,7 +53,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/doctor/3",
+							"raw": "localhost:8080/api/v1/doctor/122000",
 							"host": [
 								"localhost"
 							],
@@ -62,7 +62,7 @@
 								"api",
 								"v1",
 								"doctor",
-								"3"
+								"122000"
 							]
 						}
 					},
@@ -95,7 +95,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/doctor/2",
+							"raw": "localhost:8080/api/v1/doctor/200",
 							"host": [
 								"localhost"
 							],
@@ -104,7 +104,7 @@
 								"api",
 								"v1",
 								"doctor",
-								"2"
+								"200"
 							]
 						}
 					},
@@ -116,7 +116,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/doctor?clinic=3",
+							"raw": "localhost:8080/api/v1/doctor",
 							"host": [
 								"localhost"
 							],
@@ -134,7 +134,8 @@
 								},
 								{
 									"key": "clinic",
-									"value": "3"
+									"value": "3",
+									"disabled": true
 								}
 							]
 						}
@@ -402,7 +403,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"patientId\": 16,\r\n    \"doctorId\": 2,\r\n    \"clinicId\": 1,\r\n    \"date\": \"2016-02-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"duration\": \"00:12:00\"\r\n}",
+							"raw": "{\r\n    \"patientId\": 17,\r\n    \"doctorId\": 1,\r\n    \"clinicId\": 1,\r\n    \"date\": \"2002-02-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"duration\": \"00:12:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -431,7 +432,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"patientId\": 16,\r\n    \"doctorId\": 2,\r\n    \"date\": \"2016-02-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"duration\": \"00:12:00\",\r\n    \"rating\": \"5\",\r\n    \"review\": \"Very good doctor\"\r\n}",
+							"raw": "{\r\n    \"patientId\": 16,\r\n    \"doctorId\": 2,\r\n    \"date\": \"2016-02-22\",\r\n    \"hour\": \"11:36:00\",\r\n    \"rating\": \"5\",\r\n    \"review\": \"Very good doctor\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -488,7 +489,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/appointment?doctorId=2",
+							"raw": "localhost:8080/api/v1/appointment?patientId=17&upcoming=true",
 							"host": [
 								"localhost"
 							],
@@ -501,12 +502,12 @@
 							"query": [
 								{
 									"key": "patientId",
-									"value": "16",
-									"disabled": true
+									"value": "17"
 								},
 								{
 									"key": "doctorId",
-									"value": "2"
+									"value": "2",
+									"disabled": true
 								},
 								{
 									"key": "clinicId",
@@ -527,6 +528,10 @@
 									"key": "duration",
 									"value": "",
 									"disabled": true
+								},
+								{
+									"key": "upcoming",
+									"value": "true"
 								}
 							]
 						}

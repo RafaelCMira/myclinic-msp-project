@@ -1,5 +1,6 @@
 package com.myclinic.appointment;
 
+import com.myclinic.utils.Utility;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -91,13 +92,16 @@ class AppointmentRepository {
             Optional<Integer> clinicId,
             Optional<String> date,
             Optional<String> hour,
-            Optional<String> duration) {
+            Optional<String> duration,
+            Optional<Boolean> upcomingAppointments) {
 
         StringBuilder query = new StringBuilder("""
                 SELECT
                     patient_id,
                     doctor_id,
+                    users.name as doctor_name,
                     clinic_id,
+                    clinics.name as clinic_name,
                     date,
                     hour,
                     duration,
@@ -105,6 +109,8 @@ class AppointmentRepository {
                     review
                 FROM
                     presential_appointments
+                    INNER JOIN users ON (doctor_id = user_id)
+                    INNER JOIN clinics USING (clinic_id)
                 WHERE
                     1=1
                 """
@@ -124,6 +130,18 @@ class AppointmentRepository {
 
         date.ifPresent(
                 s -> query.append(String.format(" AND date = '%s'", s))
+        );
+
+        upcomingAppointments.ifPresent(
+                upcoming -> {
+                    String currentDate = Utility.getCurrentDate();
+
+                    if (upcoming) {
+                        query.append(String.format(" AND date >= '%s'", currentDate));
+                    } else {
+                        query.append(String.format(" AND date <= '%s'", currentDate));
+                    }
+                }
         );
 
         hour.ifPresent(

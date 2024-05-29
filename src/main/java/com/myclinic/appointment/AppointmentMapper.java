@@ -14,7 +14,9 @@ public class AppointmentMapper implements RowMapper<Appointment> {
         return new AppointmentDTO(
                 appointment.getPatientId(),
                 appointment.getDoctorId(),
+                appointment.getDoctorName(),
                 appointment.getClinicId(),
+                appointment.getClinicName(),
                 appointment.getDate(),
                 appointment.getHour(),
                 appointment.getDuration(),
@@ -31,7 +33,9 @@ public class AppointmentMapper implements RowMapper<Appointment> {
         return new Appointment(
                 appointmentDTO.patientId(),
                 appointmentDTO.doctorId(),
+                appointmentDTO.doctorName(),
                 appointmentDTO.clinicId(),
+                appointmentDTO.clinicName(),
                 appointmentDTO.date(),
                 appointmentDTO.hour(),
                 appointmentDTO.duration(),
@@ -45,7 +49,9 @@ public class AppointmentMapper implements RowMapper<Appointment> {
         return new Appointment(
                 Utility.getIntOrNull(rs, "patient_id"),
                 Utility.getIntOrNull(rs, "doctor_id"),
+                Utility.getStringOrNull(rs, "doctor_name"),
                 Utility.getIntOrNull(rs, "clinic_id"),
+                Utility.getStringOrNull(rs, "clinic_name"),
                 Utility.getLocalDateOrNull(rs, "date"),
                 Utility.getLocalTimeOrNull(rs, "hour"),
                 Utility.getLocalTimeOrNull(rs, "duration"),

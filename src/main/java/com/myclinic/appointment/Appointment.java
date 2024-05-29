@@ -14,7 +14,9 @@ import java.time.LocalTime;
 public class Appointment {
     private Integer patientId;
     private Integer doctorId;
+    private String doctorName;
     private Integer clinicId;
+    private String clinicName;
     private LocalDate date;
     private LocalTime hour;
     private LocalTime duration;

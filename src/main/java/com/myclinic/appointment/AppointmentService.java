@@ -67,7 +67,8 @@ class AppointmentService {
                 filter.clinicId(),
                 filter.date(),
                 filter.hour(),
-                filter.duration()
+                filter.duration(),
+                filter.upcoming()
         );
 
         return AppointmentMapper.toDTO(appointments);
