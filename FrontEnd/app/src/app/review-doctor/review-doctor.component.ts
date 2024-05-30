@@ -29,6 +29,7 @@ export class ReviewDoctorComponent {
     const navigation = this.router.getCurrentNavigation();
     this.route.queryParams.subscribe(params => {
       this.appointment = { ...params };
+      console.log(this.appointment)
     });
   }
 
