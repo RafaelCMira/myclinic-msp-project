@@ -12,17 +12,21 @@ import {Message, MessageService} from "primeng/api";
 })
 export class AppointmentsComponent implements OnInit {
   currentAppointments: Appointment[] = [];
+  currentAppointmentsDoctor: Appointment[] = [];
   pastAppointments: Appointment[] = [];
   messages: Message[] = [];
+  selectedRole: string = 'patient';
 
   constructor(private appointmentService: AppointmentService,
               private roleService: RoleService,
               private router: Router,
-              private messageService: MessageService) {}
+              private messageService: MessageService,) {}
 
   ngOnInit(): void {
+    this.selectedRole = this.roleService.getSelectedRole();
     this.loadCurrentAppointments();
     this.loadPastAppointments();
+    this.loadCurrentAppointmentsDoctor();
     this.messages = [{severity:'success',
                       summary:'Check-in Successful',
                       detail:'You have successfully checked in for your appointment.'}];
@@ -47,6 +51,22 @@ export class AppointmentsComponent implements OnInit {
       }
     );
  }
+
+ loadCurrentAppointmentsDoctor(): void {
+  const userId = +this.roleService.getLoggedInUserId();
+  this.appointmentService.getAppointmentsDoctor(userId).subscribe(
+    response => {
+      if (response && response.status === 'SUCCESS' && response.result) {
+        this.currentAppointmentsDoctor = response.result;
+      } else {
+        console.error('Error fetching appointments:', response);
+      }
+    },
+    error => {
+      console.error('Error fetching appointments:', error);
+    }
+  );
+}
 
  loadPastAppointments(): void {
   const userId = +this.roleService.getLoggedInUserId();

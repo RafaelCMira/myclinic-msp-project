@@ -23,4 +23,8 @@ export class AppointmentService {
   getAppointments(userId: number, upcoming: boolean): Observable<any> {
     return this.http.get<Appointment[]>(`${this.apiUrl}?patientId=${userId}&upcoming=${upcoming}`);
   }
+
+  getAppointmentsDoctor(doctorId: number): Observable<any> {
+    return this.http.get<Appointment[]>(`${this.apiUrl}?doctorId=${doctorId}&upcoming=true`);
+  }
 }

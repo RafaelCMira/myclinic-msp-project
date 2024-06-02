@@ -1,17 +1,32 @@
 <div class="insideGrid appointments-container">
-  <button type="button" pButton (click)="navigateToScheduleAppointment()">Schedule an Appointment</button>
+  <div *ngIf="selectedRole === 'patient'" class="field">
+    <button type="button" pButton class="botaoAppointments" (click)="navigateToScheduleAppointment()">Schedule an Appointment</button>
+  </div>
+  <div *ngIf="selectedRole === 'patient'" class="field">
   <h2>Your Appointments</h2>
-  <ul>
-    <li *ngFor="let appointment of currentAppointments" class="appointment-item">
-      <span>{{ appointment.date }} - {{ appointment.hour }}, duration: {{ appointment.duration }}</span>
-      <button pButton type="button" label="Check-in" (click)="checkIn(appointment)"></button>
-    </li>
-  </ul>
-  <h2>Appointments Atended</h2>
-  <ul>
-    <li *ngFor="let appointment of pastAppointments" class="appointment-item">
-      <span>{{ appointment.date }} - {{ appointment.hour }}, duration: {{ appointment.duration }}</span>
-      <button pButton type="button" label="Review" (click)="review(appointment)"></button>
-    </li>
-  </ul>
+    <ul>
+      <li *ngFor="let appointment of currentAppointments" class="appointment-item">
+        <span>{{ appointment.date }} - {{ appointment.hour }}, duration: {{ appointment.duration }}</span>
+        <button pButton type="button" label="Check-in" (click)="checkIn(appointment)"></button>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="selectedRole === 'doctor'" class="field">
+    <h2>Your Appointments</h2>
+      <ul>
+        <li *ngFor="let appointment of currentAppointmentsDoctor" class="appointment-item">
+          <span>{{ appointment.date }} - {{ appointment.hour }}, duration: {{ appointment.duration }}</span>
+          
+        </li>
+      </ul>
+    </div>
+  <div *ngIf="selectedRole === 'patient'" class="field">
+    <h2>Appointments Atended</h2>
+    <ul>
+      <li *ngFor="let appointment of pastAppointments" class="appointment-item">
+        <span>{{ appointment.date }} - {{ appointment.hour }}, duration: {{ appointment.duration }}</span>
+        <button pButton type="button" label="Review" (click)="review(appointment)"></button>
+      </li>
+    </ul>
+  </div>
 </div>

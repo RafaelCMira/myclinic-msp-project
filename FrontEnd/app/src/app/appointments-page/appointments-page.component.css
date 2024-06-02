@@ -28,3 +28,7 @@
 .appointments-container { 
   margin-top: 40px;
 }
+
+.botaoAppointments {
+  width: fit-content;
+}
