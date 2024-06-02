@@ -1,0 +1,635 @@
+<mxfile host="app.diagrams.net" modified="2024-05-14T13:58:13.504Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="mCqwW632P67IoVHP7mtB" version="24.4.0" type="github">
+  <diagram name="Página-1" id="odFwpj1P_mLRmx9RzsQF">
+    <mxGraphModel dx="2609" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Functional Requirements&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;MyClinic Services&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-370" y="130" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-2" value="MyClinic" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="400" y="10" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Non-Functional Requirements&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;MyClinic NFR&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="130" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-42" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Register Patient&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system should register a new patient&quot;&lt;br&gt;Id=&quot;1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-1490" y="380" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-43" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Basic Features&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-690" y="250" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-44" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Existing Features&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-370" y="250" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-45" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;New Features&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="250" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-47" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Register Doctor&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system should register a new doctor&quot;&lt;br&gt;Id=&quot;2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-1270" y="380" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-48" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Schedule Appointment&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;Both the patient and doctur should be able to schedule an appointment in the system&quot;&lt;br&gt;Id=&quot;3&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-1050" y="370" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-49" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Schedule Exam&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;Both the patient and doctur should be able to schedule an exam in the system&quot;&lt;br&gt;Id=&quot;4&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-830" y="371" width="200" height="109" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-50" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Check-In&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do the check-in of patients&quot;&lt;br&gt;Id=&quot;5&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-610" y="380" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-51" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-43" target="1v43-9IHqfWxljv2G6Mm-42" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1100" y="280" as="sourcePoint" />
+            <mxPoint x="-1410" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-980" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-52" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-43" target="1v43-9IHqfWxljv2G6Mm-47" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-570" y="340" as="sourcePoint" />
+            <mxPoint x="-1330" y="220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-880" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-53" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-43" target="1v43-9IHqfWxljv2G6Mm-48" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-540" y="320" as="sourcePoint" />
+            <mxPoint x="-1120" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-770" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-54" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" target="1v43-9IHqfWxljv2G6Mm-49" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-590.11" y="310.00000000000006" as="sourcePoint" />
+            <mxPoint x="-590.11" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-590.11" y="340" />
+              <mxPoint x="-620.11" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-55" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-43" target="1v43-9IHqfWxljv2G6Mm-50" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-480.11" y="310.00000000000006" as="sourcePoint" />
+            <mxPoint x="-620" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-480.11" y="340" />
+              <mxPoint x="-510.11" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-56" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Schedule online appointment&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;Both the patient and doctur should be able to schedule an online appointment in the system&quot;&lt;br&gt;Id=&quot;6&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-1030" y="510" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-57" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;See list of doctors&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;Every user should be able to see the list of doctors&quot;&lt;br&gt;Id=&quot;7&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-810" y="510" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-58" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Doctor sees patient informations&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall allow the doctor to see his patients informations&quot;&lt;br&gt;Id=&quot;8&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-590" y="510" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-59" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;See list of clinics&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;Every user should be able to see the list of doctors&quot;&lt;br&gt;Id=&quot;9&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-370" y="510" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-60" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Send Appointment reminders&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall send appointment reminders when a appointment or exam is close&quot;&lt;br&gt;Id=&quot;10&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-150" y="510" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-61" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;See list of appointments&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;Both the doctor an patient should be able to see the appointments&quot;&lt;br&gt;Id=&quot;11&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="70" y="510" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-62" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Prescribe medicine&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The patient should require a medicine and doctor validates the request&quot;&lt;br&gt;Id=&quot;12&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="290" y="510" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-63" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="1v43-9IHqfWxljv2G6Mm-44" target="1v43-9IHqfWxljv2G6Mm-62" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-280" y="350" as="sourcePoint" />
+            <mxPoint x="-170" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="490" />
+              <mxPoint x="-200.11" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-64" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" target="1v43-9IHqfWxljv2G6Mm-61" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-270" y="310" as="sourcePoint" />
+            <mxPoint x="-490" y="590" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-380" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-65" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-44" target="1v43-9IHqfWxljv2G6Mm-60" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-310" y="310" as="sourcePoint" />
+            <mxPoint x="-560" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-50" y="490" />
+              <mxPoint x="-420" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-66" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-44" target="1v43-9IHqfWxljv2G6Mm-59" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-440" y="300" as="sourcePoint" />
+            <mxPoint x="-370" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-270" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-67" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-44" target="1v43-9IHqfWxljv2G6Mm-58" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-260" y="320" as="sourcePoint" />
+            <mxPoint x="-920" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-490" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-68" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-44" target="1v43-9IHqfWxljv2G6Mm-57" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-260" y="320" as="sourcePoint" />
+            <mxPoint x="-1140" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-710" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-69" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-44" target="1v43-9IHqfWxljv2G6Mm-56" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-380" y="310" as="sourcePoint" />
+            <mxPoint x="-1480" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-930" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-70" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Review Doctor&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;A patient should be able to review a doctor that provided a service&quot;&lt;br&gt;Id=&quot;13&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-130" y="372" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-71" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Virtual appointments&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do virtual appointments with built in video calls&quot;&lt;br&gt;Id=&quot;14&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="90" y="373" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-72" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;Func Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Collect analytics from equipment&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do collect analytics from equipment used in exams&quot;&lt;br&gt;Id=&quot;15&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="310" y="373" width="200" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-80" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="1v43-9IHqfWxljv2G6Mm-45" target="1v43-9IHqfWxljv2G6Mm-70" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="320" as="sourcePoint" />
+            <mxPoint x="60" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-40" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-81" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="1v43-9IHqfWxljv2G6Mm-45" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="139.99999999999955" y="310" as="sourcePoint" />
+            <mxPoint x="189.99999999999955" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="230" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-82" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-45" target="1v43-9IHqfWxljv2G6Mm-72" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="300" as="sourcePoint" />
+            <mxPoint x="389.99999999999955" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-84" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-1" target="1v43-9IHqfWxljv2G6Mm-43" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-180" y="60" as="sourcePoint" />
+            <mxPoint x="-1500" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-590" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-85" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-1" target="1v43-9IHqfWxljv2G6Mm-44" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-170" y="200" as="sourcePoint" />
+            <mxPoint x="-490" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-270" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-86" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-1" target="1v43-9IHqfWxljv2G6Mm-45" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="150" as="sourcePoint" />
+            <mxPoint x="-40" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="50" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-88" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Development NFR&#39;s&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="710" y="250" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-89" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Maintainability&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall be easy to maintain or modify&quot;&lt;br&gt;Id=&quot;16&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="710" y="380" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-90" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-2" target="1v43-9IHqfWxljv2G6Mm-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="100" as="sourcePoint" />
+            <mxPoint x="50" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-110" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1v43-9IHqfWxljv2G6Mm-91" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-2" target="1v43-9IHqfWxljv2G6Mm-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1105" y="90" as="sourcePoint" />
+            <mxPoint x="400" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1160" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-1" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-4" target="1v43-9IHqfWxljv2G6Mm-88" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1165" y="189.9999999999999" as="sourcePoint" />
+            <mxPoint x="780" y="250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="960" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-2" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="1v43-9IHqfWxljv2G6Mm-4" target="js9QWIpTAmIStjJIfFOv-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1030" y="330" as="sourcePoint" />
+            <mxPoint x="1350" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1350" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-5" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-88" target="1v43-9IHqfWxljv2G6Mm-89" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="310" as="sourcePoint" />
+            <mxPoint x="660" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="810" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Performance&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall jave a good level of performance to acomodate all user requests&quot;&lt;br&gt;Id=&quot;17&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1354" y="370" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;requirement&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Development NFR&#39;s&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1574" y="250" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Security&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall be secure so that no user information gets compromised&quot;&lt;br&gt;Id=&quot;19&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="2775" y="370" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Usability&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall comply with usability guidelines&quot;&lt;br&gt;Id=&quot;20&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="3326" y="380" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Accessibility&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall be accessable by users with disabilities&quot;&lt;br&gt;Id=&quot;21&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="4030" y="370" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-11" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-7" target="js9QWIpTAmIStjJIfFOv-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1484" y="300" as="sourcePoint" />
+            <mxPoint x="1674" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1674" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-12" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-7" target="js9QWIpTAmIStjJIfFOv-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1824" y="340" as="sourcePoint" />
+            <mxPoint x="1604" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1674" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-13" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-7" target="js9QWIpTAmIStjJIfFOv-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1824" y="310" as="sourcePoint" />
+            <mxPoint x="1824" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1914" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-14" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-7" target="js9QWIpTAmIStjJIfFOv-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1924" y="310" as="sourcePoint" />
+            <mxPoint x="2164" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1904" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-15" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;OOP Based modularization&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall implement object oriented programing modularization&quot;&lt;br&gt;Id=&quot;16.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="594" y="525" width="200" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-16" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Acceptance criteria&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall implement acceptance criteria&quot;&lt;br&gt;Id=&quot;16.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="820" y="525" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-17" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-89" target="js9QWIpTAmIStjJIfFOv-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="480" as="sourcePoint" />
+            <mxPoint x="1200" y="680" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="690" y="500" />
+              <mxPoint x="609.89" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-18" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="1v43-9IHqfWxljv2G6Mm-89" target="js9QWIpTAmIStjJIfFOv-16" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="680" as="sourcePoint" />
+            <mxPoint x="890" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="810" y="500" />
+              <mxPoint x="809.89" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-19" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Space Performance&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have a good space margin&quot;&lt;br&gt;Id=&quot;17.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1104" y="520" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-20" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Time Performance&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall be fast responding to request of users&quot;&lt;br&gt;Id=&quot;17.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1338" y="520" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-21" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-6" target="js9QWIpTAmIStjJIfFOv-19" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1650" y="640" as="sourcePoint" />
+            <mxPoint x="1760" y="685" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1190" y="500" />
+              <mxPoint x="1649.8899999999999" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-22" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-6" target="js9QWIpTAmIStjJIfFOv-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1584" y="730" as="sourcePoint" />
+            <mxPoint x="1320" y="770" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1454" y="500" />
+              <mxPoint x="1779.8899999999999" y="1180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-23" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Database Size&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;17.1.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="970" y="670" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-24" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Main Memory Size&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;17.1.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1204" y="670" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-25" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-19" target="js9QWIpTAmIStjJIfFOv-23" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1174" y="625" as="sourcePoint" />
+            <mxPoint x="910" y="665" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1070" y="650" />
+              <mxPoint x="1369.8899999999999" y="1075" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-26" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" target="js9QWIpTAmIStjJIfFOv-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1444" y="620" as="sourcePoint" />
+            <mxPoint x="1554" y="670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1530" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-27" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;DB Indexing&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have indexes in the more requested fields&quot;&lt;br&gt;Id=&quot;17.2.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1430" y="670" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-28" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;DB Connection Pool&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have a connection pool&quot;&lt;br&gt;Id=&quot;17.2.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1640" y="670" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-29" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" target="js9QWIpTAmIStjJIfFOv-28" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1444" y="620" as="sourcePoint" />
+            <mxPoint x="1748.0000000000005" y="660" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1548" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-31" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Caching&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have a caching system to the more accessed data&quot;&lt;br&gt;Id=&quot;17.2.3&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1850" y="671" width="200" height="109" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-32" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" target="js9QWIpTAmIStjJIfFOv-31" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1444" y="620" as="sourcePoint" />
+            <mxPoint x="1956" y="670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1736" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-33" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Availability&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall be available at 99% of the time&quot;&lt;br&gt;Id=&quot;18&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="2229" y="380" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-34" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-7" target="js9QWIpTAmIStjJIfFOv-33" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1560" y="320" as="sourcePoint" />
+            <mxPoint x="1754" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1940" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-35" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Fault Tolerance&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have multiple ways of tolerating problems&quot;&lt;br&gt;Id=&quot;18.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="2129" y="510" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-36" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;SLAs provided&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall do&quot;&lt;br&gt;Id=&quot;18.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="2400" y="520" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-37" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-33" target="js9QWIpTAmIStjJIfFOv-35" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2059" y="480" as="sourcePoint" />
+            <mxPoint x="2059" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2219" y="500" />
+              <mxPoint x="2384.89" y="1180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-38" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-33" target="js9QWIpTAmIStjJIfFOv-36" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2419" y="710" as="sourcePoint" />
+            <mxPoint x="2309" y="750" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2329" y="500" />
+              <mxPoint x="2474.89" y="1410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-39" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Replication of applicational servers&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall multiple applicational servers to respond to user request despite faliure in one of the servers&quot;&lt;br&gt;Id=&quot;18.1.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="2080" y="670" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-40" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" target="js9QWIpTAmIStjJIfFOv-39" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2270" y="620" as="sourcePoint" />
+            <mxPoint x="2160" y="671" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2270" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-41" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Replication of DB servers&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have replicated information to account for problems in the database system&quot;&lt;br&gt;Id=&quot;18.1.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="2290" y="671" width="200" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-42" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-35" target="js9QWIpTAmIStjJIfFOv-41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2270" y="620" as="sourcePoint" />
+            <mxPoint x="2270" y="671" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2270" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-43" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Disaster Recovery Plan&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have a recovery plan protocoll in case of a disaster&quot;&lt;br&gt;Id=&quot;18.1.3&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="2500" y="670" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-44" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-36" target="js9QWIpTAmIStjJIfFOv-43" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2707" y="625" as="sourcePoint" />
+            <mxPoint x="2827" y="676" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-45" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Login Provided&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have a login system for both doctors and patients&quot;&lt;br&gt;Id=&quot;19.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="2620" y="520" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-46" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;2 Factor Auth&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have 2 fator authentication fro inccreased security&quot;&lt;br&gt;Id=&quot;19.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="2830" y="520" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-47" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;External Service Login&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall impllement a external login system already well established&quot;&lt;br&gt;Id=&quot;19.3&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="3040" y="520" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-48" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-8" target="js9QWIpTAmIStjJIfFOv-45" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2894" y="660" as="sourcePoint" />
+            <mxPoint x="2994" y="710" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-49" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-8" target="js9QWIpTAmIStjJIfFOv-46" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3040" y="690" as="sourcePoint" />
+            <mxPoint x="2885" y="730" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2875" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-50" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-8" target="js9QWIpTAmIStjJIfFOv-47" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2975" y="479" as="sourcePoint" />
+            <mxPoint x="3030" y="520" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-51" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Configurable settings menu provided&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall allow settings to be configurable in a menu&quot;&lt;br&gt;Id=&quot;20.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="3250" y="520" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-52" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Help menu provided&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have a help menu providing useful information&quot;&lt;br&gt;Id=&quot;20.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="3460" y="520" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-53" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;GUI provided&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall provide a GUI&quot;&lt;br&gt;Id=&quot;20.3&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="3670" y="520" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-54" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-9" target="js9QWIpTAmIStjJIfFOv-51" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3470" y="680" as="sourcePoint" />
+            <mxPoint x="3735" y="720" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-55" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-9" target="js9QWIpTAmIStjJIfFOv-52" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3646" y="690" as="sourcePoint" />
+            <mxPoint x="3570" y="730" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-56" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-9" target="js9QWIpTAmIStjJIfFOv-53" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3840" y="440" as="sourcePoint" />
+            <mxPoint x="3974" y="480" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="3590" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-58" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Color Scheme Choice for daltonism&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have a cholor scheme alternative for daltonism&quot;&lt;br&gt;Id=&quot;21.1&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="3880" y="520" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-59" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Proper HTML tags for screen readers&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have the correct html tags implemented so that screen readers can report the correct information&quot;&lt;br&gt;Id=&quot;21.2&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="4090" y="520" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-60" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Configurable font size&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall have configurable font size for people with sight disabilites&quot;&lt;br&gt;Id=&quot;21.3&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="4300" y="520" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-61" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;NF Req&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Alternative text for images&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;text=&quot;The system shall be implemented with alternative text for images&quot;&lt;br&gt;Id=&quot;21.4&quot;&lt;/p&gt;" style="shape=rect;overflow=fill;html=1;whiteSpace=wrap;align=center;" parent="1" vertex="1">
+          <mxGeometry x="4510" y="520" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-62" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-10" target="js9QWIpTAmIStjJIfFOv-58" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3960" y="730" as="sourcePoint" />
+            <mxPoint x="4304" y="770" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="3970" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-63" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-10" target="js9QWIpTAmIStjJIfFOv-59" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4520" y="390" as="sourcePoint" />
+            <mxPoint x="4360" y="430" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-64" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-10" target="js9QWIpTAmIStjJIfFOv-60" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4320" y="430" as="sourcePoint" />
+            <mxPoint x="4590" y="470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="4130" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-65" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-10" target="js9QWIpTAmIStjJIfFOv-61" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4320" y="460" as="sourcePoint" />
+            <mxPoint x="4590" y="500" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="js9QWIpTAmIStjJIfFOv-66" value="" style="rounded=0;html=1;labelBackgroundColor=none;endArrow=none;edgeStyle=elbowEdgeStyle;elbow=vertical;startArrow=sysMLPackCont;startSize=12;" parent="1" source="js9QWIpTAmIStjJIfFOv-19" target="js9QWIpTAmIStjJIfFOv-24" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1227" y="840" as="sourcePoint" />
+            <mxPoint x="1093" y="890" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1310" y="650" />
+              <mxPoint x="1392.8899999999999" y="1295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

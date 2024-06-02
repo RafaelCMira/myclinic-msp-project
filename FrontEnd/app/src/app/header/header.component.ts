@@ -17,7 +17,6 @@ export class HeaderComponent {
 
     patientMenuItems: any[] = [
         { label: 'Home', routerLink: '/panel' },
-        { label: 'About', routerLink: '/panel' },
         { label: 'Appointments', routerLink: '/appointments' },
         { label: 'Exams', routerLink: '/exam' },
         { label: 'Doctors', routerLink: '/doctor' },
@@ -26,8 +25,7 @@ export class HeaderComponent {
 
     doctorMenuItems: any[] = [
         { label: 'Home', routerLink: '/panel' },
-        { label: 'About', routerLink: '/panel' },
-        { label: 'Appointments', routerLink: '/appointment' },
+        { label: 'Appointments', routerLink: '/appointments' },
         { label: 'Exams', routerLink: '/exam' },
     ];
 
